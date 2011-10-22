@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<config>
+	<module>
+		<Alanstormdotcom_Helloworld>
+			<version>0.1.0</version>
+		</Alanstormdotcom_Helloworld>
+	</module>
+	<global>
+		<helpers>
+			<helloworld>
+				<class>Alanstormdotcom_Helloworld_Helper</class>
+			</helloworld>
+		</helpers>
+	</global>
+	<adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <helloworld_options>
+                                            <title>Store Hello World Module Section</title>
+                                        </helloworld_options>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

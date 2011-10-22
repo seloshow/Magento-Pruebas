@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+	    <Alanstormdotcom_Weblog>
+	        <version>0.2.0</version>
+	    </Alanstormdotcom_Weblog>
+	</modules>
+	<global>
+		<models>        
+        <!-- ... -->
+        	<weblog>
+        		<class>Alanstormdotcom_Weblog_model</class>
+        		<resourceModel>weblog_mysql4</resourceModel>
+        	</weblog>
+	        <weblog_mysql4>
+            	<class>Alanstormdotcom_Weblog_Model_Mysql4</class>
+            	<entities><!-- Me ha estado dando error hasta que por fin le he definido la entidad, según el manual toma po defecto la que tiene el nombre de la tabla. -->
+	                <blogpost><!-- Nomber con el que vamos a referencias al modelo que coesponde con la tabla. -->
+	                    <table>blog_posts</table><!-- Tabla a la que hace referencia el Modelo. -->
+	                </blogpost>
+            	</entities> <!-- tablas que vamos a añadir -->               
+        	</weblog_mysql4>
+   	 	</models>
+   	 	<resources>
+        	<weblog_write>
+            	<connection>
+                	<use>core_write</use>
+            	</connection>
+        	</weblog_write>
+        	<weblog_read>
+            	<connection>
+                	<use>core_read</use>
+           	 	</connection>
+        	</weblog_read>
+        	<weblog_setup>
+		        <setup>
+		            <module>Alanstormdotcom_Weblog</module>
+		            <class>Alanstormdotcom_Weblog_Model_Resource_Mysql4_Setup</class>
+		        </setup>
+		        <connection>
+		            <use>core_setup</use>
+		        </connection>
+    		</weblog_setup>     
+    	</resources>  
+	</global>
+	<frontend>
+	    <routers>
+	        <weblog>
+	            <use>standard</use>
+	            <args>
+	                <module>Alanstormdotcom_Weblog</module>
+	                <frontName>weblog</frontName>
+	            </args>
+	        </weblog>
+	    </routers>
+	</frontend>    
+</config>

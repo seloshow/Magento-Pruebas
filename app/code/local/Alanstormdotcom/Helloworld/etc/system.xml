@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<tabs>
+		<helloconfig translate="label" module="helloworld">
+            <label>Hello Config</label>
+            <sort_order>99999</sort_order>
+        </helloconfig>
+	</tabs>
+	<sections>
+        <helloworld_options translate="label" module="helloworld">
+        	<title>Store Hello World Section</title>
+            <label>Hello World Config Options</label>
+            <tab>helloconfig</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>                    
+        </helloworld_options>
+    </sections>
+</config>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+		<helloworld_index_index>
+		<!--  <default>--><!-- Situando la reescritura dentro de default estamos asegurando que se realice en todas las páginas. -->
+		<reference name="root"><!-- Estamos reescribiendo el tag root con un diferente block. -->
+			<!-- Una página roja es muy aburrida, añadamos algo mas interesante -->
+			<block type="page/html" name="root" output="toHtml" template="simple_page.phtml">
+				<!-- Con la siguiente línea estamos consiguiendo que se pueda poner en simple_page.phtml -->
+				<block type="customer/form_register" name="customer_form_register" template="customer/form/register.phtml"/>
+				<block type="page/template_links" name="top.links"/>
+			</block>
+			
+		</reference>
+		<!--  </default>-->
+		</helloworld_index_index>
+		<helloworld_index_goodbye>
+			<update handle="helloworld_index_index"/>
+		</helloworld_index_goodbye>
+</layout>

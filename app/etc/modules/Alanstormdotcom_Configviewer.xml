@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Alanstormdotcom_Configviewer>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Alanstormdotcom_Configviewer>
+    </modules>
+</config> 

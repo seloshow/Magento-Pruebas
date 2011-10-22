@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Alanstormdotcom_Helloworld>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Alanstormdotcom_Helloworld>
+	</modules>	
+	<frontend>
+		<routers>
+			<helloworld>
+				<use>standard</use>
+				<args>
+					<module>Alanstormdotcom_Helloworld</module>
+					<frontName>helloworld</frontName>
+				</args>
+			</helloworld>
+		</routers>
+	</frontend>
+</config>
