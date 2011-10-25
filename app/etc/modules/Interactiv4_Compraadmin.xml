@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Interactiv4_Compraadmin>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Interactiv4_Compraadmin>
+	</modules>
+</config>

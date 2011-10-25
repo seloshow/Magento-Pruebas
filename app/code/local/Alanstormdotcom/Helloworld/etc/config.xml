@@ -33,4 +33,15 @@
             </resources>
         </acl>
     </adminhtml>
+    <frontend>
+		<routers>
+			<helloworld>
+				<use>standard</use>
+				<args>
+					<module>Alanstormdotcom_Helloworld</module>
+					<frontName>helloworld</frontName>
+				</args>
+			</helloworld>
+		</routers>
+	</frontend>
 </config>

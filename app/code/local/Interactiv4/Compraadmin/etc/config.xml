@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Interactiv4_Compraadmin>
+			<vesion>0.1.0</vesion>
+		</Interactiv4_Compraadmin>
+	</modules>
+	<global>
+		<events>
+			 <controller_action_predispatch_adminhtml_sales_order_create_save>
+			 <!--  <controller_front_init_routers>-->
+			 	<observers>
+			 		<interactiv4_compraadmin_model_observer>
+			 			<type>singleton</type>
+			 			<class>Interactiv4_Compraadmin_Model_Observer</class>
+			 			<method>prueba</method>
+			 		</interactiv4_compraadmin_model_observer>
+			 	</observers>
+			 <!-- </controller_front_init_routers>-->
+			 </controller_action_predispatch_adminhtml_sales_order_create_save>
+		</events>
+	</global>
+</config>
