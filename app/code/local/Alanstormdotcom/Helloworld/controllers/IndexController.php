@@ -3,6 +3,8 @@ class Alanstormdotcom_Helloworld_IndexController extends Mage_Core_Controller_Fr
 	public function indexAction()
 	{
 		//echo 'Hello index';
+		$customer=Mage::getModel('customer/customer')->load(1);
+		print_r($customer->getClass());
 		$this->loadLayout();//carga el layout del m�dulo
 		$this->renderLayout();// renderiza el layout de la extensi�n.
 		
