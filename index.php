@@ -77,5 +77,18 @@ $mageRunCode = isset($_SERVER['MAGE_RUN_CODE']) ? $_SERVER['MAGE_RUN_CODE'] : ''
 /* Run store or run website */
 $mageRunType = isset($_SERVER['MAGE_RUN_TYPE']) ? $_SERVER['MAGE_RUN_TYPE'] : 'store';
 
-Mage::run($mageRunCode, $mageRunType);
+
+//Mage::run($mageRunCode, $mageRunType);
+switch($_SERVER['HTTP_HOST']) {
+
+// zapatos.com
+case 'local.envasadoras.com':
+Mage::run('envasadoras', 'website');
+break;
+ 
+// camisetas.com (default store)
+default:
+Mage::run();
+break;
+}
 Varien_Profiler::enable();

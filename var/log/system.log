@@ -1,0 +1,20 @@
+2011-10-31T12:14:54+00:00 ERR (3): Warning: getimagesize(http://local.pruebas.com/skin/adminhtml/base/default/images/media/best_selling_img02.jpg) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Image\Adapter\Abstract.php on line 87
+2011-10-31T12:14:54+00:00 ERR (3): Warning: getimagesize(http://local.pruebas.com/skin/adminhtml/base/default/images/ph_callout_left_top.gif) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Image\Adapter\Abstract.php on line 87
+2011-10-31T12:14:55+00:00 ERR (3): Warning: getimagesize(http://local.pruebas.com/skin/adminhtml/base/default/images/media/best_selling_img01.jpg) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Image\Adapter\Abstract.php on line 87
+2011-10-31T12:14:55+00:00 ERR (3): Warning: getimagesize(http://local.pruebas.com/skin/adminhtml/base/default/images/home_main_callout.jpg) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Image\Adapter\Abstract.php on line 87
+2011-10-31T12:14:56+00:00 ERR (3): Warning: getimagesize(http://local.pruebas.com/skin/adminhtml/base/default/images/media/best_selling_img03.jpg) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Image\Adapter\Abstract.php on line 87
+2011-10-31T12:14:56+00:00 ERR (3): Warning: getimagesize(http://local.pruebas.com/skin/adminhtml/base/default/images/media/best_selling_img05.jpg) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Image\Adapter\Abstract.php on line 87
+2011-10-31T12:14:56+00:00 ERR (3): Warning: getimagesize(http://local.pruebas.com/skin/adminhtml/base/default/images/media/best_selling_img06.jpg) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Image\Adapter\Abstract.php on line 87
+2011-10-31T12:14:56+00:00 ERR (3): Warning: getimagesize(http://local.pruebas.com/skin/adminhtml/base/default/images/media/best_selling_img04.jpg) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Image\Adapter\Abstract.php on line 87
+2011-10-31T12:14:57+00:00 ERR (3): Warning: getimagesize(http://local.pruebas.com/skin/adminhtml/base/default/images/ph_callout_left_rebel.jpg) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Image\Adapter\Abstract.php on line 87
+2011-10-31T12:14:57+00:00 ERR (3): Warning: getimagesize(http://local.pruebas.com/skin/adminhtml/base/default/images/free_shipping_callout.jpg) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Image\Adapter\Abstract.php on line 87
