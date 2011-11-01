@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category    Sample
+ * @package     Sample_WidgetOne
+ * @copyright   Copyright (c) 2009 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+<widgets>
+    <widgetone_twitter type="widgetone/twitter" translate="name description" module="widgetone">
+        <name>Bookmark: Twitter</name>
+        <description type="desc">Adds a simple "Tweet This!" link</description>
+    </widgetone_twitter>
+    <widgetone_digg type="widgetone/digg" translate="name description" module="widgetone">
+        <name>Bookmark: Digg</name>
+        <description type="desc">Adds a simple "You Digg?" link</description>
+    </widgetone_digg>
+    <widgetone_delicious type="widgetone/delicious" translate="name description" module="widgetone">
+        <name>Bookmark: Delicious</name>
+        <description type="desc">Adds a simple delicious.com bookmarking link</description>
+    </widgetone_delicious>
+</widgets>
