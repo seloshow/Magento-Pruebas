@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 12-10-2011 a las 15:27:38
+-- Tiempo de generación: 31-10-2011 a las 13:16:49
 -- Versión del servidor: 5.1.50
 -- Versión de PHP: 5.2.17
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `adminnotification_inbox` (
   KEY `IDX_SEVERITY` (`severity`),
   KEY `IDX_IS_READ` (`is_read`),
   KEY `IDX_IS_REMOVE` (`is_remove`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=63 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=64 ;
 
 --
 -- Volcar la base de datos para la tabla `adminnotification_inbox`
@@ -108,7 +108,8 @@ INSERT INTO `adminnotification_inbox` (`notification_id`, `severity`, `date_adde
 (59, 4, '2011-07-11 23:07:39', 'Magento Preview Version CE 1.6.0.0-rc2 is now available', 'We are happy to announce the availability of Magento Preview Version CE 1.6.0.0-rc2 for download.\nAs this is a preview version it is NOT recommended in any way to be used in a production environment.', 'http://www.magentocommerce.com/blog/comments/magento-preview-version-ce-1600-rc2-now-available/', 1, 0),
 (60, 4, '2011-08-19 21:58:31', 'Magento CE 1.6.0.0-stable Now Available', 'We are excited to announce the availability of Magento CE Version 1.6.0.0 Stable for download and upgrade.', 'http://www.magentocommerce.com/blog/comments/magento-ce-version-1600-stable-now-available/', 1, 0),
 (61, 4, '2011-09-17 05:31:26', 'Magento Preview Version CE 1.6.1.0-beta1 is now available', 'We are happy to announce the availability of Magento Preview Version CE 1.6.1.0-beta1 for download.\nAs this is a preview version it is NOT recommended in any way to be used in a production environment.', 'http://www.magentocommerce.com/blog/comments/magento-preview-version-ce-1610-beta1-now-available/', 1, 0),
-(62, 4, '2011-09-29 19:44:10', 'Magento Preview Version CE 1.6.1.0-rc1 is now available', 'We are happy to announce the availability of Magento Preview Version CE 1.6.1.0-rc1 for download.\nAs this is a preview version it is NOT recommended in any way to be used in a production environment.', 'http://www.magentocommerce.com/blog/comments/magento-preview-version-ce-1610-rc1-now-available/', 0, 0);
+(62, 4, '2011-09-29 19:44:10', 'Magento Preview Version CE 1.6.1.0-rc1 is now available', 'We are happy to announce the availability of Magento Preview Version CE 1.6.1.0-rc1 for download.\nAs this is a preview version it is NOT recommended in any way to be used in a production environment.', 'http://www.magentocommerce.com/blog/comments/magento-preview-version-ce-1610-rc1-now-available/', 0, 0),
+(63, 4, '2011-10-19 21:50:05', 'Magento CE 1.6.1.0-stable Now Available', 'We are excited to announce the availability of Magento CE Version 1.6.1.0 Stable for download and upgrade.', 'http://www.magentocommerce.com/blog/comments/magento-ce-version-1610-stable-now-available/', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -214,7 +215,7 @@ CREATE TABLE IF NOT EXISTS `admin_user` (
 --
 
 INSERT INTO `admin_user` (`user_id`, `firstname`, `lastname`, `email`, `username`, `password`, `created`, `modified`, `logdate`, `lognum`, `reload_acl_flag`, `is_active`, `extra`) VALUES
-(1, 'David ', 'Villalba', 'david.selo@gmail.com', 'admin', 'feb97f60c18dc3b355302064f7431e54:6V', '2008-08-07 14:39:09', '2011-09-28 22:50:58', '2011-10-12 10:08:57', 8, 0, 1, 'a:1:{s:11:"configState";a:6:{s:12:"dev_restrict";s:1:"1";s:9:"dev_debug";s:1:"1";s:20:"dev_translate_inline";s:1:"1";s:7:"dev_log";s:1:"1";s:6:"dev_js";s:1:"0";s:7:"dev_css";s:1:"0";}}');
+(1, 'David ', 'Villalba', 'david.selo@gmail.com', 'admin', 'feb97f60c18dc3b355302064f7431e54:6V', '2008-08-07 14:39:09', '2011-09-28 22:50:58', '2011-10-12 10:08:57', 8, 0, 1, 'a:1:{s:11:"configState";a:13:{s:12:"dev_restrict";s:1:"1";s:9:"dev_debug";s:1:"1";s:20:"dev_translate_inline";s:1:"1";s:7:"dev_log";s:1:"1";s:6:"dev_js";s:1:"0";s:7:"dev_css";s:1:"0";s:7:"web_seo";s:1:"1";s:12:"web_unsecure";s:1:"1";s:10:"web_secure";s:1:"0";s:11:"web_default";s:1:"0";s:9:"web_polls";s:1:"0";s:10:"web_cookie";s:1:"0";s:24:"web_browser_capabilities";s:1:"0";}}');
 
 -- --------------------------------------------------------
 
@@ -3564,14 +3565,14 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity` (
   `children_count` int(11) NOT NULL,
   PRIMARY KEY (`entity_id`),
   KEY `IDX_LEVEL` (`level`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Category Entityies' AUTO_INCREMENT=35 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Category Entityies' AUTO_INCREMENT=38 ;
 
 --
 -- Volcar la base de datos para la tabla `catalog_category_entity`
 --
 
 INSERT INTO `catalog_category_entity` (`entity_id`, `entity_type_id`, `attribute_set_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`) VALUES
-(1, 9, 12, 0, '2007-07-20 18:46:08', '2007-08-07 09:50:15', '1', 1, 0, 26),
+(1, 9, 12, 0, '2007-07-20 18:46:08', '2007-08-07 09:50:15', '1', 1, 0, 29),
 (3, 9, 12, 1, '2007-08-22 15:54:41', '2007-12-05 04:38:59', '1/3', 3, 1, 25),
 (4, 9, 12, 18, '2007-08-22 15:55:34', '2008-08-08 00:56:48', '1/3/18/4', 4, 3, 0),
 (5, 9, 12, 18, '2007-08-22 16:21:29', '2008-08-07 23:55:38', '1/3/18/5', 5, 3, 2),
@@ -3597,7 +3598,10 @@ INSERT INTO `catalog_category_entity` (`entity_id`, `entity_type_id`, `attribute
 (31, 9, 12, 13, '2008-07-25 00:41:56', '2008-07-25 00:41:56', '1/3/13/15/31', 5, 4, 0),
 (32, 9, 12, 13, '2008-07-25 00:42:57', '2008-07-25 00:42:57', '1/3/13/15/32', 6, 4, 0),
 (33, 9, 12, 13, '2008-07-25 00:43:25', '2008-07-25 00:43:25', '1/3/13/15/33', 7, 4, 0),
-(34, 9, 12, 13, '2008-07-25 00:44:17', '2008-07-25 00:44:17', '1/3/13/15/34', 8, 4, 0);
+(34, 9, 12, 13, '2008-07-25 00:44:17', '2008-07-25 00:44:17', '1/3/13/15/34', 8, 4, 0),
+(35, 9, 12, 1, '2011-10-31 11:27:48', '2011-10-31 11:28:27', '1/35', 4, 1, 0),
+(36, 9, 12, 1, '2011-10-31 11:28:01', '2011-10-31 11:29:05', '1/36', 5, 1, 0),
+(37, 9, 12, 1, '2011-10-31 11:28:15', '2011-10-31 11:29:13', '1/37', 6, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -3618,12 +3622,19 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity_datetime` (
   KEY `FK_ATTRIBUTE_DATETIME_ENTITY` (`entity_id`),
   KEY `FK_CATALOG_CATEGORY_ENTITY_DATETIME_ATTRIBUTE` (`attribute_id`),
   KEY `FK_CATALOG_CATEGORY_ENTITY_DATETIME_STORE` (`store_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Volcar la base de datos para la tabla `catalog_category_entity_datetime`
 --
 
+INSERT INTO `catalog_category_entity_datetime` (`value_id`, `entity_type_id`, `attribute_id`, `store_id`, `entity_id`, `value`) VALUES
+(1, 9, 565, 0, 35, NULL),
+(2, 9, 566, 0, 35, NULL),
+(3, 9, 565, 0, 36, NULL),
+(4, 9, 566, 0, 36, NULL),
+(5, 9, 565, 0, 37, NULL),
+(6, 9, 566, 0, 37, NULL);
 
 -- --------------------------------------------------------
 
@@ -3670,7 +3681,7 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity_int` (
   KEY `FK_ATTRIBUTE_INT_ENTITY` (`entity_id`),
   KEY `FK_CATALOG_CATEGORY_EMTITY_INT_ATTRIBUTE` (`attribute_id`),
   KEY `FK_CATALOG_CATEGORY_EMTITY_INT_STORE` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=154 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=175 ;
 
 --
 -- Volcar la base de datos para la tabla `catalog_category_entity_int`
@@ -3802,7 +3813,28 @@ INSERT INTO `catalog_category_entity_int` (`value_id`, `entity_type_id`, `attrib
 (150, 9, 935, 0, 33, 1),
 (151, 9, 936, 0, 33, 1),
 (152, 9, 935, 0, 34, 1),
-(153, 9, 936, 0, 34, 1);
+(153, 9, 936, 0, 34, 1),
+(154, 9, 119, 0, 35, 1),
+(155, 9, 932, 0, 35, 1),
+(156, 9, 117, 0, 35, NULL),
+(157, 9, 120, 0, 35, 0),
+(158, 9, 935, 0, 35, 0),
+(159, 9, 936, 0, 35, 0),
+(160, 9, 937, 0, 35, NULL),
+(161, 9, 119, 0, 36, 1),
+(162, 9, 932, 0, 36, 1),
+(163, 9, 117, 0, 36, NULL),
+(164, 9, 120, 0, 36, 0),
+(165, 9, 935, 0, 36, 0),
+(166, 9, 936, 0, 36, 0),
+(167, 9, 937, 0, 36, NULL),
+(168, 9, 119, 0, 37, 1),
+(169, 9, 932, 0, 37, 1),
+(170, 9, 117, 0, 37, NULL),
+(171, 9, 120, 0, 37, 0),
+(172, 9, 935, 0, 37, 0),
+(173, 9, 936, 0, 37, 0),
+(174, 9, 937, 0, 37, NULL);
 
 -- --------------------------------------------------------
 
@@ -3823,7 +3855,7 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity_text` (
   KEY `FK_ATTRIBUTE_TEXT_ENTITY` (`entity_id`),
   KEY `FK_CATALOG_CATEGORY_ENTITY_TEXT_ATTRIBUTE` (`attribute_id`),
   KEY `FK_CATALOG_CATEGORY_ENTITY_TEXT_STORE` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=147 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=162 ;
 
 --
 -- Volcar la base de datos para la tabla `catalog_category_entity_text`
@@ -3975,7 +4007,22 @@ INSERT INTO `catalog_category_entity_text` (`value_id`, `entity_type_id`, `attri
 (143, 9, 530, 0, 26, ''),
 (144, 9, 116, 0, 19, ''),
 (145, 9, 112, 0, 20, ''),
-(146, 9, 116, 0, 20, '');
+(146, 9, 116, 0, 20, ''),
+(147, 9, 112, 0, 35, ''),
+(148, 9, 115, 0, 35, ''),
+(149, 9, 116, 0, 35, ''),
+(150, 9, 530, 0, 35, ''),
+(151, 9, 927, 0, 35, ''),
+(152, 9, 112, 0, 36, ''),
+(153, 9, 115, 0, 36, ''),
+(154, 9, 116, 0, 36, ''),
+(155, 9, 530, 0, 36, ''),
+(156, 9, 927, 0, 36, ''),
+(157, 9, 112, 0, 37, ''),
+(158, 9, 115, 0, 37, ''),
+(159, 9, 116, 0, 37, ''),
+(160, 9, 530, 0, 37, ''),
+(161, 9, 927, 0, 37, '');
 
 -- --------------------------------------------------------
 
@@ -3996,7 +4043,7 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity_varchar` (
   KEY `FK_ATTRIBUTE_VARCHAR_ENTITY` (`entity_id`),
   KEY `FK_CATALOG_CATEGORY_ENTITY_VARCHAR_ATTRIBUTE` (`attribute_id`),
   KEY `FK_CATALOG_CATEGORY_ENTITY_VARCHAR_STORE` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=205 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=223 ;
 
 --
 -- Volcar la base de datos para la tabla `catalog_category_entity_varchar`
@@ -4206,7 +4253,25 @@ INSERT INTO `catalog_category_entity_varchar` (`value_id`, `entity_type_id`, `at
 (201, 9, 533, 1, 5, 'apparel/shoes.html'),
 (202, 9, 533, 1, 16, 'apparel/shoes/mens.html'),
 (203, 9, 533, 1, 17, 'apparel/shoes/womens.html'),
-(204, 9, 533, 1, 20, 'household-items.html');
+(204, 9, 533, 1, 20, 'household-items.html'),
+(205, 9, 111, 0, 35, 'todovinotecas'),
+(206, 9, 114, 0, 35, ''),
+(207, 9, 479, 0, 35, 'todovinotecas'),
+(208, 9, 118, 0, 35, 'PRODUCTS'),
+(209, 9, 563, 0, 35, ''),
+(210, 9, 514, 0, 35, ''),
+(211, 9, 111, 0, 36, 'envasadoras'),
+(212, 9, 114, 0, 36, ''),
+(213, 9, 479, 0, 36, 'envasadoras'),
+(214, 9, 118, 0, 36, 'PRODUCTS'),
+(215, 9, 563, 0, 36, ''),
+(216, 9, 514, 0, 36, ''),
+(217, 9, 111, 0, 37, 'vitroceramicas'),
+(218, 9, 114, 0, 37, ''),
+(219, 9, 479, 0, 37, 'vitroceramicas'),
+(220, 9, 118, 0, 37, 'PRODUCTS'),
+(221, 9, 563, 0, 37, ''),
+(222, 9, 514, 0, 37, '');
 
 -- --------------------------------------------------------
 
@@ -15918,7 +15983,7 @@ CREATE TABLE IF NOT EXISTS `cms_page` (
 
 INSERT INTO `cms_page` (`page_id`, `title`, `root_template`, `meta_keywords`, `meta_description`, `identifier`, `content_heading`, `content`, `creation_time`, `update_time`, `is_active`, `sort_order`, `layout_update_xml`, `custom_theme`, `custom_root_template`, `custom_layout_update_xml`, `custom_theme_from`, `custom_theme_to`) VALUES
 (1, '404 Not Found 1', 'two_columns_right', 'Page keywords', 'Page description', 'no-route', '', '<div class="page-head-alt"><h3>Whoops, our bad...</h3></div>\r\n<dl>\r\n<dt>The page you requested was not found, and we have a fine guess why.</dt>\r\n<dd>\r\n<ul class="disc">\r\n<li>If you typed the URL directly, please make sure the spelling is correct.</li>\r\n<li>If you clicked on a link to get here, the link is outdated.</li>\r\n</ul></dd>\r\n</dl>\r\n<br/>\r\n<dl>\r\n<dt>What can you do?</dt>\r\n<dd>Have no fear, help is near! There are many ways you can get back on track with Magento Demo Store.</dd>\r\n<dd>\r\n<ul class="disc">\r\n<li><a href="#" onclick="history.go(-1);">Go back</a> to the previous page.</li>\r\n<li>Use the search bar at the top of the page to search for your products.</li>\r\n<li>Follow these links to get you back on track!<br/><a href="{{store url=""}}">Store Home</a><br/><a href="{{store url="customer/account"}}">My Account</a></li></ul></dd></dl><br/>\r\n<p><img src="{{skin url=''images/media/404_callout1.jpg''}}" style="margin-right:15px;"/><img src="{{skin url=''images/media/404_callout2.jpg''}}" /></p>', '2007-06-20 18:38:32', '2007-08-26 19:11:13', 1, 0, NULL, NULL, '', NULL, NULL, NULL),
-(2, 'Home page', 'two_columns_right', '', '', 'home', '', '<div class="col-left side-col">\r\n<p class="home-callout">\r\n<a href="{{store direct_url="apparel/shoes/womens/anashria-womens-premier-leather-sandal.html"}}"><img src="{{skin url=''images/ph_callout_left_top.gif''}}" border="0" /></a>\r\n</p>\r\n<p class="home-callout">\r\n<img src="{{skin url=''images/ph_callout_left_rebel.jpg''}}" border="0" />\r\n</p>\r\n{{block type="tag/popular" template="tag/popular.phtml"}}\r\n</div>\r\n<div class="home-spot">\r\n<p class="home-callout">\r\n<img src="{{skin url=''images/home_main_callout.jpg''}}" border="0" width="470" />\r\n</p>\r\n<p class="home-callout">\r\n<img src="{{skin url=''images/free_shipping_callout.jpg''}}" border="0" width="470" />\r\n</p>\r\n<div class="box best-selling">\r\n<h3>Best Selling Products</h3>\r\n<table border="0" cellspacing="0">\r\n	<tbody>\r\n		<tr class="odd">\r\n			<td><a href="{{store direct_url="sony-vaio-vgn-txn27n-b-11-1-notebook-pc.html"}}"><img class="product-img" src="{{skin url=''images/media/best_selling_img01.jpg''}}" border="0" width="95" /></a>\r\n			<div class="product-description">\r\n			<p><a href="{{store direct_url="sony-vaio-vgn-txn27n-b-11-1-notebook-pc.html"}}">Sony VAIO VGN-TXN27N/B 11.1" Notebook PC</a></p>\r\n			<p>\r\n			See all <a href="{{store direct_url="electronics/computers/laptops.html"}}">Laptops</a>\r\n			</p>\r\n			</div>\r\n			</td>\r\n			<td><a href="{{store direct_url="nine-west-women-s-lucero-pump.html"}}"><img class="product-img" src="{{skin url=''images/media/best_selling_img02.jpg''}}" border="0" width="95" /></a>\r\n			<div class="product-description">\r\n			<p><a href="{{store direct_url="nine-west-women-s-lucero-pump.html"}}">Nine West Women''s Lucero Pump</a></p>\r\n			<p>\r\n			See all <a href="{{store direct_url="apparel/shoes.html"}}">Shoes</a>\r\n			</p>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr class="even">\r\n			<td><a href="{{store direct_url="olympus-stylus-750-7-1mp-digital-camera.html"}}"><img class="product-img" src="{{skin url=''images/media/best_selling_img03.jpg''}}" border="0" width="95" /></a>\r\n			<div class="product-description">\r\n			<p>\r\n			<a href="{{store direct_url="olympus-stylus-750-7-1mp-digital-camera.html"}}">Olympus Stylus 750 7.1MP Digital Camera</a>\r\n			</p>\r\n			<p>\r\n			See all <a href="{{store direct_url="electronics/cameras/digital-cameras.html"}}">Digital Cameras</a>\r\n			</p>\r\n			</div>\r\n			</td>\r\n			<td><a href="{{store direct_url="acer-ferrari-3200-notebook-computer-pc.html"}}"><img class="product-img" src="{{skin url=''images/media/best_selling_img04.jpg''}}" border="0" width="95" /></a>\r\n			<div class="product-description">\r\n			<p>\r\n			<a href="{{store direct_url="acer-ferrari-3200-notebook-computer-pc.html"}}">Acer Ferrari 3200 Notebook Computer PC</a>\r\n			</p>\r\n			<p>\r\n			See all <a href="{{store direct_url="electronics/computers/laptops.html"}}">Laptops</a>\r\n			</p>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n		<tr class="odd">\r\n			<td><a href="{{store direct_url="asics-men-s-gel-kayano-xii.html"}}"><img class="product-img" src="{{skin url=''images/media/best_selling_img05.jpg''}}" border="0" width="95" /></a>\r\n			<div class="product-description">\r\n			<p><a href="{{store direct_url="asics-men-s-gel-kayano-xii.html"}}">ASICS&reg; Men''s GEL-Kayano&reg; XII</a></p>\r\n			<p>See all <a href="{{store direct_url="apparel/shoes.html"}}">Shoes</a></p>\r\n			</div>\r\n			</td>\r\n			<td><a href="{{store direct_url="coalesce-functioning-on-impatience-t-shirt.html"}}"><img class="product-img" src="{{skin url=''images/media/best_selling_img06.jpg''}}" border="0" width="95" /></a>\r\n			<div class="product-description">\r\n			<p>\r\n			<a href="{{store direct_url="coalesce-functioning-on-impatience-t-shirt.html"}}">Coalesce: Functioning On Impatience T-Shirt</a>\r\n			</p>\r\n			<p>\r\n			See all <a href="{{store direct_url="apparel/shirts.html"}}">Shirts</a>\r\n			</p>\r\n			</div>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n</div>\r\n</div>', '2007-08-23 10:03:25', '2008-08-08 13:29:35', 1, 0, '<!--<reference name="content">\r\n<block type="catalog/product_new" name="home.catalog.product.new" alias="product_new" template="catalog/product/new.phtml" after="cms_page"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n<block type="reports/product_viewed" name="home.reports.product.viewed" alias="product_viewed" template="reports/home_product_viewed.phtml" after="product_new"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n<block type="reports/product_compared" name="home.reports.product.compared" template="reports/home_product_compared.phtml" after="product_viewed"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n</reference><reference name="right">\r\n<action method="unsetChild"><alias>right.reports.product.viewed</alias></action>\r\n<action method="unsetChild"><alias>right.reports.product.compared</alias></action>\r\n</reference>-->', '', '', NULL, NULL, NULL),
+(2, 'Home page', 'two_columns_right', '', '', 'home', '', '<div class="col-left side-col">\r\n<p class="home-callout"><a href="{{store direct_url="apparel/shoes/womens/anashria-womens-premier-leather-sandal.html"}}"><img src="{{skin url=''images/ph_callout_left_top.gif''}}" border="0" alt="" /></a></p>\r\n<p class="home-callout"><img src="{{skin url=''images/ph_callout_left_rebel.jpg''}}" border="0" alt="" /></p>\r\n{{block type="tag/popular" template="tag/popular.phtml"}}</div>\r\n<div class="home-spot">\r\n<p class="home-callout"><img src="{{skin url=''images/home_main_callout.jpg''}}" border="0" alt="" width="470" /></p>\r\n<p class="home-callout"><img src="{{skin url=''images/free_shipping_callout.jpg''}}" border="0" alt="" width="470" /></p>\r\n<div class="box best-selling">\r\n<h3>Best Selling Products</h3>\r\n<table border="0" cellspacing="0">\r\n<tbody>\r\n<tr class="odd">\r\n<td><a href="{{store direct_url="sony-vaio-vgn-txn27n-b-11-1-notebook-pc.html"}}"><img class="product-img" src="{{skin url=''images/media/best_selling_img01.jpg''}}" border="0" alt="" width="95" /></a>\r\n<div class="product-description">\r\n<p><a href="{{store direct_url="sony-vaio-vgn-txn27n-b-11-1-notebook-pc.html"}}">Sony VAIO VGN-TXN27N/B 11.1" Notebook PC</a></p>\r\n<p>See all <a href="{{store direct_url="electronics/computers/laptops.html"}}">Laptops</a></p>\r\n</div>\r\n</td>\r\n<td><a href="{{store direct_url="nine-west-women-s-lucero-pump.html"}}"><img class="product-img" src="{{skin url=''images/media/best_selling_img02.jpg''}}" border="0" alt="" width="95" /></a>\r\n<div class="product-description">\r\n<p><a href="{{store direct_url="nine-west-women-s-lucero-pump.html"}}">Nine West Women''s Lucero Pump</a></p>\r\n<p>See all <a href="{{store direct_url="apparel/shoes.html"}}">Shoes</a></p>\r\n</div>\r\n</td>\r\n</tr>\r\n<tr class="even">\r\n<td><a href="{{store direct_url="olympus-stylus-750-7-1mp-digital-camera.html"}}"><img class="product-img" src="{{skin url=''images/media/best_selling_img03.jpg''}}" border="0" alt="" width="95" /></a>\r\n<div class="product-description">\r\n<p><a href="{{store direct_url="olympus-stylus-750-7-1mp-digital-camera.html"}}">Olympus Stylus 750 7.1MP Digital Camera</a></p>\r\n<p>See all <a href="{{store direct_url="electronics/cameras/digital-cameras.html"}}">Digital Cameras</a></p>\r\n</div>\r\n</td>\r\n<td><a href="{{store direct_url="acer-ferrari-3200-notebook-computer-pc.html"}}"><img class="product-img" src="{{skin url=''images/media/best_selling_img04.jpg''}}" border="0" alt="" width="95" /></a>\r\n<div class="product-description">\r\n<p><a href="{{store direct_url="acer-ferrari-3200-notebook-computer-pc.html"}}">Acer Ferrari 3200 Notebook Computer PC</a></p>\r\n<p>See all <a href="{{store direct_url="electronics/computers/laptops.html"}}">Laptops</a></p>\r\n</div>\r\n</td>\r\n</tr>\r\n<tr class="odd">\r\n<td><a href="{{store direct_url="asics-men-s-gel-kayano-xii.html"}}"><img class="product-img" src="{{skin url=''images/media/best_selling_img05.jpg''}}" border="0" alt="" width="95" /></a>\r\n<div class="product-description">\r\n<p><a href="{{store direct_url="asics-men-s-gel-kayano-xii.html"}}">ASICS&reg; Men''s GEL-Kayano&reg; XII</a></p>\r\n<p>See all <a href="{{store direct_url="apparel/shoes.html"}}">Shoes</a></p>\r\n</div>\r\n</td>\r\n<td><a href="{{store direct_url="coalesce-functioning-on-impatience-t-shirt.html"}}"><img class="product-img" src="{{skin url=''images/media/best_selling_img06.jpg''}}" border="0" alt="" width="95" /></a>\r\n<div class="product-description">\r\n<p><a href="{{store direct_url="coalesce-functioning-on-impatience-t-shirt.html"}}">Coalesce: Functioning On Impatience T-Shirt</a></p>\r\n<p>See all <a href="{{store direct_url="apparel/shirts.html"}}">Shirts</a></p>\r\n</div>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>', '2007-08-23 10:03:25', '2011-10-31 12:14:59', 1, 0, '<!--<reference name="content">\r\n<block type="catalog/product_new" name="home.catalog.product.new" alias="product_new" template="catalog/product/new.phtml" after="cms_page"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n<block type="reports/product_viewed" name="home.reports.product.viewed" alias="product_viewed" template="reports/home_product_viewed.phtml" after="product_new"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n<block type="reports/product_compared" name="home.reports.product.compared" template="reports/home_product_compared.phtml" after="product_viewed"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n</reference><reference name="right">\r\n<action method="unsetChild"><alias>right.reports.product.viewed</alias></action>\r\n<action method="unsetChild"><alias>right.reports.product.compared</alias></action>\r\n</reference>-->', '', '', '', NULL, NULL),
 (3, 'About  Us', 'one_column', '', '', 'about-magento-demo-store', '', '<div class="page-head">\r\n<h3>About Magento  Demo Store</h3>\r\n</div>\r\n<div class="col3-set">\r\n<div class="col-1"><p><img src="http://var-dev.varien.com:81/dev/minu/magento/skin/frontend/default/default/images/media/about_us_img.jpg" alt="Varien office pic"/></p><p style="line-height:1.2em;"><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede.</small></p>\r\n<p style="color:#888; font:1.2em/1.4em georgia, serif;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta.</p></div>\r\n<div class="col-2">\r\n<p><strong style="color:#de036f;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit.</strong></p>\r\n<p>Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo. </p>\r\n<p>Maecenas ullamcorper, odio vel tempus egestas, dui orci faucibus orci, sit amet aliquet lectus dolor et quam. Pellentesque consequat luctus purus. Nunc et risus. Etiam a nibh. Phasellus dignissim metus eget nisi. Vestibulum sapien dolor, aliquet nec, porta ac, malesuada a, libero. Praesent feugiat purus eget est. Nulla facilisi. Vestibulum tincidunt sapien eu velit. Mauris purus. Maecenas eget mauris eu orci accumsan feugiat. Pellentesque eget velit. Nunc tincidunt.</p></div>\r\n<div class="col-3">\r\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper </p>\r\n<p><strong style="color:#de036f;">Maecenas ullamcorper, odio vel tempus egestas, dui orci faucibus orci, sit amet aliquet lectus dolor et quam. Pellentesque consequat luctus purus.</strong></p>\r\n<p>Nunc et risus. Etiam a nibh. Phasellus dignissim metus eget nisi.</p>\r\n<div class="divider"></div>\r\n<p>To all of you, from all of us at Magento Demo Store - Thank you and Happy eCommerce!</p>\r\n<p style="line-height:1.2em;"><strong style="font:italic 2em Georgia, serif;">John Doe</strong><br/><small>Some important guy</small></p></div>\r\n</div>', '2007-08-30 14:01:18', '2007-08-30 14:01:18', 1, 0, NULL, NULL, '', NULL, NULL, NULL),
 (4, 'Customer Service', 'three_columns', '', '', 'customer-service', '', '<div class="page-head">\r\n<h3>Customer Service</h3>\r\n</div>\r\n<ul class="disc" style="margin-bottom:15px;">\r\n<li><a href="#answer1">Shipping & Delivery</a></li>\r\n<li><a href="#answer2">Privacy & Security</a></li>\r\n<li><a href="#answer3">Returns & Replacements</a></li>\r\n<li><a href="#answer4">Ordering</a></li>\r\n<li><a href="#answer5">Payment, Pricing & Promotions</a></li>\r\n<li><a href="#answer6">Viewing Orders</a></li>\r\n<li><a href="#answer7">Updating Account Information</a></li>\r\n</ul>\r\n<dl>\r\n<dt id="answer1">Shipping & Delivery</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer2">Privacy & Security</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer3">Returns & Replacements</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer4">Ordering</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer5">Payment, Pricing & Promotions</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer6">Viewing Orders</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer7">Updating Account Information</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n</dl>', '2007-08-30 14:02:20', '2007-08-30 14:03:37', 1, 0, NULL, NULL, '', NULL, NULL, NULL),
 (5, 'Home page', 'one_column', '', '', 'home', '', '<!-- this homepage can be used for modern theme  -->\r\n{{block type="core/template" template="sample/home.phtml"}}', '2008-04-16 14:51:52', '2008-08-08 12:23:12', 0, 0, '<!--<reference name="content">\r\n<block type="catalog/product_new" name="home.catalog.product.new" alias="product_new" template="catalog/product/new.phtml" after="cms_page"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n<block type="reports/product_viewed" name="home.reports.product.viewed" alias="product_viewed" template="reports/home_product_viewed.phtml" after="product_new"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n<block type="reports/product_compared" name="home.reports.product.compared" template="reports/home_product_compared.phtml" after="product_viewed"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n</reference><reference name="right">\r\n<action method="unsetChild"><alias>right.reports.product.viewed</alias></action>\r\n<action method="unsetChild"><alias>right.reports.product.compared</alias></action>\r\n</reference>-->', '', '', NULL, NULL, NULL),
@@ -15950,7 +16015,8 @@ INSERT INTO `cms_page_store` (`page_id`, `store_id`) VALUES
 (6, 0),
 (2, 1),
 (2, 2),
-(2, 3);
+(2, 3),
+(2, 4);
 
 -- --------------------------------------------------------
 
@@ -16034,7 +16100,7 @@ CREATE TABLE IF NOT EXISTS `core_config_data` (
   `value` text NOT NULL,
   PRIMARY KEY (`config_id`),
   UNIQUE KEY `config_scope` (`scope`,`scope_id`,`path`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
 --
 -- Volcar la base de datos para la tabla `core_config_data`
@@ -16058,7 +16124,8 @@ INSERT INTO `core_config_data` (`config_id`, `scope`, `scope_id`, `path`, `value
 (21, 'default', 0, 'dev/log/exception_file', 'exception.log'),
 (22, 'default', 0, 'dev/js/merge_files', '0'),
 (23, 'default', 0, 'dev/js/deprecation', '0'),
-(24, 'default', 0, 'dev/css/merge_css_files', '0');
+(24, 'default', 0, 'dev/css/merge_css_files', '0'),
+(25, 'stores', 4, 'web/unsecure/base_url', 'http://local.envasadoras.com/');
 
 -- --------------------------------------------------------
 
@@ -16287,7 +16354,7 @@ CREATE TABLE IF NOT EXISTS `core_store` (
   KEY `FK_STORE_WEBSITE` (`website_id`),
   KEY `is_active` (`is_active`,`sort_order`),
   KEY `FK_STORE_GROUP` (`group_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Stores' AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Stores' AUTO_INCREMENT=7 ;
 
 --
 -- Volcar la base de datos para la tabla `core_store`
@@ -16297,7 +16364,10 @@ INSERT INTO `core_store` (`store_id`, `code`, `website_id`, `group_id`, `name`, 
 (0, 'admin', 0, 0, 'Admin', 0, 1),
 (1, 'default', 1, 1, 'English', 0, 1),
 (2, 'german', 1, 1, 'German', 0, 1),
-(3, 'french', 1, 1, 'French', 0, 1);
+(3, 'french', 1, 1, 'French', 0, 1),
+(4, 'envasadoras', 3, 2, 'envasadoras', 0, 1),
+(5, 'todovinotecas', 2, 3, 'todovinotecas', 0, 1),
+(6, 'vitroceramicas', 4, 4, 'vitroceramicas', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -16315,7 +16385,7 @@ CREATE TABLE IF NOT EXISTS `core_store_group` (
   PRIMARY KEY (`group_id`),
   KEY `FK_STORE_GROUP_WEBSITE` (`website_id`),
   KEY `default_store_id` (`default_store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Volcar la base de datos para la tabla `core_store_group`
@@ -16323,7 +16393,10 @@ CREATE TABLE IF NOT EXISTS `core_store_group` (
 
 INSERT INTO `core_store_group` (`group_id`, `website_id`, `name`, `root_category_id`, `default_store_id`) VALUES
 (0, 0, 'Default', 0, 0),
-(1, 1, 'Main Store', 3, 1);
+(1, 1, 'Main Store', 3, 1),
+(2, 3, 'envasadoras', 36, 4),
+(3, 2, 'todovinotecas', 35, 5),
+(4, 4, 'vitroceramicas', 37, 6);
 
 -- --------------------------------------------------------
 
@@ -17340,7 +17413,7 @@ CREATE TABLE IF NOT EXISTS `core_website` (
   UNIQUE KEY `code` (`code`),
   KEY `sort_order` (`sort_order`),
   KEY `default_group_id` (`default_group_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Websites' AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Websites' AUTO_INCREMENT=5 ;
 
 --
 -- Volcar la base de datos para la tabla `core_website`
@@ -17348,7 +17421,10 @@ CREATE TABLE IF NOT EXISTS `core_website` (
 
 INSERT INTO `core_website` (`website_id`, `code`, `name`, `sort_order`, `default_group_id`, `is_default`) VALUES
 (0, 'admin', 'Admin', 0, 0, 0),
-(1, 'base', 'Main Website', 0, 1, 1);
+(1, 'base', 'Main Website', 0, 1, 1),
+(2, 'todovinotecas', 'todovinotecas', 0, 3, 0),
+(3, 'envasadoras', 'envasadoras', 0, 2, 0),
+(4, 'vitroceramicas', 'vitrocerámicas', 0, 4, 0);
 
 -- --------------------------------------------------------
 
@@ -23691,12 +23767,22 @@ CREATE TABLE IF NOT EXISTS `index_event` (
   `new_data` mediumtext,
   PRIMARY KEY (`event_id`),
   UNIQUE KEY `IDX_UNIQUE_EVENT` (`type`,`entity`,`entity_pk`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Volcar la base de datos para la tabla `index_event`
 --
 
+INSERT INTO `index_event` (`event_id`, `type`, `entity`, `entity_pk`, `created_at`, `old_data`, `new_data`) VALUES
+(1, 'save', 'catalog_category', 35, '2011-10-31 11:27:48', 'a:3:{s:30:"Mage_Catalog_Model_Indexer_Url";N;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}', 'a:9:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:30:"Mage_Catalog_Model_Indexer_Url";N;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:1;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:35:"catalogsearch_fulltext_match_result";b:1;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}'),
+(2, 'save', 'catalog_category', 36, '2011-10-31 11:28:01', 'a:3:{s:30:"Mage_Catalog_Model_Indexer_Url";N;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}', 'a:9:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:30:"Mage_Catalog_Model_Indexer_Url";N;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:1;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:35:"catalogsearch_fulltext_match_result";b:1;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}'),
+(3, 'save', 'catalog_category', 37, '2011-10-31 11:28:15', 'a:3:{s:30:"Mage_Catalog_Model_Indexer_Url";N;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}', 'a:9:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:30:"Mage_Catalog_Model_Indexer_Url";N;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:1;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:35:"catalogsearch_fulltext_match_result";b:1;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}'),
+(4, 'save', 'store_group', 2, '2011-10-31 11:29:45', 'a:3:{s:41:"Mage_CatalogInventory_Model_Indexer_Stock";N;s:39:"Mage_Catalog_Model_Product_Indexer_Flat";N;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}', 'a:9:{s:35:"cataloginventory_stock_match_result";b:1;s:41:"Mage_CatalogInventory_Model_Indexer_Stock";N;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:1;s:39:"Mage_Catalog_Model_Product_Indexer_Flat";N;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:1;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}'),
+(5, 'save', 'store_group', 3, '2011-10-31 11:30:04', 'a:3:{s:41:"Mage_CatalogInventory_Model_Indexer_Stock";N;s:39:"Mage_Catalog_Model_Product_Indexer_Flat";N;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}', 'a:9:{s:35:"cataloginventory_stock_match_result";b:1;s:41:"Mage_CatalogInventory_Model_Indexer_Stock";N;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:1;s:39:"Mage_Catalog_Model_Product_Indexer_Flat";N;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:1;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}'),
+(6, 'save', 'store_group', 4, '2011-10-31 11:30:27', 'a:3:{s:41:"Mage_CatalogInventory_Model_Indexer_Stock";N;s:39:"Mage_Catalog_Model_Product_Indexer_Flat";N;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}', 'a:9:{s:35:"cataloginventory_stock_match_result";b:1;s:41:"Mage_CatalogInventory_Model_Indexer_Stock";N;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:0;s:33:"catalog_product_flat_match_result";b:1;s:39:"Mage_Catalog_Model_Product_Indexer_Flat";N;s:37:"catalog_category_product_match_result";b:0;s:35:"catalogsearch_fulltext_match_result";b:1;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}'),
+(7, 'save', 'core_store', 4, '2011-10-31 11:31:03', 'a:5:{s:41:"Mage_CatalogInventory_Model_Indexer_Stock";N;s:30:"Mage_Catalog_Model_Indexer_Url";N;s:39:"Mage_Catalog_Model_Product_Indexer_Flat";N;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}', 'a:11:{s:35:"cataloginventory_stock_match_result";b:1;s:41:"Mage_CatalogInventory_Model_Indexer_Stock";N;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:30:"Mage_Catalog_Model_Indexer_Url";N;s:33:"catalog_product_flat_match_result";b:1;s:39:"Mage_Catalog_Model_Product_Indexer_Flat";N;s:37:"catalog_category_product_match_result";b:1;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:35:"catalogsearch_fulltext_match_result";b:1;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}'),
+(8, 'save', 'core_store', 5, '2011-10-31 11:32:08', 'a:5:{s:41:"Mage_CatalogInventory_Model_Indexer_Stock";N;s:30:"Mage_Catalog_Model_Indexer_Url";N;s:39:"Mage_Catalog_Model_Product_Indexer_Flat";N;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}', 'a:11:{s:35:"cataloginventory_stock_match_result";b:1;s:41:"Mage_CatalogInventory_Model_Indexer_Stock";N;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:30:"Mage_Catalog_Model_Indexer_Url";N;s:33:"catalog_product_flat_match_result";b:1;s:39:"Mage_Catalog_Model_Product_Indexer_Flat";N;s:37:"catalog_category_product_match_result";b:1;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:35:"catalogsearch_fulltext_match_result";b:1;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}'),
+(9, 'save', 'core_store', 6, '2011-10-31 11:32:36', 'a:5:{s:41:"Mage_CatalogInventory_Model_Indexer_Stock";N;s:30:"Mage_Catalog_Model_Indexer_Url";N;s:39:"Mage_Catalog_Model_Product_Indexer_Flat";N;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}', 'a:11:{s:35:"cataloginventory_stock_match_result";b:1;s:41:"Mage_CatalogInventory_Model_Indexer_Stock";N;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:30:"Mage_Catalog_Model_Indexer_Url";N;s:33:"catalog_product_flat_match_result";b:1;s:39:"Mage_Catalog_Model_Product_Indexer_Flat";N;s:37:"catalog_category_product_match_result";b:1;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:35:"catalogsearch_fulltext_match_result";b:1;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}');
 
 -- --------------------------------------------------------
 
@@ -23723,12 +23809,12 @@ CREATE TABLE IF NOT EXISTS `index_process` (
 INSERT INTO `index_process` (`process_id`, `indexer_code`, `status`, `started_at`, `ended_at`, `mode`) VALUES
 (1, 'catalog_product_attribute', 'pending', '2011-09-28 23:09:44', '2011-09-28 23:09:45', 'real_time'),
 (2, 'catalog_product_price', 'pending', '2011-09-28 23:09:54', '2011-09-28 23:09:57', 'real_time'),
-(3, 'catalog_url', 'pending', '2011-09-28 23:09:57', '2011-09-28 23:10:00', 'real_time'),
-(4, 'catalog_product_flat', 'pending', '2011-09-28 23:09:45', '2011-09-28 23:09:54', 'real_time'),
+(3, 'catalog_url', 'require_reindex', '2011-09-28 23:09:57', '2011-09-28 23:10:00', 'real_time'),
+(4, 'catalog_product_flat', 'require_reindex', '2011-09-28 23:09:45', '2011-09-28 23:09:54', 'real_time'),
 (5, 'catalog_category_flat', 'pending', '2011-09-28 23:09:40', '2011-09-28 23:09:41', 'real_time'),
-(6, 'catalog_category_product', 'pending', '2011-09-28 23:09:41', '2011-09-28 23:09:44', 'real_time'),
-(7, 'catalogsearch_fulltext', 'pending', '2011-09-28 23:09:38', '2011-09-28 23:09:40', 'real_time'),
-(8, 'cataloginventory_stock', 'pending', '2011-09-28 23:09:37', '2011-09-28 23:09:38', 'real_time'),
+(6, 'catalog_category_product', 'require_reindex', '2011-09-28 23:09:41', '2011-09-28 23:09:44', 'real_time'),
+(7, 'catalogsearch_fulltext', 'require_reindex', '2011-09-28 23:09:38', '2011-09-28 23:09:40', 'real_time'),
+(8, 'cataloginventory_stock', 'require_reindex', '2011-09-28 23:09:37', '2011-09-28 23:09:38', 'real_time'),
 (9, 'tag_summary', 'pending', '2011-09-28 23:10:00', '2011-09-28 23:10:00', 'real_time');
 
 -- --------------------------------------------------------
@@ -23750,6 +23836,40 @@ CREATE TABLE IF NOT EXISTS `index_process_event` (
 -- Volcar la base de datos para la tabla `index_process_event`
 --
 
+INSERT INTO `index_process_event` (`process_id`, `event_id`, `status`) VALUES
+(3, 1, 'done'),
+(3, 2, 'done'),
+(3, 3, 'done'),
+(3, 7, 'done'),
+(3, 8, 'done'),
+(3, 9, 'done'),
+(4, 4, 'done'),
+(4, 5, 'done'),
+(4, 6, 'done'),
+(4, 7, 'done'),
+(4, 8, 'done'),
+(4, 9, 'done'),
+(6, 1, 'done'),
+(6, 2, 'done'),
+(6, 3, 'done'),
+(6, 7, 'done'),
+(6, 8, 'done'),
+(6, 9, 'done'),
+(7, 1, 'done'),
+(7, 2, 'done'),
+(7, 3, 'done'),
+(7, 4, 'done'),
+(7, 5, 'done'),
+(7, 6, 'done'),
+(7, 7, 'done'),
+(7, 8, 'done'),
+(7, 9, 'done'),
+(8, 4, 'done'),
+(8, 5, 'done'),
+(8, 6, 'done'),
+(8, 7, 'done'),
+(8, 8, 'done'),
+(8, 9, 'done');
 
 -- --------------------------------------------------------
 
@@ -23957,7 +24077,19 @@ INSERT INTO `log_url` (`url_id`, `visitor_id`, `visit_time`) VALUES
 (96, 14, '2011-10-12 12:22:26'),
 (97, 14, '2011-10-12 12:24:29'),
 (98, 14, '2011-10-12 12:24:38'),
-(99, 14, '2011-10-12 12:24:43');
+(99, 14, '2011-10-12 12:24:43'),
+(100, 29, '2011-10-31 11:50:24'),
+(101, 29, '2011-10-31 11:58:24'),
+(102, 29, '2011-10-31 12:05:10'),
+(103, 29, '2011-10-31 12:05:18'),
+(104, 29, '2011-10-31 12:06:59'),
+(105, 29, '2011-10-31 12:08:31'),
+(106, 29, '2011-10-31 12:08:43'),
+(107, 29, '2011-10-31 12:08:58'),
+(108, 15, '2011-10-31 12:10:55'),
+(109, 15, '2011-10-31 12:10:56'),
+(110, 15, '2011-10-31 12:15:04'),
+(111, 29, '2011-10-31 12:16:06');
 
 -- --------------------------------------------------------
 
@@ -23971,7 +24103,7 @@ CREATE TABLE IF NOT EXISTS `log_url_info` (
   `url` varchar(255) NOT NULL DEFAULT '',
   `referer` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`url_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Detale information about url visit' AUTO_INCREMENT=100 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Detale information about url visit' AUTO_INCREMENT=112 ;
 
 --
 -- Volcar la base de datos para la tabla `log_url_info`
@@ -24075,7 +24207,19 @@ INSERT INTO `log_url_info` (`url_id`, `url`, `referer`) VALUES
 (96, 'http://local.pruebas.com/complexworld/index/showcollection', ''),
 (97, 'http://local.pruebas.com/', ''),
 (98, 'http://local.pruebas.com/complexworld/index/populateEntries', ''),
-(99, 'http://local.pruebas.com/complexworld/index/showcollection', '');
+(99, 'http://local.pruebas.com/complexworld/index/showcollection', ''),
+(100, 'http://local.pruebas.com/', ''),
+(101, 'http://local.pruebas.com/', ''),
+(102, 'http://local.pruebas.com/', ''),
+(103, 'http://local.pruebas.com/', ''),
+(104, 'http://local.pruebas.com/', ''),
+(105, 'http://local.pruebas.com/', ''),
+(106, 'http://local.pruebas.com/', ''),
+(107, 'http://local.pruebas.com/', ''),
+(108, 'http://local.envasadoras.com/', ''),
+(109, 'http://local.envasadoras.com/', ''),
+(110, 'http://local.envasadoras.com/', ''),
+(111, 'http://local.pruebas.com/', '');
 
 -- --------------------------------------------------------
 
@@ -24092,7 +24236,7 @@ CREATE TABLE IF NOT EXISTS `log_visitor` (
   `last_url_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `store_id` smallint(5) unsigned NOT NULL,
   PRIMARY KEY (`visitor_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='System visitors log' AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='System visitors log' AUTO_INCREMENT=16 ;
 
 --
 -- Volcar la base de datos para la tabla `log_visitor`
@@ -24112,7 +24256,8 @@ INSERT INTO `log_visitor` (`visitor_id`, `session_id`, `first_visit_at`, `last_v
 (11, '2ghsa3cfbms0kmpdtq9642ig12', '2011-10-08 22:05:56', '2011-10-09 00:02:00', 66, 1),
 (12, '9hr2d5i8jh9dh1oijd4ambi6q2', '2011-10-10 19:55:52', '2011-10-10 21:33:07', 76, 1),
 (13, '2mdhq8rq9clvdkbll0mna2bv92', '2011-10-12 10:08:26', '2011-10-12 10:11:12', 79, 1),
-(14, 'kn1fj04q7itf23lh9lguchp4p5', '2011-10-12 11:20:01', '2011-10-12 12:24:43', 99, 1);
+(14, 'kn1fj04q7itf23lh9lguchp4p5', '2011-10-12 11:20:01', '2011-10-12 12:24:43', 99, 1),
+(15, 'o8cgb5qm8ccv1n4t4nblrs4aj6', '2011-10-31 12:10:55', '2011-10-31 12:15:04', 110, 4);
 
 -- --------------------------------------------------------
 
@@ -24150,7 +24295,8 @@ INSERT INTO `log_visitor_info` (`visitor_id`, `http_referer`, `http_user_agent`,
 (11, '', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433),
 (12, '', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433),
 (13, '', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433),
-(14, '', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433);
+(14, '', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433),
+(15, '', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433);
 
 -- --------------------------------------------------------
 
@@ -24836,6 +24982,56 @@ CREATE TABLE IF NOT EXISTS `poll_vote` (
 -- Volcar la base de datos para la tabla `poll_vote`
 --
 
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `privatesales_event`
+--
+
+DROP TABLE IF EXISTS `privatesales_event`;
+CREATE TABLE IF NOT EXISTS `privatesales_event` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `parent_id` int(11) unsigned NOT NULL,
+  `active` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `start_date` datetime DEFAULT NULL,
+  `finish_date` datetime DEFAULT NULL,
+  `sort` int(11) unsigned DEFAULT NULL,
+  `countdown_category` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `countdown_product` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Volcar la base de datos para la tabla `privatesales_event`
+--
+
+INSERT INTO `privatesales_event` (`id`, `parent_id`, `active`, `start_date`, `finish_date`, `sort`, `countdown_category`, `countdown_product`) VALUES
+(1, 36, 1, '2011-09-18 08:37:43', '2011-09-26 08:37:00', 0, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `privatesales_event_image`
+--
+
+DROP TABLE IF EXISTS `privatesales_event_image`;
+CREATE TABLE IF NOT EXISTS `privatesales_event_image` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `event_id` int(11) unsigned NOT NULL,
+  `store_id` smallint(5) unsigned NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `event_id` (`event_id`,`store_id`),
+  KEY `FK_EVENT_IMAGE_STORE_STORE` (`store_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='PrivateSales EVENT image to STORE' AUTO_INCREMENT=2 ;
+
+--
+-- Volcar la base de datos para la tabla `privatesales_event_image`
+--
+
+INSERT INTO `privatesales_event_image` (`id`, `event_id`, `store_id`, `image`) VALUES
+(1, 1, 0, '/2/0/2011-09-16_100514.png');
 
 -- --------------------------------------------------------
 
@@ -28502,6 +28698,44 @@ CREATE TABLE IF NOT EXISTS `sendfriend_log` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `shipping_matrixdays`
+--
+
+DROP TABLE IF EXISTS `shipping_matrixdays`;
+CREATE TABLE IF NOT EXISTS `shipping_matrixdays` (
+  `pk` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `website_id` int(11) NOT NULL DEFAULT '0',
+  `dest_country_id` varchar(4) NOT NULL DEFAULT '0',
+  `dest_region_id` int(10) NOT NULL DEFAULT '0',
+  `dest_city` varchar(10) NOT NULL DEFAULT '',
+  `dest_zip` varchar(10) NOT NULL DEFAULT '',
+  `dest_zip_to` varchar(10) NOT NULL DEFAULT '',
+  `package_id` varchar(30) NOT NULL DEFAULT '',
+  `weight_from_value` decimal(12,4) NOT NULL DEFAULT '0.0000',
+  `weight_to_value` decimal(12,4) NOT NULL DEFAULT '0.0000',
+  `price_from_value` decimal(12,4) NOT NULL DEFAULT '0.0000',
+  `price_to_value` decimal(12,4) NOT NULL DEFAULT '0.0000',
+  `item_from_value` decimal(12,4) NOT NULL DEFAULT '0.0000',
+  `item_to_value` decimal(12,4) NOT NULL DEFAULT '0.0000',
+  `price` decimal(12,4) NOT NULL DEFAULT '0.0000',
+  `day` int(1) DEFAULT NULL,
+  `algorithm` varchar(255) NOT NULL DEFAULT '',
+  `customer_group` varchar(30) NOT NULL DEFAULT '',
+  `cost` decimal(12,4) NOT NULL DEFAULT '0.0000',
+  `delivery_type` varchar(255) NOT NULL DEFAULT '',
+  `notes` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`pk`),
+  UNIQUE KEY `dest_country` (`website_id`,`dest_country_id`,`dest_region_id`,`dest_city`,`dest_zip`,`dest_zip_to`,`package_id`,`weight_from_value`,`weight_to_value`,`price_from_value`,`price_to_value`,`item_from_value`,`item_to_value`,`delivery_type`,`algorithm`,`customer_group`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Volcar la base de datos para la tabla `shipping_matrixdays`
+--
+
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `shipping_tablerate`
 --
 
@@ -30417,6 +30651,38 @@ CREATE TABLE IF NOT EXISTS `wishlist_item_option` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `wsa_timegrid`
+--
+
+DROP TABLE IF EXISTS `wsa_timegrid`;
+CREATE TABLE IF NOT EXISTS `wsa_timegrid` (
+  `timegrid_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `time_slot_id` varchar(30) NOT NULL DEFAULT '',
+  `1_price` decimal(12,4) DEFAULT NULL,
+  `2_price` decimal(12,4) DEFAULT NULL,
+  `3_price` decimal(12,4) DEFAULT NULL,
+  `4_price` decimal(12,4) DEFAULT NULL,
+  `5_price` decimal(12,4) DEFAULT NULL,
+  `6_price` decimal(12,4) DEFAULT NULL,
+  `7_price` decimal(12,4) DEFAULT NULL,
+  `1_slots` int(5) DEFAULT NULL,
+  `2_slots` int(5) DEFAULT NULL,
+  `3_slots` int(5) DEFAULT NULL,
+  `4_slots` int(5) DEFAULT NULL,
+  `5_slots` int(5) DEFAULT NULL,
+  `6_slots` int(5) DEFAULT NULL,
+  `7_slots` int(5) DEFAULT NULL,
+  PRIMARY KEY (`timegrid_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Volcar la base de datos para la tabla `wsa_timegrid`
+--
+
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `xmlconnect_application`
 --
 
@@ -31295,15 +31561,15 @@ ALTER TABLE `downloadable_sample_title`
 -- Filtros para la tabla `eavblog_post`
 --
 ALTER TABLE `eavblog_post`
-  ADD CONSTRAINT `FK_eavblog_post_type` FOREIGN KEY (`entity_type_id`) REFERENCES `eav_entity_type` (`entity_type_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_eavblog_post_store` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `FK_eavblog_post_store` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_eavblog_post_type` FOREIGN KEY (`entity_type_id`) REFERENCES `eav_entity_type` (`entity_type_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `eavblog_posts`
 --
 ALTER TABLE `eavblog_posts`
-  ADD CONSTRAINT `FK_eavblog_posts_type` FOREIGN KEY (`entity_type_id`) REFERENCES `eav_entity_type` (`entity_type_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_eavblog_posts_store` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `FK_eavblog_posts_store` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_eavblog_posts_type` FOREIGN KEY (`entity_type_id`) REFERENCES `eav_entity_type` (`entity_type_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `eavblog_posts_datetime`
@@ -31633,6 +31899,13 @@ ALTER TABLE `poll_store`
 --
 ALTER TABLE `poll_vote`
   ADD CONSTRAINT `FK_POLL_ANSWER` FOREIGN KEY (`poll_answer_id`) REFERENCES `poll_answer` (`answer_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `privatesales_event_image`
+--
+ALTER TABLE `privatesales_event_image`
+  ADD CONSTRAINT `FK_EVENT_IMAGE_STORE_EVENT` FOREIGN KEY (`event_id`) REFERENCES `privatesales_event` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_EVENT_IMAGE_STORE_STORE` FOREIGN KEY (`store_id`) REFERENCES `core_store` (`store_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `product_alert_price`
