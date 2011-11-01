@@ -7,7 +7,7 @@
 	</modules>
 	<global>
 		<events>
-			 <controller_action_predispatch_adminhtml_sales_order_create_save>
+			 <sales_order_place_before>
 			 <!--  <controller_front_init_routers>-->
 			 	<observers>
 			 		<interactiv4_compraadmin_model_observer>
@@ -17,7 +17,7 @@
 			 		</interactiv4_compraadmin_model_observer>
 			 	</observers>
 			 <!-- </controller_front_init_routers>-->
-			 </controller_action_predispatch_adminhtml_sales_order_create_save>
+			 </sales_order_place_before>
 		</events>
 	</global>
 </config>
