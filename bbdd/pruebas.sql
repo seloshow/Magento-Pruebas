@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 02-11-2011 a las 00:01:58
+-- Tiempo de generación: 03-11-2011 a las 23:47:49
 -- Versión del servidor: 5.1.50
 -- Versión de PHP: 5.2.17
 
@@ -215,7 +215,7 @@ CREATE TABLE IF NOT EXISTS `admin_user` (
 --
 
 INSERT INTO `admin_user` (`user_id`, `firstname`, `lastname`, `email`, `username`, `password`, `created`, `modified`, `logdate`, `lognum`, `reload_acl_flag`, `is_active`, `extra`) VALUES
-(1, 'David ', 'Villalba', 'david.selo@gmail.com', 'admin', 'feb97f60c18dc3b355302064f7431e54:6V', '2008-08-07 14:39:09', '2011-09-28 22:50:58', '2011-11-01 22:44:18', 18, 0, 1, 'a:1:{s:11:"configState";a:15:{s:12:"dev_restrict";s:1:"1";s:9:"dev_debug";s:1:"1";s:20:"dev_translate_inline";s:1:"1";s:7:"dev_log";s:1:"1";s:6:"dev_js";s:1:"0";s:7:"dev_css";s:1:"0";s:7:"web_url";s:1:"0";s:7:"web_seo";s:1:"0";s:12:"web_unsecure";s:1:"0";s:10:"web_secure";s:1:"0";s:11:"web_default";s:1:"1";s:9:"web_polls";s:1:"0";s:10:"web_cookie";s:1:"0";s:11:"web_session";s:1:"0";s:24:"web_browser_capabilities";s:1:"0";}}');
+(1, 'David ', 'Villalba', 'david.selo@gmail.com', 'admin', 'feb97f60c18dc3b355302064f7431e54:6V', '2008-08-07 14:39:09', '2011-09-28 22:50:58', '2011-11-03 21:20:29', 19, 0, 1, 'a:1:{s:11:"configState";a:15:{s:12:"dev_restrict";s:1:"1";s:9:"dev_debug";s:1:"1";s:20:"dev_translate_inline";s:1:"1";s:7:"dev_log";s:1:"1";s:6:"dev_js";s:1:"0";s:7:"dev_css";s:1:"0";s:7:"web_url";s:1:"0";s:7:"web_seo";s:1:"0";s:12:"web_unsecure";s:1:"0";s:10:"web_secure";s:1:"0";s:11:"web_default";s:1:"1";s:9:"web_polls";s:1:"0";s:10:"web_cookie";s:1:"0";s:11:"web_session";s:1:"0";s:24:"web_browser_capabilities";s:1:"0";}}');
 
 -- --------------------------------------------------------
 
@@ -3565,15 +3565,15 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity` (
   `children_count` int(11) NOT NULL,
   PRIMARY KEY (`entity_id`),
   KEY `IDX_LEVEL` (`level`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Category Entityies' AUTO_INCREMENT=35 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Category Entityies' AUTO_INCREMENT=36 ;
 
 --
 -- Volcar la base de datos para la tabla `catalog_category_entity`
 --
 
 INSERT INTO `catalog_category_entity` (`entity_id`, `entity_type_id`, `attribute_set_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`) VALUES
-(1, 9, 12, 0, '2007-07-20 18:46:08', '2007-08-07 09:50:15', '1', 1, 0, 26),
-(3, 9, 12, 1, '2007-08-22 15:54:41', '2011-11-01 19:26:35', '1/3', 3, 1, 25),
+(1, 9, 12, 0, '2007-07-20 18:46:08', '2007-08-07 09:50:15', '1', 1, 0, 27),
+(3, 9, 12, 1, '2007-08-22 15:54:41', '2011-11-01 19:26:35', '1/3', 3, 1, 26),
 (4, 9, 12, 18, '2007-08-22 15:55:34', '2008-08-08 00:56:48', '1/3/18/4', 4, 3, 0),
 (5, 9, 12, 18, '2007-08-22 16:21:29', '2008-08-07 23:55:38', '1/3/18/5', 5, 3, 2),
 (8, 9, 12, 13, '2007-08-22 18:10:30', '2008-08-07 23:51:26', '1/3/13/8', 8, 3, 0),
@@ -3598,7 +3598,8 @@ INSERT INTO `catalog_category_entity` (`entity_id`, `entity_type_id`, `attribute
 (31, 9, 12, 13, '2008-07-25 00:41:56', '2008-07-25 00:41:56', '1/3/13/15/31', 5, 4, 0),
 (32, 9, 12, 13, '2008-07-25 00:42:57', '2008-07-25 00:42:57', '1/3/13/15/32', 6, 4, 0),
 (33, 9, 12, 13, '2008-07-25 00:43:25', '2008-07-25 00:43:25', '1/3/13/15/33', 7, 4, 0),
-(34, 9, 12, 13, '2008-07-25 00:44:17', '2008-07-25 00:44:17', '1/3/13/15/34', 8, 4, 0);
+(34, 9, 12, 13, '2008-07-25 00:44:17', '2008-07-25 00:44:17', '1/3/13/15/34', 8, 4, 0),
+(35, 9, 12, 3, '2011-11-03 21:26:16', '2011-11-03 21:26:56', '1/3/35', 21, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -3619,7 +3620,7 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity_datetime` (
   KEY `FK_ATTRIBUTE_DATETIME_ENTITY` (`entity_id`),
   KEY `FK_CATALOG_CATEGORY_ENTITY_DATETIME_ATTRIBUTE` (`attribute_id`),
   KEY `FK_CATALOG_CATEGORY_ENTITY_DATETIME_STORE` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Volcar la base de datos para la tabla `catalog_category_entity_datetime`
@@ -3627,7 +3628,9 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity_datetime` (
 
 INSERT INTO `catalog_category_entity_datetime` (`value_id`, `entity_type_id`, `attribute_id`, `store_id`, `entity_id`, `value`) VALUES
 (1, 9, 565, 0, 3, NULL),
-(2, 9, 566, 0, 3, NULL);
+(2, 9, 566, 0, 3, NULL),
+(3, 9, 565, 0, 35, NULL),
+(4, 9, 566, 0, 35, NULL);
 
 -- --------------------------------------------------------
 
@@ -3674,7 +3677,7 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity_int` (
   KEY `FK_ATTRIBUTE_INT_ENTITY` (`entity_id`),
   KEY `FK_CATALOG_CATEGORY_EMTITY_INT_ATTRIBUTE` (`attribute_id`),
   KEY `FK_CATALOG_CATEGORY_EMTITY_INT_STORE` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=159 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=166 ;
 
 --
 -- Volcar la base de datos para la tabla `catalog_category_entity_int`
@@ -3810,7 +3813,14 @@ INSERT INTO `catalog_category_entity_int` (`value_id`, `entity_type_id`, `attrib
 (154, 9, 117, 0, 3, NULL),
 (155, 9, 120, 0, 3, 0),
 (156, 9, 936, 0, 3, 0),
-(157, 9, 937, 0, 3, NULL);
+(157, 9, 937, 0, 3, NULL),
+(158, 9, 119, 0, 35, 1),
+(159, 9, 932, 0, 35, 0),
+(160, 9, 117, 0, 35, NULL),
+(161, 9, 120, 0, 35, 0),
+(162, 9, 935, 0, 35, 0),
+(163, 9, 936, 0, 35, 0),
+(164, 9, 937, 0, 35, NULL);
 
 -- --------------------------------------------------------
 
@@ -3831,7 +3841,7 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity_text` (
   KEY `FK_ATTRIBUTE_TEXT_ENTITY` (`entity_id`),
   KEY `FK_CATALOG_CATEGORY_ENTITY_TEXT_ATTRIBUTE` (`attribute_id`),
   KEY `FK_CATALOG_CATEGORY_ENTITY_TEXT_STORE` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=152 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=157 ;
 
 --
 -- Volcar la base de datos para la tabla `catalog_category_entity_text`
@@ -3988,7 +3998,12 @@ INSERT INTO `catalog_category_entity_text` (`value_id`, `entity_type_id`, `attri
 (148, 9, 115, 0, 3, ''),
 (149, 9, 116, 0, 3, ''),
 (150, 9, 530, 0, 3, ''),
-(151, 9, 927, 0, 3, '');
+(151, 9, 927, 0, 3, ''),
+(152, 9, 112, 0, 35, ''),
+(153, 9, 115, 0, 35, ''),
+(154, 9, 116, 0, 35, ''),
+(155, 9, 530, 0, 35, ''),
+(156, 9, 927, 0, 35, '');
 
 -- --------------------------------------------------------
 
@@ -4009,7 +4024,7 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity_varchar` (
   KEY `FK_ATTRIBUTE_VARCHAR_ENTITY` (`entity_id`),
   KEY `FK_CATALOG_CATEGORY_ENTITY_VARCHAR_ATTRIBUTE` (`attribute_id`),
   KEY `FK_CATALOG_CATEGORY_ENTITY_VARCHAR_STORE` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=209 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=216 ;
 
 --
 -- Volcar la base de datos para la tabla `catalog_category_entity_varchar`
@@ -4222,7 +4237,15 @@ INSERT INTO `catalog_category_entity_varchar` (`value_id`, `entity_type_id`, `at
 (204, 9, 533, 1, 20, 'household-items.html'),
 (205, 9, 114, 0, 3, ''),
 (206, 9, 563, 0, 3, ''),
-(207, 9, 514, 0, 3, '');
+(207, 9, 514, 0, 3, ''),
+(208, 9, 111, 0, 35, 'featured products'),
+(209, 9, 114, 0, 35, ''),
+(210, 9, 479, 0, 35, 'featured-products'),
+(211, 9, 118, 0, 35, 'PRODUCTS'),
+(212, 9, 563, 0, 35, ''),
+(213, 9, 514, 0, 35, ''),
+(214, 9, 533, 1, 35, 'featured-products.html'),
+(215, 9, 533, 0, 35, 'featured-products.html');
 
 -- --------------------------------------------------------
 
@@ -4625,7 +4648,9 @@ INSERT INTO `catalog_category_product` (`category_id`, `product_id`, `position`)
 (34, 159, 0),
 (34, 160, 0),
 (34, 161, 0),
-(34, 162, 0);
+(34, 162, 0),
+(35, 157, 0),
+(35, 166, 0);
 
 -- --------------------------------------------------------
 
@@ -5092,6 +5117,8 @@ INSERT INTO `catalog_category_product_index` (`category_id`, `product_id`, `posi
 (34, 160, 0, 1, 1, 4),
 (34, 161, 0, 1, 1, 4),
 (34, 162, 0, 1, 1, 4),
+(35, 157, 0, 1, 1, 4),
+(35, 166, 0, 1, 1, 4),
 (3, 35, 200000, 0, 2, 1),
 (3, 36, 200000, 0, 2, 1),
 (3, 37, 200000, 0, 2, 1),
@@ -5531,6 +5558,8 @@ INSERT INTO `catalog_category_product_index` (`category_id`, `product_id`, `posi
 (34, 160, 0, 1, 2, 4),
 (34, 161, 0, 1, 2, 4),
 (34, 162, 0, 1, 2, 4),
+(35, 157, 0, 1, 2, 4),
+(35, 166, 0, 1, 2, 4),
 (3, 35, 200000, 0, 3, 1),
 (3, 36, 200000, 0, 3, 1),
 (3, 37, 200000, 0, 3, 1),
@@ -5969,7 +5998,9 @@ INSERT INTO `catalog_category_product_index` (`category_id`, `product_id`, `posi
 (34, 159, 0, 1, 3, 4),
 (34, 160, 0, 1, 3, 4),
 (34, 161, 0, 1, 3, 4),
-(34, 162, 0, 1, 3, 4);
+(34, 162, 0, 1, 3, 4),
+(35, 157, 0, 1, 3, 4),
+(35, 166, 0, 1, 3, 4);
 
 -- --------------------------------------------------------
 
@@ -15939,7 +15970,7 @@ INSERT INTO `cms_page` (`page_id`, `title`, `root_template`, `meta_keywords`, `m
 (4, 'Customer Service', 'three_columns', '', '', 'customer-service', '', '<div class="page-head">\r\n<h3>Customer Service</h3>\r\n</div>\r\n<ul class="disc" style="margin-bottom:15px;">\r\n<li><a href="#answer1">Shipping & Delivery</a></li>\r\n<li><a href="#answer2">Privacy & Security</a></li>\r\n<li><a href="#answer3">Returns & Replacements</a></li>\r\n<li><a href="#answer4">Ordering</a></li>\r\n<li><a href="#answer5">Payment, Pricing & Promotions</a></li>\r\n<li><a href="#answer6">Viewing Orders</a></li>\r\n<li><a href="#answer7">Updating Account Information</a></li>\r\n</ul>\r\n<dl>\r\n<dt id="answer1">Shipping & Delivery</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer2">Privacy & Security</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer3">Returns & Replacements</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer4">Ordering</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer5">Payment, Pricing & Promotions</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer6">Viewing Orders</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer7">Updating Account Information</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n</dl>', '2007-08-30 14:02:20', '2007-08-30 14:03:37', 1, 0, NULL, NULL, '', NULL, NULL, NULL),
 (5, 'Home page', 'one_column', '', '', 'home', '', '<!-- this homepage can be used for modern theme  -->\r\n<p>{{block type="core/template" template="sample/home.phtml"}}</p>', '2008-04-16 14:51:52', '2011-11-01 19:30:50', 1, 0, '<!--<reference name="content">\r\n<block type="catalog/product_new" name="home.catalog.product.new" alias="product_new" template="catalog/product/new.phtml" after="cms_page"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n<block type="reports/product_viewed" name="home.reports.product.viewed" alias="product_viewed" template="reports/home_product_viewed.phtml" after="product_new"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n<block type="reports/product_compared" name="home.reports.product.compared" template="reports/home_product_compared.phtml" after="product_viewed"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n</reference><reference name="right">\r\n<action method="unsetChild"><alias>right.reports.product.viewed</alias></action>\r\n<action method="unsetChild"><alias>right.reports.product.compared</alias></action>\r\n</reference>-->', '', '', '', NULL, NULL),
 (6, 'Enable Cookies', 'one_column', '', '', 'enable-cookies', '', '<div class="std">\r\n    <ul class="messages">\r\n        <li class="notice-msg">\r\n            <ul>\r\n                <li>Please enable cookies in your web browser to continue.</li>\r\n            </ul>\r\n        </li>\r\n    </ul>\r\n    <div class="page-title">\r\n        <h1><a name="top"></a>What are Cookies?</h1>\r\n    </div>\r\n    <p>Cookies are short pieces of data that are sent to your computer when you visit a website. On later visits, this data is then returned to that website. Cookies allow us to recognize you automatically whenever you visit our site so that we can personalize your experience and provide you with better service. We also use cookies (and similar browser data, such as Flash cookies) for fraud prevention and other purposes. If your web browser is set to refuse cookies from our website, you will not be able to complete a purchase or take advantage of certain features of our website, such as storing items in your Shopping Cart or receiving personalized recommendations. As a result, we strongly encourage you to configure your web browser to accept cookies from our website.</p>\r\n    <h2 class="subtitle">Enabling Cookies</h2>\r\n    <ul class="disc">\r\n        <li><a href="#ie7">Internet Explorer 7.x</a></li>\r\n        <li><a href="#ie6">Internet Explorer 6.x</a></li>\r\n        <li><a href="#firefox">Mozilla/Firefox</a></li>\r\n        <li><a href="#opera">Opera 7.x</a></li>\r\n    </ul>\r\n    <h3><a name="ie7"></a>Internet Explorer 7.x</h3>\r\n    <ol>\r\n        <li>\r\n            <p>Start Internet Explorer</p>\r\n        </li>\r\n        <li>\r\n            <p>Under the <strong>Tools</strong> menu, click <strong>Internet Options</strong></p>\r\n            <p><img src="{{skin url="images/cookies/ie7-1.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click the <strong>Privacy</strong> tab</p>\r\n            <p><img src="{{skin url="images/cookies/ie7-2.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click the <strong>Advanced</strong> button</p>\r\n            <p><img src="{{skin url="images/cookies/ie7-3.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Put a check mark in the box for <strong>Override Automatic Cookie Handling</strong>, put another check mark in the <strong>Always accept session cookies </strong>box</p>\r\n            <p><img src="{{skin url="images/cookies/ie7-4.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click <strong>OK</strong></p>\r\n            <p><img src="{{skin url="images/cookies/ie7-5.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click <strong>OK</strong></p>\r\n            <p><img src="{{skin url="images/cookies/ie7-6.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Restart Internet Explore</p>\r\n        </li>\r\n    </ol>\r\n    <p class="a-top"><a href="#top">Back to Top</a></p>\r\n    <h3><a name="ie6"></a>Internet Explorer 6.x</h3>\r\n    <ol>\r\n        <li>\r\n            <p>Select <strong>Internet Options</strong> from the Tools menu</p>\r\n            <p><img src="{{skin url="images/cookies/ie6-1.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Privacy</strong> tab</p>\r\n        </li>\r\n        <li>\r\n            <p>Click the <strong>Default</strong> button (or manually slide the bar down to <strong>Medium</strong>) under <strong>Settings</strong>. Click <strong>OK</strong></p>\r\n            <p><img src="{{skin url="images/cookies/ie6-2.gif"}}" alt="" /></p>\r\n        </li>\r\n    </ol>\r\n    <p class="a-top"><a href="#top">Back to Top</a></p>\r\n    <h3><a name="firefox"></a>Mozilla/Firefox</h3>\r\n    <ol>\r\n        <li>\r\n            <p>Click on the <strong>Tools</strong>-menu in Mozilla</p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Options...</strong> item in the menu - a new window open</p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Privacy</strong> selection in the left part of the window. (See image below)</p>\r\n            <p><img src="{{skin url="images/cookies/firefox.png"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Expand the <strong>Cookies</strong> section</p>\r\n        </li>\r\n        <li>\r\n            <p>Check the <strong>Enable cookies</strong> and <strong>Accept cookies normally</strong> checkboxes</p>\r\n        </li>\r\n        <li>\r\n            <p>Save changes by clicking <strong>Ok</strong>.</p>\r\n        </li>\r\n    </ol>\r\n    <p class="a-top"><a href="#top">Back to Top</a></p>\r\n    <h3><a name="opera"></a>Opera 7.x</h3>\r\n    <ol>\r\n        <li>\r\n            <p>Click on the <strong>Tools</strong> menu in Opera</p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Preferences...</strong> item in the menu - a new window open</p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Privacy</strong> selection near the bottom left of the window. (See image below)</p>\r\n            <p><img src="{{skin url="images/cookies/opera.png"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>The <strong>Enable cookies</strong> checkbox must be checked, and <strong>Accept all cookies</strong> should be selected in the &quot;<strong>Normal cookies</strong>&quot; drop-down</p>\r\n        </li>\r\n        <li>\r\n            <p>Save changes by clicking <strong>Ok</strong></p>\r\n        </li>\r\n    </ol>\r\n    <p class="a-top"><a href="#top">Back to Top</a></p>\r\n</div>\r\n', '2011-09-28 22:45:58', '2011-09-28 22:45:58', 1, 0, NULL, NULL, '', NULL, NULL, NULL),
-(7, 'Pagina para realizar pruebas', 'one_column', '', '', 'inicio', '', '<h1>Home Page</h1>\r\n<p>{{widget type="widgettwo/list" enabled_services="digg,delicious,twitter" template="widgettwo/icons.phtml"}}</p>', '2011-11-01 19:44:35', '2011-11-01 23:00:04', 1, 0, '', '', '', '', NULL, NULL);
+(7, 'Pagina para realizar pruebas', 'one_column', '', '', 'inicio', '', '<h1>Home Page</h1>\r\n<p>{{widget type="widgettwo/list" enabled_services="digg,delicious,twitter" template="widgettwo/icons.phtml"}}</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h1>Featured products</h1>\r\n<p>{{block type="catalog/product_list" name="product_feature_products" category_id="35" column_count="3" template="catalog/product/list.phtml"}}</p>', '2011-11-01 19:44:35', '2011-11-03 22:45:00', 1, 0, '', '', '', '', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -16474,7 +16505,7 @@ CREATE TABLE IF NOT EXISTS `core_url_rewrite` (
   KEY `IDX_ID_PATH` (`id_path`),
   KEY `IDX_CATEGORY_REWRITE` (`category_id`,`is_system`,`product_id`,`store_id`,`id_path`),
   KEY `IDX_TARGET_PATH` (`target_path`,`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=847 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=856 ;
 
 --
 -- Volcar la base de datos para la tabla `core_url_rewrite`
@@ -17328,7 +17359,16 @@ INSERT INTO `core_url_rewrite` (`url_rewrite_id`, `store_id`, `category_id`, `pr
 (843, 2, NULL, 146, '77527700_1317251399', '1-year-extended-warranty-parts-and-labor-146.html', '1-year-extended-warranty-parts-and-labor-2.html', 0, 'RP', NULL),
 (844, 2, NULL, 158, '88621800_1317251399', 'sony-vaio-vgn-txn27n-b-11-1-notebook-pc-158.html', 'sony-vaio-vgn-txn27n-b-11-1-notebook-pc-1.html', 0, 'RP', NULL),
 (845, 2, NULL, 162, '96429100_1317251399', 'microsoft-wireless-optical-mouse-5000-162.html', 'microsoft-wireless-optical-mouse-5001.html', 0, 'RP', NULL),
-(846, 2, 34, 162, '03232000_1317251400', 'electronics/computers/peripherals/microsoft-wireless-optical-mouse-5000-162.html', 'electronics/computers/peripherals/microsoft-wireless-optical-mouse-5001.html', 0, 'RP', NULL);
+(846, 2, 34, 162, '03232000_1317251400', 'electronics/computers/peripherals/microsoft-wireless-optical-mouse-5000-162.html', 'electronics/computers/peripherals/microsoft-wireless-optical-mouse-5001.html', 0, 'RP', NULL),
+(847, 1, 35, NULL, 'category/35', 'featured-products.html', 'catalog/category/view/id/35', 1, '', NULL),
+(848, 3, 35, NULL, 'category/35', 'featured-products.html', 'catalog/category/view/id/35', 1, '', NULL),
+(849, 2, 35, NULL, 'category/35', 'featured-products.html', 'catalog/category/view/id/35', 1, '', NULL),
+(850, 1, 35, 157, 'product/157/35', 'featured-products/30-flat-panel-tft-lcd-cinema-hd-monitor.html', 'catalog/product/view/id/157/category/35', 1, '', NULL),
+(851, 1, 35, 166, 'product/166/35', 'featured-products/htc-touch-diamond.html', 'catalog/product/view/id/166/category/35', 1, '', NULL),
+(852, 3, 35, 157, 'product/157/35', 'featured-products/30-flat-panel-tft-lcd-cinema-hd-monitor.html', 'catalog/product/view/id/157/category/35', 1, '', NULL),
+(853, 3, 35, 166, 'product/166/35', 'featured-products/htc-touch-diamond.html', 'catalog/product/view/id/166/category/35', 1, '', NULL),
+(854, 2, 35, 157, 'product/157/35', 'featured-products/30-flat-panel-tft-lcd-cinema-hd-monitor.html', 'catalog/product/view/id/157/category/35', 1, '', NULL),
+(855, 2, 35, 166, 'product/166/35', 'featured-products/htc-touch-diamond.html', 'catalog/product/view/id/166/category/35', 1, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -23750,14 +23790,15 @@ CREATE TABLE IF NOT EXISTS `index_event` (
   `new_data` mediumtext,
   PRIMARY KEY (`event_id`),
   UNIQUE KEY `IDX_UNIQUE_EVENT` (`type`,`entity`,`entity_pk`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Volcar la base de datos para la tabla `index_event`
 --
 
 INSERT INTO `index_event` (`event_id`, `type`, `entity`, `entity_pk`, `created_at`, `old_data`, `new_data`) VALUES
-(1, 'save', 'catalog_category', 3, '2011-11-01 19:26:23', 'a:3:{s:30:"Mage_Catalog_Model_Indexer_Url";N;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}', 'a:9:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:30:"Mage_Catalog_Model_Indexer_Url";N;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:1;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:35:"catalogsearch_fulltext_match_result";b:1;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}');
+(1, 'save', 'catalog_category', 3, '2011-11-01 19:26:23', 'a:3:{s:30:"Mage_Catalog_Model_Indexer_Url";N;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}', 'a:9:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:30:"Mage_Catalog_Model_Indexer_Url";N;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:1;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:35:"catalogsearch_fulltext_match_result";b:1;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}'),
+(2, 'save', 'catalog_category', 35, '2011-11-03 21:26:19', 'a:3:{s:30:"Mage_Catalog_Model_Indexer_Url";N;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}', 'a:9:{s:35:"cataloginventory_stock_match_result";b:0;s:34:"catalog_product_price_match_result";b:0;s:24:"catalog_url_match_result";b:1;s:30:"Mage_Catalog_Model_Indexer_Url";N;s:33:"catalog_product_flat_match_result";b:0;s:37:"catalog_category_product_match_result";b:1;s:43:"Mage_Catalog_Model_Category_Indexer_Product";N;s:35:"catalogsearch_fulltext_match_result";b:1;s:41:"Mage_CatalogSearch_Model_Indexer_Fulltext";N;}');
 
 -- --------------------------------------------------------
 
@@ -23813,8 +23854,11 @@ CREATE TABLE IF NOT EXISTS `index_process_event` (
 
 INSERT INTO `index_process_event` (`process_id`, `event_id`, `status`) VALUES
 (3, 1, 'done'),
+(3, 2, 'done'),
 (6, 1, 'done'),
-(7, 1, 'done');
+(6, 2, 'done'),
+(7, 1, 'done'),
+(7, 2, 'done');
 
 -- --------------------------------------------------------
 
@@ -24144,7 +24188,20 @@ INSERT INTO `log_url` (`url_id`, `visitor_id`, `visit_time`) VALUES
 (212, 41, '2011-11-01 19:59:45'),
 (213, 43, '2011-11-01 22:57:54'),
 (214, 43, '2011-11-01 22:58:50'),
-(215, 43, '2011-11-01 23:00:13');
+(215, 43, '2011-11-01 23:00:13'),
+(216, 43, '2011-11-01 23:15:50'),
+(217, 44, '2011-11-03 21:20:19'),
+(218, 44, '2011-11-03 21:26:30'),
+(219, 44, '2011-11-03 21:29:12'),
+(220, 44, '2011-11-03 21:59:15'),
+(221, 44, '2011-11-03 21:59:42'),
+(222, 44, '2011-11-03 22:03:05'),
+(223, 44, '2011-11-03 22:03:21'),
+(224, 44, '2011-11-03 22:04:20'),
+(225, 44, '2011-11-03 22:05:42'),
+(226, 44, '2011-11-03 22:06:01'),
+(227, 44, '2011-11-03 22:06:29'),
+(228, 44, '2011-11-03 22:06:46');
 
 -- --------------------------------------------------------
 
@@ -24158,7 +24215,7 @@ CREATE TABLE IF NOT EXISTS `log_url_info` (
   `url` varchar(255) NOT NULL DEFAULT '',
   `referer` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`url_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Detale information about url visit' AUTO_INCREMENT=216 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Detale information about url visit' AUTO_INCREMENT=229 ;
 
 --
 -- Volcar la base de datos para la tabla `log_url_info`
@@ -24378,7 +24435,20 @@ INSERT INTO `log_url_info` (`url_id`, `url`, `referer`) VALUES
 (212, 'http://local.pruebas.com/', 'http://local.pruebas.com/'),
 (213, 'http://local.pruebas.com/', 'http://local.pruebas.com/'),
 (214, 'http://local.pruebas.com/', ''),
-(215, 'http://local.pruebas.com/', '');
+(215, 'http://local.pruebas.com/', ''),
+(216, 'http://local.pruebas.com/', ''),
+(217, 'http://local.pruebas.com/', ''),
+(218, 'http://local.pruebas.com/', ''),
+(219, 'http://local.pruebas.com/', ''),
+(220, 'http://local.pruebas.com/', ''),
+(221, 'http://local.pruebas.com/', ''),
+(222, 'http://local.pruebas.com/', ''),
+(223, 'http://local.pruebas.com/', ''),
+(224, 'http://local.pruebas.com/', ''),
+(225, 'http://local.pruebas.com/', ''),
+(226, 'http://local.pruebas.com/', ''),
+(227, 'http://local.pruebas.com/', ''),
+(228, 'http://local.pruebas.com/', '');
 
 -- --------------------------------------------------------
 
@@ -24395,7 +24465,7 @@ CREATE TABLE IF NOT EXISTS `log_visitor` (
   `last_url_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `store_id` smallint(5) unsigned NOT NULL,
   PRIMARY KEY (`visitor_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='System visitors log' AUTO_INCREMENT=44 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='System visitors log' AUTO_INCREMENT=45 ;
 
 --
 -- Volcar la base de datos para la tabla `log_visitor`
@@ -24444,7 +24514,8 @@ INSERT INTO `log_visitor` (`visitor_id`, `session_id`, `first_visit_at`, `last_v
 (40, 's4i14sdsjv4rn4744rl1c2kbr4', '2011-11-01 17:38:38', '2011-11-01 17:38:52', 182, 1),
 (41, 'oappeve99gr3hdl54gbvg3ars5', '2011-11-01 19:22:40', '2011-11-01 19:59:45', 212, 1),
 (42, 't7l7ntbj1t5744jfhifd86vdu2', '2011-11-01 22:56:41', '2011-11-01 22:56:41', 0, 1),
-(43, 't7l7ntbj1t5744jfhifd86vdu2', '2011-11-01 22:57:52', '2011-11-01 23:00:13', 215, 1);
+(43, 't7l7ntbj1t5744jfhifd86vdu2', '2011-11-01 22:57:52', '2011-11-01 23:15:50', 216, 1),
+(44, 'jqo35jdoq5f8n1fkv7jipheqq1', '2011-11-03 21:20:10', '2011-11-03 22:06:46', 228, 1);
 
 -- --------------------------------------------------------
 
@@ -24511,7 +24582,8 @@ INSERT INTO `log_visitor_info` (`visitor_id`, `http_referer`, `http_user_agent`,
 (40, '', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433),
 (41, 'http://local.pruebas.com/', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433),
 (42, 'http://local.pruebas.com/', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433),
-(43, 'http://local.pruebas.com/', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433);
+(43, 'http://local.pruebas.com/', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433),
+(44, '', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433);
 
 -- --------------------------------------------------------
 
