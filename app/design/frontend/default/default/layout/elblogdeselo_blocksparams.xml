@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<layout>
-	<default>
-		<block type="blocksparamas/test" name="nombre_unico" template="blocksparamas/test.phmtl"></block>
-	</default>
-</layout>
