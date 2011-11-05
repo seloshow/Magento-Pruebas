@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Elblogdeselo_Blocksparams>
+			<version>0.1.0</version>
+		</Elblogdeselo_Blocksparams>
+	</modules>
+	<global>
+		<blocks>
+			<blocksparams>
+				<class>Elblogdeselo_Blocksparams_Block</class>
+			</blocksparams>
+		</blocks>
+	</global>
+</config>
