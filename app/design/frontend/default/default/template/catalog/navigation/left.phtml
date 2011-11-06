@@ -1,0 +1,27 @@
+<div id="leftnav">
+    <?php $helper = $this->helper('catalog/category') ?>
+    <?php $categories = $this->getStoreCategories() ?>
+    <?php if (count($categories) > 0): ?>
+        <ul id="leftnav-tree" class="level0">
+            <?php foreach($categories as $category): ?>
+                <li class="level0<?php if ($this->isCategoryActive($category)): ?> active<?php endif; ?>">
+                    <a href="<?php echo $helper->getCategoryUrl($category) ?>"><span><?php echo $this->escapeHtml($category->getName()) ?></span></a>
+                    <?php if ($this->isCategoryActive($category)): ?>
+                        <?php $subcategories = $category->getChildren() ?>
+                        <?php if (count($subcategories) > 0): ?>
+                            <ul id="leftnav-tree-<?php echo $category->getId() ?>" class="level1">
+                                <?php foreach($subcategories as $subcategory): ?>
+                                    <li class="level1<?php if ($this->isCategoryActive($subcategory)): ?> active<?php endif; ?>">
+                                        <a href="<?php echo $helper->getCategoryUrl($subcategory) ?>"><?php echo $this->escapeHtml(trim($subcategory->getName(), '- ')) ?></a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                            <script type="text/javascript">decorateList('leftnav-tree-<?php echo $category->getId() ?>', 'recursive')</script>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+        <script type="text/javascript">decorateList('leftnav-tree', 'recursive')</script>
+    <?php endif; ?>
+</div>
