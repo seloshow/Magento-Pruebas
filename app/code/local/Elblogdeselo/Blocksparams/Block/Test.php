@@ -13,16 +13,19 @@
  * extendemos de Mage_Core_Block_template automáticamente el template que le pongamos en el parámetro de creación será su salida html.
  *{{block type="blocksparams/test" name="bloque_con_parametros" nombre="david" apellidos="villalba flores" template="blocksparams/test.phtml"}}
  *tomará el template="blocksparams/test.phtml" como salida html.
+ *Nota: el bloque Mage_core_Block_Template si creamos método _toHtml() prevalecerá sobre el template y mostrará ese html,esto es 
+ *debido a que dicha clase extiende de Mage_Core_Block_template y tiene ese método heredado.
+ *
  */
-//class Elblogdeselo_Blocksparams_Block_Test extends Mage_Core_Block_Abstract{
-class Elblogdeselo_Blocksparams_Block_Test extends Mage_Core_Block_Template{
+class Elblogdeselo_Blocksparams_Block_Test extends Mage_Core_Block_Abstract{
+//class Elblogdeselo_Blocksparams_Block_Test extends Mage_Core_Block_Template{
 	
-	/*
+	
 	protected function _toHtml(){
 		
 		$nombre=$this->getNombre();
 		$apellidos=$this->getApellidos();
 		$html=$nombre." ".$apellidos;
 		return $html;
-	}*/
+	}
 }

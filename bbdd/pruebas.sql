@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 03-11-2011 a las 23:47:49
+-- Tiempo de generación: 06-11-2011 a las 01:52:04
 -- Versión del servidor: 5.1.50
 -- Versión de PHP: 5.2.17
 
@@ -215,7 +215,7 @@ CREATE TABLE IF NOT EXISTS `admin_user` (
 --
 
 INSERT INTO `admin_user` (`user_id`, `firstname`, `lastname`, `email`, `username`, `password`, `created`, `modified`, `logdate`, `lognum`, `reload_acl_flag`, `is_active`, `extra`) VALUES
-(1, 'David ', 'Villalba', 'david.selo@gmail.com', 'admin', 'feb97f60c18dc3b355302064f7431e54:6V', '2008-08-07 14:39:09', '2011-09-28 22:50:58', '2011-11-03 21:20:29', 19, 0, 1, 'a:1:{s:11:"configState";a:15:{s:12:"dev_restrict";s:1:"1";s:9:"dev_debug";s:1:"1";s:20:"dev_translate_inline";s:1:"1";s:7:"dev_log";s:1:"1";s:6:"dev_js";s:1:"0";s:7:"dev_css";s:1:"0";s:7:"web_url";s:1:"0";s:7:"web_seo";s:1:"0";s:12:"web_unsecure";s:1:"0";s:10:"web_secure";s:1:"0";s:11:"web_default";s:1:"1";s:9:"web_polls";s:1:"0";s:10:"web_cookie";s:1:"0";s:11:"web_session";s:1:"0";s:24:"web_browser_capabilities";s:1:"0";}}');
+(1, 'David ', 'Villalba', 'david.selo@gmail.com', 'admin', 'feb97f60c18dc3b355302064f7431e54:6V', '2008-08-07 14:39:09', '2011-09-28 22:50:58', '2011-11-06 00:24:05', 22, 0, 1, 'a:1:{s:11:"configState";a:22:{s:12:"dev_restrict";s:1:"1";s:9:"dev_debug";s:1:"1";s:20:"dev_translate_inline";s:1:"1";s:7:"dev_log";s:1:"1";s:6:"dev_js";s:1:"0";s:7:"dev_css";s:1:"0";s:7:"web_url";s:1:"0";s:7:"web_seo";s:1:"0";s:12:"web_unsecure";s:1:"0";s:10:"web_secure";s:1:"0";s:11:"web_default";s:1:"1";s:9:"web_polls";s:1:"0";s:10:"web_cookie";s:1:"0";s:11:"web_session";s:1:"0";s:24:"web_browser_capabilities";s:1:"0";s:14:"design_package";s:1:"0";s:12:"design_theme";s:1:"0";s:11:"design_head";s:1:"1";s:13:"design_header";s:1:"0";s:13:"design_footer";s:1:"0";s:16:"design_watermark";s:1:"0";s:17:"design_pagination";s:1:"0";}}');
 
 -- --------------------------------------------------------
 
@@ -3620,7 +3620,7 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity_datetime` (
   KEY `FK_ATTRIBUTE_DATETIME_ENTITY` (`entity_id`),
   KEY `FK_CATALOG_CATEGORY_ENTITY_DATETIME_ATTRIBUTE` (`attribute_id`),
   KEY `FK_CATALOG_CATEGORY_ENTITY_DATETIME_STORE` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Volcar la base de datos para la tabla `catalog_category_entity_datetime`
@@ -3677,7 +3677,7 @@ CREATE TABLE IF NOT EXISTS `catalog_category_entity_int` (
   KEY `FK_ATTRIBUTE_INT_ENTITY` (`entity_id`),
   KEY `FK_CATALOG_CATEGORY_EMTITY_INT_ATTRIBUTE` (`attribute_id`),
   KEY `FK_CATALOG_CATEGORY_EMTITY_INT_STORE` (`store_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=166 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=165 ;
 
 --
 -- Volcar la base de datos para la tabla `catalog_category_entity_int`
@@ -15970,7 +15970,7 @@ INSERT INTO `cms_page` (`page_id`, `title`, `root_template`, `meta_keywords`, `m
 (4, 'Customer Service', 'three_columns', '', '', 'customer-service', '', '<div class="page-head">\r\n<h3>Customer Service</h3>\r\n</div>\r\n<ul class="disc" style="margin-bottom:15px;">\r\n<li><a href="#answer1">Shipping & Delivery</a></li>\r\n<li><a href="#answer2">Privacy & Security</a></li>\r\n<li><a href="#answer3">Returns & Replacements</a></li>\r\n<li><a href="#answer4">Ordering</a></li>\r\n<li><a href="#answer5">Payment, Pricing & Promotions</a></li>\r\n<li><a href="#answer6">Viewing Orders</a></li>\r\n<li><a href="#answer7">Updating Account Information</a></li>\r\n</ul>\r\n<dl>\r\n<dt id="answer1">Shipping & Delivery</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer2">Privacy & Security</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer3">Returns & Replacements</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer4">Ordering</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer5">Payment, Pricing & Promotions</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer6">Viewing Orders</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n<dt id="answer7">Updating Account Information</dt>\r\n<dd style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</dd>\r\n</dl>', '2007-08-30 14:02:20', '2007-08-30 14:03:37', 1, 0, NULL, NULL, '', NULL, NULL, NULL),
 (5, 'Home page', 'one_column', '', '', 'home', '', '<!-- this homepage can be used for modern theme  -->\r\n<p>{{block type="core/template" template="sample/home.phtml"}}</p>', '2008-04-16 14:51:52', '2011-11-01 19:30:50', 1, 0, '<!--<reference name="content">\r\n<block type="catalog/product_new" name="home.catalog.product.new" alias="product_new" template="catalog/product/new.phtml" after="cms_page"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n<block type="reports/product_viewed" name="home.reports.product.viewed" alias="product_viewed" template="reports/home_product_viewed.phtml" after="product_new"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n<block type="reports/product_compared" name="home.reports.product.compared" template="reports/home_product_compared.phtml" after="product_viewed"><action method="addPriceBlockType"><type>bundle</type><block>bundle/catalog_product_price</block><template>bundle/catalog/product/price.phtml</template></action></block>\r\n</reference><reference name="right">\r\n<action method="unsetChild"><alias>right.reports.product.viewed</alias></action>\r\n<action method="unsetChild"><alias>right.reports.product.compared</alias></action>\r\n</reference>-->', '', '', '', NULL, NULL),
 (6, 'Enable Cookies', 'one_column', '', '', 'enable-cookies', '', '<div class="std">\r\n    <ul class="messages">\r\n        <li class="notice-msg">\r\n            <ul>\r\n                <li>Please enable cookies in your web browser to continue.</li>\r\n            </ul>\r\n        </li>\r\n    </ul>\r\n    <div class="page-title">\r\n        <h1><a name="top"></a>What are Cookies?</h1>\r\n    </div>\r\n    <p>Cookies are short pieces of data that are sent to your computer when you visit a website. On later visits, this data is then returned to that website. Cookies allow us to recognize you automatically whenever you visit our site so that we can personalize your experience and provide you with better service. We also use cookies (and similar browser data, such as Flash cookies) for fraud prevention and other purposes. If your web browser is set to refuse cookies from our website, you will not be able to complete a purchase or take advantage of certain features of our website, such as storing items in your Shopping Cart or receiving personalized recommendations. As a result, we strongly encourage you to configure your web browser to accept cookies from our website.</p>\r\n    <h2 class="subtitle">Enabling Cookies</h2>\r\n    <ul class="disc">\r\n        <li><a href="#ie7">Internet Explorer 7.x</a></li>\r\n        <li><a href="#ie6">Internet Explorer 6.x</a></li>\r\n        <li><a href="#firefox">Mozilla/Firefox</a></li>\r\n        <li><a href="#opera">Opera 7.x</a></li>\r\n    </ul>\r\n    <h3><a name="ie7"></a>Internet Explorer 7.x</h3>\r\n    <ol>\r\n        <li>\r\n            <p>Start Internet Explorer</p>\r\n        </li>\r\n        <li>\r\n            <p>Under the <strong>Tools</strong> menu, click <strong>Internet Options</strong></p>\r\n            <p><img src="{{skin url="images/cookies/ie7-1.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click the <strong>Privacy</strong> tab</p>\r\n            <p><img src="{{skin url="images/cookies/ie7-2.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click the <strong>Advanced</strong> button</p>\r\n            <p><img src="{{skin url="images/cookies/ie7-3.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Put a check mark in the box for <strong>Override Automatic Cookie Handling</strong>, put another check mark in the <strong>Always accept session cookies </strong>box</p>\r\n            <p><img src="{{skin url="images/cookies/ie7-4.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click <strong>OK</strong></p>\r\n            <p><img src="{{skin url="images/cookies/ie7-5.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click <strong>OK</strong></p>\r\n            <p><img src="{{skin url="images/cookies/ie7-6.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Restart Internet Explore</p>\r\n        </li>\r\n    </ol>\r\n    <p class="a-top"><a href="#top">Back to Top</a></p>\r\n    <h3><a name="ie6"></a>Internet Explorer 6.x</h3>\r\n    <ol>\r\n        <li>\r\n            <p>Select <strong>Internet Options</strong> from the Tools menu</p>\r\n            <p><img src="{{skin url="images/cookies/ie6-1.gif"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Privacy</strong> tab</p>\r\n        </li>\r\n        <li>\r\n            <p>Click the <strong>Default</strong> button (or manually slide the bar down to <strong>Medium</strong>) under <strong>Settings</strong>. Click <strong>OK</strong></p>\r\n            <p><img src="{{skin url="images/cookies/ie6-2.gif"}}" alt="" /></p>\r\n        </li>\r\n    </ol>\r\n    <p class="a-top"><a href="#top">Back to Top</a></p>\r\n    <h3><a name="firefox"></a>Mozilla/Firefox</h3>\r\n    <ol>\r\n        <li>\r\n            <p>Click on the <strong>Tools</strong>-menu in Mozilla</p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Options...</strong> item in the menu - a new window open</p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Privacy</strong> selection in the left part of the window. (See image below)</p>\r\n            <p><img src="{{skin url="images/cookies/firefox.png"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>Expand the <strong>Cookies</strong> section</p>\r\n        </li>\r\n        <li>\r\n            <p>Check the <strong>Enable cookies</strong> and <strong>Accept cookies normally</strong> checkboxes</p>\r\n        </li>\r\n        <li>\r\n            <p>Save changes by clicking <strong>Ok</strong>.</p>\r\n        </li>\r\n    </ol>\r\n    <p class="a-top"><a href="#top">Back to Top</a></p>\r\n    <h3><a name="opera"></a>Opera 7.x</h3>\r\n    <ol>\r\n        <li>\r\n            <p>Click on the <strong>Tools</strong> menu in Opera</p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Preferences...</strong> item in the menu - a new window open</p>\r\n        </li>\r\n        <li>\r\n            <p>Click on the <strong>Privacy</strong> selection near the bottom left of the window. (See image below)</p>\r\n            <p><img src="{{skin url="images/cookies/opera.png"}}" alt="" /></p>\r\n        </li>\r\n        <li>\r\n            <p>The <strong>Enable cookies</strong> checkbox must be checked, and <strong>Accept all cookies</strong> should be selected in the &quot;<strong>Normal cookies</strong>&quot; drop-down</p>\r\n        </li>\r\n        <li>\r\n            <p>Save changes by clicking <strong>Ok</strong></p>\r\n        </li>\r\n    </ol>\r\n    <p class="a-top"><a href="#top">Back to Top</a></p>\r\n</div>\r\n', '2011-09-28 22:45:58', '2011-09-28 22:45:58', 1, 0, NULL, NULL, '', NULL, NULL, NULL),
-(7, 'Pagina para realizar pruebas', 'one_column', '', '', 'inicio', '', '<h1>Home Page</h1>\r\n<p>{{widget type="widgettwo/list" enabled_services="digg,delicious,twitter" template="widgettwo/icons.phtml"}}</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h1>Featured products</h1>\r\n<p>{{block type="catalog/product_list" name="product_feature_products" category_id="35" column_count="3" template="catalog/product/list.phtml"}}</p>', '2011-11-01 19:44:35', '2011-11-03 22:45:00', 1, 0, '', '', '', '', NULL, NULL);
+(7, 'Pagina para realizar pruebas', 'one_column', '', '', 'inicio', '', '<h1>Home Page</h1>\r\n<p>{{widget type="widgettwo/list" enabled_services="digg,delicious,twitter" template="widgettwo/icons.phtml"}}</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<h1>Featured products</h1>\r\n<p>{{block type="catalog/product_list" name="product_feature_products" category_id="35" column_count="3" template="catalog/product/list.phtml"}}</p>\r\n<h1>Pruebas pasandole parametros a los bloques</h1>\r\n<p>{{block type="blocksparams/test" name="bloque_con_parametros" nombre="david" apellidos="villalba flores" template="blocksparams/test.phtml"}}</p>\r\n<h1>Probando los tags disponibles en el editos CMS</h1>\r\n<p>htmlescape</p>\r\n<p>{{htmlescape var=''<a href="javascript:alert(1);">Hello</a>''}}</p>\r\n<p>Cargando un handle, probar con este:</p>\r\n<p>{{htmlescape var=''{{layout handle="default"}}''}}</p>\r\n<p>media url:</p>\r\n<p>{{media url=''catalog/product/l/a/large_phone.jpg''}}</p>\r\n<p>skin url:</p>\r\n<p>{{skin url=''images/media/about_us_img.jpg''}}</p>\r\n<p>store URL: {{store url=''about-magento-demo-store''}}</p>\r\n<p>direct_URL:</p>\r\n<p>direct URL: {{store direct_url=''about-magento-demo-store''}}</p>', '2011-11-01 19:44:35', '2011-11-06 00:48:08', 1, 0, '', '', '', '', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -16083,7 +16083,7 @@ CREATE TABLE IF NOT EXISTS `core_config_data` (
   `value` text NOT NULL,
   PRIMARY KEY (`config_id`),
   UNIQUE KEY `config_scope` (`scope`,`scope_id`,`path`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=59 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=96 ;
 
 --
 -- Volcar la base de datos para la tabla `core_config_data`
@@ -16141,7 +16141,44 @@ INSERT INTO `core_config_data` (`config_id`, `scope`, `scope_id`, `path`, `value
 (55, 'default', 0, 'web/browser_capabilities/javascript', '1'),
 (56, 'stores', 1, 'dev/debug/template_hints', ''),
 (57, 'stores', 1, 'dev/debug/template_hints_blocks', ''),
-(58, 'stores', 1, 'dev/translate_inline/active', '');
+(58, 'stores', 1, 'dev/translate_inline/active', ''),
+(59, 'default', 0, 'design/package/name', 'default'),
+(60, 'default', 0, 'design/package/ua_regexp', 'a:0:{}'),
+(61, 'default', 0, 'design/theme/locale', ''),
+(62, 'default', 0, 'design/theme/template', ''),
+(63, 'default', 0, 'design/theme/template_ua_regexp', 'a:0:{}'),
+(64, 'default', 0, 'design/theme/skin', ''),
+(65, 'default', 0, 'design/theme/skin_ua_regexp', 'a:0:{}'),
+(66, 'default', 0, 'design/theme/layout', ''),
+(67, 'default', 0, 'design/theme/layout_ua_regexp', 'a:0:{}'),
+(68, 'default', 0, 'design/theme/default', ''),
+(69, 'default', 0, 'design/theme/default_ua_regexp', 'a:0:{}'),
+(70, 'default', 0, 'design/head/default_title', 'Magento Commerce'),
+(71, 'default', 0, 'design/head/title_prefix', ''),
+(72, 'default', 0, 'design/head/title_suffix', ''),
+(73, 'default', 0, 'design/head/default_description', 'Default Description'),
+(74, 'default', 0, 'design/head/default_keywords', 'Magento, Varien, E-commerce'),
+(75, 'default', 0, 'design/head/default_robots', 'INDEX,FOLLOW'),
+(76, 'default', 0, 'design/head/includes', ''),
+(77, 'default', 0, 'design/head/demonotice', '1'),
+(78, 'default', 0, 'design/header/logo_src', 'images/logo.gif'),
+(79, 'default', 0, 'design/header/logo_alt', 'Magento Commerce'),
+(80, 'default', 0, 'design/header/welcome', 'Default welcome msg!'),
+(81, 'default', 0, 'design/footer/copyright', '&copy; 2008 Magento Demo Store. All Rights Reserved.'),
+(82, 'default', 0, 'design/footer/absolute_footer', ''),
+(83, 'default', 0, 'design/watermark/image_size', ''),
+(84, 'default', 0, 'design/watermark/image_imageOpacity', ''),
+(85, 'default', 0, 'design/watermark/image_position', 'stretch'),
+(86, 'default', 0, 'design/watermark/small_image_size', ''),
+(87, 'default', 0, 'design/watermark/small_image_imageOpacity', ''),
+(88, 'default', 0, 'design/watermark/small_image_position', 'stretch'),
+(89, 'default', 0, 'design/watermark/thumbnail_size', ''),
+(90, 'default', 0, 'design/watermark/thumbnail_imageOpacity', ''),
+(91, 'default', 0, 'design/watermark/thumbnail_position', 'stretch'),
+(92, 'default', 0, 'design/pagination/pagination_frame', '5'),
+(93, 'default', 0, 'design/pagination/pagination_frame_skip', ''),
+(94, 'default', 0, 'design/pagination/anchor_text_for_previous', ''),
+(95, 'default', 0, 'design/pagination/anchor_text_for_next', '');
 
 -- --------------------------------------------------------
 
@@ -24201,7 +24238,65 @@ INSERT INTO `log_url` (`url_id`, `visitor_id`, `visit_time`) VALUES
 (225, 44, '2011-11-03 22:05:42'),
 (226, 44, '2011-11-03 22:06:01'),
 (227, 44, '2011-11-03 22:06:29'),
-(228, 44, '2011-11-03 22:06:46');
+(228, 44, '2011-11-03 22:06:46'),
+(229, 45, '2011-11-04 16:43:57'),
+(230, 45, '2011-11-04 16:58:56'),
+(231, 45, '2011-11-04 17:02:53'),
+(232, 45, '2011-11-04 17:07:56'),
+(233, 45, '2011-11-04 17:08:42'),
+(234, 45, '2011-11-04 17:10:04'),
+(235, 45, '2011-11-04 17:20:17'),
+(236, 45, '2011-11-04 17:22:54'),
+(237, 45, '2011-11-04 17:23:35'),
+(238, 45, '2011-11-04 17:24:35'),
+(239, 45, '2011-11-04 17:30:29'),
+(240, 45, '2011-11-04 17:30:34'),
+(241, 45, '2011-11-04 17:30:38'),
+(242, 45, '2011-11-04 17:37:41'),
+(243, 45, '2011-11-04 17:38:25'),
+(244, 45, '2011-11-04 17:41:55'),
+(245, 45, '2011-11-04 17:41:56'),
+(246, 46, '2011-11-05 19:25:04'),
+(247, 46, '2011-11-05 19:34:43'),
+(248, 46, '2011-11-05 19:34:50'),
+(249, 46, '2011-11-05 19:35:12'),
+(250, 46, '2011-11-05 19:39:38'),
+(251, 46, '2011-11-05 19:39:45'),
+(252, 46, '2011-11-05 19:41:46'),
+(253, 46, '2011-11-05 19:46:50'),
+(254, 46, '2011-11-05 19:47:19'),
+(255, 46, '2011-11-05 19:53:20'),
+(256, 46, '2011-11-05 19:56:23'),
+(257, 46, '2011-11-05 20:01:32'),
+(258, 46, '2011-11-05 20:01:39'),
+(259, 46, '2011-11-05 20:02:10'),
+(260, 46, '2011-11-05 20:03:54'),
+(261, 46, '2011-11-05 20:06:18'),
+(262, 46, '2011-11-05 20:06:49'),
+(263, 46, '2011-11-05 20:07:46'),
+(264, 46, '2011-11-05 20:08:17'),
+(265, 46, '2011-11-05 20:09:21'),
+(266, 46, '2011-11-05 20:09:40'),
+(267, 46, '2011-11-05 20:18:40'),
+(268, 46, '2011-11-05 20:23:19'),
+(269, 46, '2011-11-05 20:23:30'),
+(270, 47, '2011-11-06 00:19:30'),
+(271, 47, '2011-11-06 00:23:50'),
+(272, 47, '2011-11-06 00:25:08'),
+(273, 47, '2011-11-06 00:28:15'),
+(274, 47, '2011-11-06 00:28:41'),
+(275, 47, '2011-11-06 00:32:26'),
+(276, 47, '2011-11-06 00:33:37'),
+(277, 47, '2011-11-06 00:34:25'),
+(278, 47, '2011-11-06 00:34:36'),
+(279, 47, '2011-11-06 00:35:01'),
+(280, 47, '2011-11-06 00:35:07'),
+(281, 47, '2011-11-06 00:35:31'),
+(282, 47, '2011-11-06 00:36:52'),
+(283, 47, '2011-11-06 00:39:57'),
+(284, 47, '2011-11-06 00:42:45'),
+(285, 47, '2011-11-06 00:45:05'),
+(286, 47, '2011-11-06 00:47:37');
 
 -- --------------------------------------------------------
 
@@ -24215,7 +24310,7 @@ CREATE TABLE IF NOT EXISTS `log_url_info` (
   `url` varchar(255) NOT NULL DEFAULT '',
   `referer` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`url_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Detale information about url visit' AUTO_INCREMENT=229 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='Detale information about url visit' AUTO_INCREMENT=287 ;
 
 --
 -- Volcar la base de datos para la tabla `log_url_info`
@@ -24448,7 +24543,65 @@ INSERT INTO `log_url_info` (`url_id`, `url`, `referer`) VALUES
 (225, 'http://local.pruebas.com/', ''),
 (226, 'http://local.pruebas.com/', ''),
 (227, 'http://local.pruebas.com/', ''),
-(228, 'http://local.pruebas.com/', '');
+(228, 'http://local.pruebas.com/', ''),
+(229, 'http://local.pruebas.com/', ''),
+(230, 'http://local.pruebas.com/', ''),
+(231, 'http://local.pruebas.com/', ''),
+(232, 'http://local.pruebas.com/', ''),
+(233, 'http://local.pruebas.com/', ''),
+(234, 'http://local.pruebas.com/', ''),
+(235, 'http://local.pruebas.com/', ''),
+(236, 'http://local.pruebas.com/', ''),
+(237, 'http://local.pruebas.com/', ''),
+(238, 'http://local.pruebas.com/', ''),
+(239, 'http://local.pruebas.com/', ''),
+(240, 'http://local.pruebas.com/helloworld/index/collections', ''),
+(241, 'http://local.pruebas.com/helloworld/index/', ''),
+(242, 'http://local.pruebas.com/', ''),
+(243, 'http://local.pruebas.com/', ''),
+(244, 'http://local.pruebas.com/', ''),
+(245, 'http://local.pruebas.com/', ''),
+(246, 'http://local.pruebas.com/', ''),
+(247, 'http://local.pruebas.com/', ''),
+(248, 'http://local.pruebas.com/', ''),
+(249, 'http://local.pruebas.com/', ''),
+(250, 'http://local.pruebas.com/', ''),
+(251, 'http://local.pruebas.com/', ''),
+(252, 'http://local.pruebas.com/', ''),
+(253, 'http://local.pruebas.com/', ''),
+(254, 'http://local.pruebas.com/', ''),
+(255, 'http://local.pruebas.com/', ''),
+(256, 'http://local.pruebas.com/', ''),
+(257, 'http://local.pruebas.com/', ''),
+(258, 'http://local.pruebas.com/', ''),
+(259, 'http://local.pruebas.com/', ''),
+(260, 'http://local.pruebas.com/', ''),
+(261, 'http://local.pruebas.com/', ''),
+(262, 'http://local.pruebas.com/', ''),
+(263, 'http://local.pruebas.com/', ''),
+(264, 'http://local.pruebas.com/', ''),
+(265, 'http://local.pruebas.com/', ''),
+(266, 'http://local.pruebas.com/', ''),
+(267, 'http://local.pruebas.com/', ''),
+(268, 'http://local.pruebas.com/', ''),
+(269, 'http://local.pruebas.com/', ''),
+(270, 'http://local.pruebas.com/', ''),
+(271, 'http://local.pruebas.com/', ''),
+(272, 'http://local.pruebas.com/', ''),
+(273, 'http://local.pruebas.com/', ''),
+(274, 'http://local.pruebas.com/', ''),
+(275, 'http://local.pruebas.com/', ''),
+(276, 'http://local.pruebas.com/', ''),
+(277, 'http://local.pruebas.com/helloworld/index/', ''),
+(278, 'http://local.pruebas.com/', ''),
+(279, 'http://local.pruebas.com/', ''),
+(280, 'http://local.pruebas.com/', ''),
+(281, 'http://local.pruebas.com/', ''),
+(282, 'http://local.pruebas.com/', ''),
+(283, 'http://local.pruebas.com/', ''),
+(284, 'http://local.pruebas.com/', ''),
+(285, 'http://local.pruebas.com/', ''),
+(286, 'http://local.pruebas.com/', '');
 
 -- --------------------------------------------------------
 
@@ -24465,7 +24618,7 @@ CREATE TABLE IF NOT EXISTS `log_visitor` (
   `last_url_id` bigint(20) unsigned NOT NULL DEFAULT '0',
   `store_id` smallint(5) unsigned NOT NULL,
   PRIMARY KEY (`visitor_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='System visitors log' AUTO_INCREMENT=45 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='System visitors log' AUTO_INCREMENT=48 ;
 
 --
 -- Volcar la base de datos para la tabla `log_visitor`
@@ -24515,7 +24668,10 @@ INSERT INTO `log_visitor` (`visitor_id`, `session_id`, `first_visit_at`, `last_v
 (41, 'oappeve99gr3hdl54gbvg3ars5', '2011-11-01 19:22:40', '2011-11-01 19:59:45', 212, 1),
 (42, 't7l7ntbj1t5744jfhifd86vdu2', '2011-11-01 22:56:41', '2011-11-01 22:56:41', 0, 1),
 (43, 't7l7ntbj1t5744jfhifd86vdu2', '2011-11-01 22:57:52', '2011-11-01 23:15:50', 216, 1),
-(44, 'jqo35jdoq5f8n1fkv7jipheqq1', '2011-11-03 21:20:10', '2011-11-03 22:06:46', 228, 1);
+(44, 'jqo35jdoq5f8n1fkv7jipheqq1', '2011-11-03 21:20:10', '2011-11-03 22:06:46', 228, 1),
+(45, '5kv7lvdh8iul92rq82cra0eqa0', '2011-11-04 16:43:42', '2011-11-04 17:41:56', 245, 1),
+(46, '5pkbt77o47pu9emsiht3bkrge5', '2011-11-05 19:24:50', '2011-11-05 20:23:30', 269, 1),
+(47, '0ueo5n473n26mlrgnsrs21gg60', '2011-11-06 00:19:28', '2011-11-06 00:47:37', 286, 1);
 
 -- --------------------------------------------------------
 
@@ -24583,7 +24739,10 @@ INSERT INTO `log_visitor_info` (`visitor_id`, `http_referer`, `http_user_agent`,
 (41, 'http://local.pruebas.com/', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433),
 (42, 'http://local.pruebas.com/', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433),
 (43, 'http://local.pruebas.com/', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433),
-(44, '', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433);
+(44, '', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433),
+(45, '', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433),
+(46, '', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433),
+(47, '', 'Mozilla/5.0 (Windows NT 6.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7', 'es-es,es;q=0.8,en-us;q=0.5,en;q=0.3', 2130706433, 2130706433);
 
 -- --------------------------------------------------------
 
