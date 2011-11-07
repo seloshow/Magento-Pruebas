@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Interactiv4_Loginredirect>
+			<version>0.1.0</version>
+		</Interactiv4_Loginredirect>
+	</modules>
+	<global>
+		<events>
+			<customer_login>
+				<observers>
+					<interactiv4_loginredirect_model_observer>
+						<type>singleton</type>
+						<class>Interactiv4_Loginredirect_Model_Observer</class>
+						<method>prueba</method>
+					</interactiv4_loginredirect_model_observer>
+				</observers>
+			</customer_login>
+		</events>
+	</global>
+</config>
