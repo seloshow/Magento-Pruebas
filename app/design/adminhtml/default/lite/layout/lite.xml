@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+
+    <default>
+    	<!-- remove if Mage_AdminNotification is enabled -->
+        <reference name="notifications">
+            <remove name="notification_survey"/>
+        </reference>
+    </default>
+    
+    <adminhtml_customer_edit>
+        <reference name="customer_edit_tabs">
+            <action method="removeTab" ifconfig="lite/billing_agreement/hide"><name>customer_edit_tab_agreements</name></action>
+            <action method="removeTab" ifconfig="lite/recurring_profile/hide"><name>customer_edit_tab_recurring_profile</name></action>
+        </reference>
+    </adminhtml_customer_edit>
+    
+    <!-- adminhtml create order -->
+    
+	<lite_adminhtml_sales_order_create>
+		<!-- remove if Mage_Wishlist is enabled -->
+		<remove name="wishlist"/>
+		<!-- remove if Mage_SalesRule is enabled -->
+        <remove name="coupons" />
+        <!--
+        <reference name="sidebar" ifconfig="">
+        	<action method="unsetChild">
+        		<name>wishlist</name>
+        	</action>
+        </reference>
+        -->
+	</lite_adminhtml_sales_order_create>    
+    
+    <adminhtml_sales_order_create_index>
+		<update handle="lite_adminhtml_sales_order_create" />
+    </adminhtml_sales_order_create_index>
+    
+    <adminhtml_sales_order_create_load_block_data>
+		<update handle="lite_adminhtml_sales_order_create" />
+    </adminhtml_sales_order_create_load_block_data>
+    
+    <adminhtml_sales_order_create_load_block_sidebar>
+		<update handle="lite_adminhtml_sales_order_create" />	
+    </adminhtml_sales_order_create_load_block_sidebar>
+	
+</layout>

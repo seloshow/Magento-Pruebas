@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout version="0.1.0">
+
+	<checkout_cart_index>
+		<reference name="checkout.cart">
+			<remove name="checkout.cart.coupon" />
+		</reference>
+	</checkout_cart_index>
+
+</layout>

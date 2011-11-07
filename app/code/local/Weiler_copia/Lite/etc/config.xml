@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Weiler_Lite>
+             <version>1.6.1.0</version>
+        </Weiler_Lite>
+    </modules>
+    
+    <global>
+        <models>
+            <lite>
+                <class>Weiler_Lite_Model</class>
+            </lite>
+            <admin>
+            	<rewrite>
+            		<roles>Weiler_Lite_Model_Admin_Roles</roles>
+            	</rewrite>
+            </admin>     
+        </models>
+        <resources>
+            <lite_setup>
+                <setup>
+                    <module>Weiler_Lite</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+            </lite_setup>
+        </resources>               
+		<blocks>
+			<lite>
+                <class>Weiler_Lite_Block</class>
+            </lite>
+            <adminhtml>
+            	<rewrite>
+            		<system_config_form_fieldset_modules_disableOutput>Weiler_Lite_Block_Adminhtml_System_Config_Form_Fieldset_Modules_DisableOutput</system_config_form_fieldset_modules_disableOutput>
+            		<system_design_grid>Weiler_Lite_Block_Adminhtml_System_Design_Grid</system_design_grid>
+            		<system_email_template_grid>Weiler_Lite_Block_Adminhtml_System_Email_Template_Grid</system_email_template_grid>
+            		<customer_edit_tab_view_accordion>Weiler_Lite_Block_Adminhtml_Customer_Edit_Tab_View_Accordion</customer_edit_tab_view_accordion>
+            		<customer_edit_tabs>Weiler_Lite_Block_Adminhtml_Customer_Edit_Tabs</customer_edit_tabs>
+            		<report_refresh_statistics_grid>Weiler_Lite_Block_Adminhtml_Report_Refresh_Statistics_Grid</report_refresh_statistics_grid>
+            		<sales_order_create_search_grid_renderer_price>Weiler_Lite_Block_Adminhtml_Sales_Order_Create_Search_Grid_Renderer_Price</sales_order_create_search_grid_renderer_price>
+            	</rewrite>
+            </adminhtml>
+            <install>
+            	<rewrite>
+            		<end>Weiler_Lite_Block_Install_End</end>
+            	</rewrite>
+            </install>
+        </blocks>
+        <helpers>
+			<lite>
+                <class>Weiler_Lite_Helper</class>
+            </lite>
+            <catalog>
+            	<rewrite>
+            		<product_view>Weiler_Lite_Helper_Catalog_Product_View</product_view>
+            	</rewrite>
+            </catalog>
+            <giftmessage>
+            	<rewrite>
+            		<data>Weiler_Lite_Helper_GiftMessage_Message</data>
+            		<message>Weiler_Lite_Helper_GiftMessage_Message</message>
+            	</rewrite>
+            </giftmessage>
+            <rss>
+            	<rewrite>
+            		<order>Weiler_Lite_Helper_Rss_Order</order>
+            	</rewrite>
+            </rss>            
+            <weee>
+            	<rewrite>
+            		<data>Weiler_Lite_Helper_Weee_Data</data>
+            	</rewrite>
+            </weee>    
+            <wishlist>
+            	<rewrite>
+            		<data>Weiler_Lite_Helper_Wishlist_Data</data>
+            	</rewrite>
+            </wishlist>                   
+        </helpers>
+    </global>
+    
+    <frontend>
+        <events>
+        	<!-- disable Catalog Product Compare events; performance gain but product compare won't work properly 
+            <customer_login><observers><catalog><type>disabled</type></catalog></observers>
+            </customer_login>
+            <customer_logout><observers><catalog><type>disabled</type></catalog></observers>
+            </customer_logout>
+            -->
+			<!-- disable Mage Log events; performance gain but some reports will be empty in admin
+            <controller_action_predispatch>
+                <observers><log><type>disabled</type></log></observers>
+            </controller_action_predispatch>
+            <controller_action_postdispatch>
+                <observers><log><type>disabled</type></log></observers>
+            </controller_action_postdispatch>
+            <customer_login>
+                <observers><log><type>disabled</type></log></observers>
+            </customer_login>
+            <customer_logout>
+                <observers><log><type>disabled</type></log></observers>
+            </customer_logout>
+            <sales_quote_save_after>
+                <observers><log><type>disabled</type></log></observers>
+            </sales_quote_save_after>
+            <checkout_quote_destroy>
+                <observers><log><type>disabled</type></log></observers>
+            </checkout_quote_destroy>            
+            -->
+            <core_layout_update_updates_get_after>
+	            <observers>
+					<lite>
+					    <class>lite/observer</class>
+					    <method>removeLayouts</method>
+					</lite>     
+				</observers>       
+            </core_layout_update_updates_get_after>
+        </events>
+		<layout>
+            <updates>
+                <lite module="Weiler_Lite">
+                    <file>lite.xml</file>
+                </lite>
+            </updates>
+        </layout>
+        <routers>
+             <install>
+                 <args>
+                     <modules>
+                         <lite before="Mage_Install">Weiler_Lite_Install</lite>
+                     </modules>
+                 </args>
+             </install>
+        </routers>        
+    </frontend>
+    
+    <adminhtml>
+    	<events>
+            <core_block_abstract_prepare_layout_after>
+                <observers>
+                    <lite>
+                        <class>lite/observer</class>
+                        <method>removeCatalogProductEditTabs</method>
+                    </lite>
+                </observers>
+            </core_block_abstract_prepare_layout_after>
+            <cms_wysiwyg_config_prepare>
+                <observers>
+                    <lite>
+                        <class>lite/observer</class>
+                        <method>removeWidgetsFromWysiwyg</method>
+                    </lite>
+                </observers>           	
+            </cms_wysiwyg_config_prepare>
+    	</events>
+        <layout>
+            <updates>
+                <lite>
+                    <file>lite.xml</file>
+                </lite>
+            </updates>
+        </layout>   	
+    </adminhtml>
+    
+    <admin>
+        <routers>
+             <adminhtml>
+                 <args>
+                     <modules>
+                         <lite before="Mage_Adminhtml">Weiler_Lite_Adminhtml</lite>
+                     </modules>
+                 </args>
+             </adminhtml>
+        </routers>
+    </admin>    
+    
+    <default>
+    	<!-- default frontend theme/layout; optional, can be removed -->
+		<design>
+            <theme>
+            	<template>lite</template>
+            	<layout>lite</layout>
+            </theme>
+        </design>
+        
+        <!-- Mage_Sales config fix -->
+        <payment>
+            <googlecheckout>
+                <active>0</active>
+            </googlecheckout>
+        </payment>
+        
+        <!-- Hide Billing Agreements and Recurring Profiles -->
+        <lite>
+        	<billing_agreement>
+        		<!-- backend_model or similar can solve this? -->
+        		<hide>1</hide>
+        		<show>0</show>
+        	</billing_agreement>
+        	<recurring_profile>
+        		<hide>1</hide>
+        		<show>0</show>
+        	</recurring_profile>
+
+        	<related>
+				<hide>1</hide>
+        	</related>
+        	<upsell>
+				<hide>1</hide>
+        	</upsell>
+        	<crosssell>
+				<hide>1</hide>
+        	</crosssell>
+        </lite>
+        
+    </default>
+  
+    <stores>
+        <admin>
+        	<!-- default theme/skin in admin -->
+            <design>
+                <theme>
+                    <default>lite</default>
+                    <!-- skin>lite</skin -->
+                </theme>
+            </design>
+        </admin>
+    </stores>
+    
+</config>

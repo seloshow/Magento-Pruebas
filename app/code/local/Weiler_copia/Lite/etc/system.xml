@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <sections>
+    	<!-- lite hacks -->
+    	<web>
+    		<groups>
+               <polls>
+                    <if_module_enabled>Mage_Poll</if_module_enabled>
+                </polls>    		
+    		</groups>
+    	</web>  	
+	</sections>
+</config>
