@@ -37,20 +37,23 @@ $idioma=$idioma[0];
 
 $mainImagePath = '';
 $galleryImages = $this->getGalleryImages();
+/*@davidselo: vamos a aprovechar el foreach que hace para obtener las diferentes imagenes del producto
+     * para crear el script, es un poco mas lioso pero se ha decidido hacer así para no tener que realizar
+     * otro bucle solo para crear completar el script.
+     * */
+?>
+<script type="text/javascript">
+
+			jQuery(document).ready(function(){
+				jQuery.noConflict();
+				jQuery("#yoxview_custom").yoxview({<?php 
 if (count($galleryImages) > 0) {
     $gallery = '<div class="more-views">';
     $gallery .= '<h2>' . $this->__('More Views') . '</h2>';
     $gallery .= '<ul>';
-    /*@davidselo: vamos a aprovechar el foreach que hace para obtener las diferentes imagenes del producto
-     * para crear el script, es un poco mas lioso pero se ha decidido hacer así para no tener que realizar
-     * otro bucle solo para crear completar el script.
-     * */
+    
     ?>
-    <script type="text/javascript">
-
-			jQuery(document).ready(function(){
-				jQuery.noConflict();
-				jQuery("#yoxview_custom").yoxview({
+    
 					 images: [			
     <?php 
     foreach ($galleryImages as $_image) {
@@ -70,8 +73,10 @@ if (count($galleryImages) > 0) {
                  .  '<img src="' . $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(56) . '" width="56" height="56" alt="' . $this->htmlEscape($_image->getLabel()) . '" />'
                  .  '</a></li>';
     }
-    ?>
-    ],
+    ?>],<?php 
+    $gallery .= '</ul></div>';
+}?>
+ 
     lang: "<?php echo $idioma!=null?$idioma:'en'?>",
 					backgroundColor: "#000099",
 					
@@ -80,9 +85,7 @@ if (count($galleryImages) > 0) {
 
 			});
 			</script>
-    <?php 
-    $gallery .= '</ul></div>';
-}
+			<?php 
 ?>
 
 
