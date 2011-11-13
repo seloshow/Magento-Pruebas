@@ -34,6 +34,24 @@
                 <type>skin_js</type>
                 <name>js/cloud-zoom.1.0.2.min.js</name>
             </action>
+            <!-- @davidselo: añadiendo el zoom jquery de yox -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/yoxview/yoxview-init.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/yoxview/yox.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/yoxview/jquery.yoxview-2.21.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/yoxview/jquery.yoxthumbs.js</name>
+            </action>
+            
         </reference>
 		
         <reference name="product.info.media">
