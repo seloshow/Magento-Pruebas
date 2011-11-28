@@ -222,6 +222,7 @@
                     var imageIndex = 0;
                     thumbnails.each(function(i, thumbnail){
                         var $thumbnail = $(thumbnail);
+                        console.log($thumbnail);
                         var imageData = getImageDataFromThumbnail($thumbnail, options);
                         if (imageData)
                         {

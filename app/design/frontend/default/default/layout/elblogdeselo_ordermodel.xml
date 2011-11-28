@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog_product_view>
+	<reference name="content">
+		<block type="mto/product_view" name="product.info" template="catalog/product/view.phtml"/>
+	</reference>
+</catalog_product_view>
