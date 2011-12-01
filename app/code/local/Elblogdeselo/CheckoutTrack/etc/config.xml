@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Elblogdeselo_CheckoutTrack>
+			<version>0.1.0</version>
+		</Elblogdeselo_CheckoutTrack>
+	</modules>
+	<global>
+		<models>
+			<checkouttrack>
+				<class>Elblogdeselo_CheckoutTrack_Model</class>
+			</checkouttrack>
+		</models>
+		<events>
+    		<checkout_type_onepage_save_order>
+    			<observers><!-- Cuando tengamos el evento controller_front_init_routers -->
+    				<elblogdeselo_checkouttrack>
+    					<class>checkouttrack/observer</class>
+    					<method>addSessionVariable</method><!-- Llamaremos a este método al recibir el evento. -->
+    				</elblogdeselo_checkouttrack>
+    			</observers>
+    		</checkout_type_onepage_save_order>
+    	</events>
+	</global>
+</config>

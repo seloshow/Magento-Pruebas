@@ -64,7 +64,9 @@ require_once $mageFilename;
 #Varien_Profiler::enable();
 
 if (isset($_SERVER['MAGE_IS_DEVELOPER_MODE'])) {
-    Mage::setIsDeveloperMode(true);
+	Varien_Profiler::enable();
+    Mage::setIsDeveloperMode(true);//Magento no va a meter los errores en un log y va a mostrarlos por pantalla
+    ini_set('display_errors', 1);
 }
 
 #ini_set('display_errors', 1);
@@ -77,18 +79,4 @@ $mageRunCode = isset($_SERVER['MAGE_RUN_CODE']) ? $_SERVER['MAGE_RUN_CODE'] : ''
 /* Run store or run website */
 $mageRunType = isset($_SERVER['MAGE_RUN_TYPE']) ? $_SERVER['MAGE_RUN_TYPE'] : 'store';
 
-
-//Mage::run($mageRunCode, $mageRunType);
-switch($_SERVER['HTTP_HOST']) {
-
-// zapatos.com
-case 'local.envasadoras.com':
-Mage::run('envasadoras', 'website');
-break;
- 
-// camisetas.com (default store)
-default:
-Mage::run();
-break;
-}
-Varien_Profiler::enable();
+Mage::run($mageRunCode, $mageRunType);

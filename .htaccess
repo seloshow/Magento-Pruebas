@@ -176,3 +176,4 @@
 ## http://developer.yahoo.com/performance/rules.html#etags
 
     #FileETag none
+SetEnvIf Host .*pruebas.* MAGE_IS_DEVELOPER_MODE=1;
