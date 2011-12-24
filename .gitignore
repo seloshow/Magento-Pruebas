@@ -1,0 +1,15 @@
+var/cache
+var/session
+var/log
+var/tmp
+var/locks
+var/export
+var/report
+media/catalog/product/cache
+.bash_history
+.bash_logout
+.bashrc
+.cache/
+.profile
+.settings
+.DS_Store
