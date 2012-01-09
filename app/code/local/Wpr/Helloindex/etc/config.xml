@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Wpr_Helloindex>
+			<version>0.1.0</version>
+		</Wpr_Helloindex>
+	</modules>
+	<global>
+		<blocks>
+			<blockshellowpr>
+				<class>Wpr_Helloindex_Block</class>
+			</blockshellowpr>
+		</blocks>
+	</global>
+	 <frontend>
+	 	<layout>
+			<updates>
+				<identificativo>
+					<file>hellowpr.xml</file>
+				</identificativo>
+			</updates>
+		</layout>
+		<routers>
+			<hellowpr>
+				<use>standard</use>
+				<args>
+					<module>Wpr_Helloindex</module>
+					<frontName>hellowpr</frontName>
+				</args>
+			</hellowpr>
+		</routers>
+	</frontend>
+</config>

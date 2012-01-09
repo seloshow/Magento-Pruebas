@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+	<hellowpr_index_index>
+		<reference name="right">
+			<block type="blockshellowpr/wpr_helloblock" name="helloblock" after="cart_sidebar" template="hellowpr/helloblock.phtml"/>
+		</reference>
+	</hellowpr_index_index>
+
+</layout>

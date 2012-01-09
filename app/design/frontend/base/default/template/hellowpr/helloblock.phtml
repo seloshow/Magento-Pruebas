@@ -1,0 +1,8 @@
+<?php
+?>
+<h2>Hello block!!!</h2><br>
+<?php if(Mage::getSingleton('customer/session')->isLoggedIn()):?>
+<h2>Hola <?php echo 'customer'.Mage::getModel('customer/session')->getCustomer()->getName()?></h2>
+<?php else:?>
+<h2><?php echo 'customer no logueado'?></h2>
+<?php endif?>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Elblogdeselo_Reloadsimpleproduct>
+			<version>0.1.0</version>
+		</Elblogdeselo_Reloadsimpleproduct>
+	</modules>
+	<frontend>
+		<layout>
+			<updates>
+				<reload>
+					<file>elblogdeselo_reloadsimpleproduct.xml</file>
+				</reload>
+			</updates>
+		</layout>
+		<routers>
+			<reload>
+				<use>standard</use>
+				<args>
+					<module>Elblogdeselo_Reloadsimpleproduct</module>
+					<frontName>reload</frontName>
+				</args>
+			</reload>
+		</routers>
+	</frontend>
+</config>
