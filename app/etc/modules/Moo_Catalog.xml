@@ -23,7 +23,7 @@
 <config>
     <modules>
         <Moo_Catalog>
-            <active>true</active>
+            <active>false</active>
             <codePool>community</codePool>
         </Moo_Catalog>
     </modules>
