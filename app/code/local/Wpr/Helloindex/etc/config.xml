@@ -2,15 +2,36 @@
 <config>
 	<modules>
 		<Wpr_Helloindex>
-			<version>0.1.0</version>
+			<version>0.8.0</version>
 		</Wpr_Helloindex>
 	</modules>
 	<global>
+		<models>
+            <helloindex>
+                <class>Wpr_Helloindex_Model</class>
+                <resourceModel>helloindex_mysql4</resourceModel>
+            </helloindex>
+            <helloindex_mysql4>
+                <class>Wpr_Helloindex_Model_Mysql4</class>
+                <entities>
+                    <blogpost>
+                        <table>blogpost</table>
+                    </blogpost>
+                </entities>
+            </helloindex_mysql4>
+        </models>
 		<blocks>
 			<blockshellowpr>
 				<class>Wpr_Helloindex_Block</class>
 			</blockshellowpr>
 		</blocks>
+		<resources>
+            <helloindex_setup>
+                <setup>
+                    <module>Wpr_Helloindex</module>
+                </setup>
+            </helloindex_setup>
+        </resources>
 	</global>
 	 <frontend>
 	 	<layout>
