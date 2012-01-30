@@ -1572,3 +1572,558 @@ Stack trace:
 #12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
 #13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(91): Mage::run()
 #14 {main}
+2012-01-22T15:10:46+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: include(Elblogdeselo\CheckoutTrack\Model\Observer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php on line 93' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): mageCoreErrorHandler(2, 'include(Elblogd...', 'C:\Program File...', 93, Array)
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): Varien_Autoload::autoload()
+#2 [internal function]: Varien_Autoload->autoload('Elblogdeselo_Ch...')
+#3 [internal function]: spl_autoload_call('Elblogdeselo_Ch...')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Config.php(1252): class_exists('Elblogdeselo_Ch...')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(432): Mage_Core_Model_Config->getModelInstance('checkouttrack/o...', Array)
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(446): Mage::getModel('checkouttrack/o...', Array)
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(1245): Mage::getSingleton('checkouttrack/o...')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(416): Mage_Core_Model_App->dispatchEvent('checkout_type_o...', Array)
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(180): Mage::dispatchEvent('checkout_type_o...', Array)
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(229): Mage_Sales_Model_Service_Quote->submitOrder()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(742): Mage_Sales_Model_Service_Quote->submitAll()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#17 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#18 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#19 {main}
+2012-01-22T15:10:49+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send('owner@example.c...', 'Owner', Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Helper\Data.php(217): Mage_Core_Model_Email_Template->sendTransactional('checkout_paymen...', 'general', 'owner@example.c...', 'Owner', Array)
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(497): Mage_Checkout_Helper_Data->sendPaymentFailedEmail(Object(Mage_Sales_Model_Quote), 'Warning: includ...')
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#12 {main}
+2012-01-22T15:10:55+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: include(Elblogdeselo\CheckoutTrack\Model\Observer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php on line 93' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): mageCoreErrorHandler(2, 'include(Elblogd...', 'C:\Program File...', 93, Array)
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): Varien_Autoload::autoload()
+#2 [internal function]: Varien_Autoload->autoload('Elblogdeselo_Ch...')
+#3 [internal function]: spl_autoload_call('Elblogdeselo_Ch...')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Config.php(1252): class_exists('Elblogdeselo_Ch...')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(432): Mage_Core_Model_Config->getModelInstance('checkouttrack/o...', Array)
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(446): Mage::getModel('checkouttrack/o...', Array)
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(1245): Mage::getSingleton('checkouttrack/o...')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(416): Mage_Core_Model_App->dispatchEvent('checkout_type_o...', Array)
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(180): Mage::dispatchEvent('checkout_type_o...', Array)
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(229): Mage_Sales_Model_Service_Quote->submitOrder()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(742): Mage_Sales_Model_Service_Quote->submitAll()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#17 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#18 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#19 {main}
+2012-01-22T15:10:57+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send('owner@example.c...', 'Owner', Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Helper\Data.php(217): Mage_Core_Model_Email_Template->sendTransactional('checkout_paymen...', 'general', 'owner@example.c...', 'Owner', Array)
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(497): Mage_Checkout_Helper_Data->sendPaymentFailedEmail(Object(Mage_Sales_Model_Quote), 'Warning: includ...')
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#12 {main}
+2012-01-22T15:11:23+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: include(Elblogdeselo\CheckoutTrack\Model\Observer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php on line 93' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): mageCoreErrorHandler(2, 'include(Elblogd...', 'C:\Program File...', 93, Array)
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): Varien_Autoload::autoload()
+#2 [internal function]: Varien_Autoload->autoload('Elblogdeselo_Ch...')
+#3 [internal function]: spl_autoload_call('Elblogdeselo_Ch...')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Config.php(1252): class_exists('Elblogdeselo_Ch...')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(432): Mage_Core_Model_Config->getModelInstance('checkouttrack/o...', Array)
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(446): Mage::getModel('checkouttrack/o...', Array)
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(1245): Mage::getSingleton('checkouttrack/o...')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(416): Mage_Core_Model_App->dispatchEvent('checkout_type_o...', Array)
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(180): Mage::dispatchEvent('checkout_type_o...', Array)
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(229): Mage_Sales_Model_Service_Quote->submitOrder()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(742): Mage_Sales_Model_Service_Quote->submitAll()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#17 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#18 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#19 {main}
+2012-01-22T15:11:24+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send('owner@example.c...', 'Owner', Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Helper\Data.php(217): Mage_Core_Model_Email_Template->sendTransactional('checkout_paymen...', 'general', 'owner@example.c...', 'Owner', Array)
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(497): Mage_Checkout_Helper_Data->sendPaymentFailedEmail(Object(Mage_Sales_Model_Quote), 'Warning: includ...')
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#12 {main}
+2012-01-22T15:11:46+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: include(Elblogdeselo\CheckoutTrack\Model\Observer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php on line 93' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): mageCoreErrorHandler(2, 'include(Elblogd...', 'C:\Program File...', 93, Array)
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): Varien_Autoload::autoload()
+#2 [internal function]: Varien_Autoload->autoload('Elblogdeselo_Ch...')
+#3 [internal function]: spl_autoload_call('Elblogdeselo_Ch...')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Config.php(1252): class_exists('Elblogdeselo_Ch...')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(432): Mage_Core_Model_Config->getModelInstance('checkouttrack/o...', Array)
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(446): Mage::getModel('checkouttrack/o...', Array)
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(1245): Mage::getSingleton('checkouttrack/o...')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(416): Mage_Core_Model_App->dispatchEvent('checkout_type_o...', Array)
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(180): Mage::dispatchEvent('checkout_type_o...', Array)
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(229): Mage_Sales_Model_Service_Quote->submitOrder()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(742): Mage_Sales_Model_Service_Quote->submitAll()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#17 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#18 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#19 {main}
+2012-01-22T15:11:47+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send('owner@example.c...', 'Owner', Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Helper\Data.php(217): Mage_Core_Model_Email_Template->sendTransactional('checkout_paymen...', 'general', 'owner@example.c...', 'Owner', Array)
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(497): Mage_Checkout_Helper_Data->sendPaymentFailedEmail(Object(Mage_Sales_Model_Quote), 'Warning: includ...')
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#12 {main}
+2012-01-22T15:12:59+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: include(Elblogdeselo\CheckoutTrack\Model\Observer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php on line 93' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): mageCoreErrorHandler(2, 'include(Elblogd...', 'C:\Program File...', 93, Array)
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): Varien_Autoload::autoload()
+#2 [internal function]: Varien_Autoload->autoload('Elblogdeselo_Ch...')
+#3 [internal function]: spl_autoload_call('Elblogdeselo_Ch...')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Config.php(1252): class_exists('Elblogdeselo_Ch...')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(432): Mage_Core_Model_Config->getModelInstance('checkouttrack/o...', Array)
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(446): Mage::getModel('checkouttrack/o...', Array)
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(1245): Mage::getSingleton('checkouttrack/o...')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(416): Mage_Core_Model_App->dispatchEvent('checkout_type_o...', Array)
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(180): Mage::dispatchEvent('checkout_type_o...', Array)
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(229): Mage_Sales_Model_Service_Quote->submitOrder()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(742): Mage_Sales_Model_Service_Quote->submitAll()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#17 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#18 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#19 {main}
+2012-01-22T15:13:01+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send('owner@example.c...', 'Owner', Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Helper\Data.php(217): Mage_Core_Model_Email_Template->sendTransactional('checkout_paymen...', 'general', 'owner@example.c...', 'Owner', Array)
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(497): Mage_Checkout_Helper_Data->sendPaymentFailedEmail(Object(Mage_Sales_Model_Quote), 'Warning: includ...')
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#12 {main}
+2012-01-22T15:13:29+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: include(Elblogdeselo\CheckoutTrack\Model\Observer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php on line 93' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): mageCoreErrorHandler(2, 'include(Elblogd...', 'C:\Program File...', 93, Array)
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): Varien_Autoload::autoload()
+#2 [internal function]: Varien_Autoload->autoload('Elblogdeselo_Ch...')
+#3 [internal function]: spl_autoload_call('Elblogdeselo_Ch...')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Config.php(1252): class_exists('Elblogdeselo_Ch...')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(432): Mage_Core_Model_Config->getModelInstance('checkouttrack/o...', Array)
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(446): Mage::getModel('checkouttrack/o...', Array)
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(1245): Mage::getSingleton('checkouttrack/o...')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(416): Mage_Core_Model_App->dispatchEvent('checkout_type_o...', Array)
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(180): Mage::dispatchEvent('checkout_type_o...', Array)
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(229): Mage_Sales_Model_Service_Quote->submitOrder()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(742): Mage_Sales_Model_Service_Quote->submitAll()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#17 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#18 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#19 {main}
+2012-01-22T15:13:31+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send('owner@example.c...', 'Owner', Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Helper\Data.php(217): Mage_Core_Model_Email_Template->sendTransactional('checkout_paymen...', 'general', 'owner@example.c...', 'Owner', Array)
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(497): Mage_Checkout_Helper_Data->sendPaymentFailedEmail(Object(Mage_Sales_Model_Quote), 'Warning: includ...')
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#12 {main}
+2012-01-22T15:13:53+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: include(Elblogdeselo\CheckoutTrack\Model\Observer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php on line 93' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): mageCoreErrorHandler(2, 'include(Elblogd...', 'C:\Program File...', 93, Array)
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): Varien_Autoload::autoload()
+#2 [internal function]: Varien_Autoload->autoload('Elblogdeselo_Ch...')
+#3 [internal function]: spl_autoload_call('Elblogdeselo_Ch...')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Config.php(1252): class_exists('Elblogdeselo_Ch...')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(432): Mage_Core_Model_Config->getModelInstance('checkouttrack/o...', Array)
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(446): Mage::getModel('checkouttrack/o...', Array)
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(1245): Mage::getSingleton('checkouttrack/o...')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(416): Mage_Core_Model_App->dispatchEvent('checkout_type_o...', Array)
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(180): Mage::dispatchEvent('checkout_type_o...', Array)
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(229): Mage_Sales_Model_Service_Quote->submitOrder()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(742): Mage_Sales_Model_Service_Quote->submitAll()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#17 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#18 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#19 {main}
+2012-01-22T15:13:54+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send('owner@example.c...', 'Owner', Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Helper\Data.php(217): Mage_Core_Model_Email_Template->sendTransactional('checkout_paymen...', 'general', 'owner@example.c...', 'Owner', Array)
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(497): Mage_Checkout_Helper_Data->sendPaymentFailedEmail(Object(Mage_Sales_Model_Quote), 'Warning: includ...')
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#12 {main}
+2012-01-22T15:23:48+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: include(Elblogdeselo\CheckoutTrack\Model\Observer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php on line 93' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): mageCoreErrorHandler(2, 'include(Elblogd...', 'C:\Program File...', 93, Array)
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): Varien_Autoload::autoload()
+#2 [internal function]: Varien_Autoload->autoload('Elblogdeselo_Ch...')
+#3 [internal function]: spl_autoload_call('Elblogdeselo_Ch...')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Config.php(1252): class_exists('Elblogdeselo_Ch...')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(432): Mage_Core_Model_Config->getModelInstance('checkouttrack/o...', Array)
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(446): Mage::getModel('checkouttrack/o...', Array)
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(1245): Mage::getSingleton('checkouttrack/o...')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(416): Mage_Core_Model_App->dispatchEvent('checkout_type_o...', Array)
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(180): Mage::dispatchEvent('checkout_type_o...', Array)
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(229): Mage_Sales_Model_Service_Quote->submitOrder()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(742): Mage_Sales_Model_Service_Quote->submitAll()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#17 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#18 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#19 {main}
+2012-01-22T15:23:49+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send('owner@example.c...', 'Owner', Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Helper\Data.php(217): Mage_Core_Model_Email_Template->sendTransactional('checkout_paymen...', 'general', 'owner@example.c...', 'Owner', Array)
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(497): Mage_Checkout_Helper_Data->sendPaymentFailedEmail(Object(Mage_Sales_Model_Quote), 'Warning: includ...')
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#12 {main}
+2012-01-22T15:29:10+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: include(Elblogdeselo\CheckoutTrack\Model\Observer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php on line 93' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): mageCoreErrorHandler(2, 'include(Elblogd...', 'C:\Program File...', 93, Array)
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): Varien_Autoload::autoload()
+#2 [internal function]: Varien_Autoload->autoload('Elblogdeselo_Ch...')
+#3 [internal function]: spl_autoload_call('Elblogdeselo_Ch...')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Config.php(1252): class_exists('Elblogdeselo_Ch...')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(432): Mage_Core_Model_Config->getModelInstance('checkouttrack/o...', Array)
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(446): Mage::getModel('checkouttrack/o...', Array)
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(1245): Mage::getSingleton('checkouttrack/o...')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(416): Mage_Core_Model_App->dispatchEvent('checkout_type_o...', Array)
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(180): Mage::dispatchEvent('checkout_type_o...', Array)
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(229): Mage_Sales_Model_Service_Quote->submitOrder()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(742): Mage_Sales_Model_Service_Quote->submitAll()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#17 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#18 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#19 {main}
+2012-01-22T15:29:11+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send('owner@example.c...', 'Owner', Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Helper\Data.php(217): Mage_Core_Model_Email_Template->sendTransactional('checkout_paymen...', 'general', 'owner@example.c...', 'Owner', Array)
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(497): Mage_Checkout_Helper_Data->sendPaymentFailedEmail(Object(Mage_Sales_Model_Quote), 'Warning: includ...')
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#12 {main}
+2012-01-22T15:29:21+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: include(Elblogdeselo\CheckoutTrack\Model\Observer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php on line 93' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): mageCoreErrorHandler(2, 'include(Elblogd...', 'C:\Program File...', 93, Array)
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): Varien_Autoload::autoload()
+#2 [internal function]: Varien_Autoload->autoload('Elblogdeselo_Ch...')
+#3 [internal function]: spl_autoload_call('Elblogdeselo_Ch...')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Config.php(1252): class_exists('Elblogdeselo_Ch...')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(432): Mage_Core_Model_Config->getModelInstance('checkouttrack/o...', Array)
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(446): Mage::getModel('checkouttrack/o...', Array)
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(1245): Mage::getSingleton('checkouttrack/o...')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(416): Mage_Core_Model_App->dispatchEvent('checkout_type_o...', Array)
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(180): Mage::dispatchEvent('checkout_type_o...', Array)
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(229): Mage_Sales_Model_Service_Quote->submitOrder()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(742): Mage_Sales_Model_Service_Quote->submitAll()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#17 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#18 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#19 {main}
+2012-01-22T15:29:23+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send('owner@example.c...', 'Owner', Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Helper\Data.php(217): Mage_Core_Model_Email_Template->sendTransactional('checkout_paymen...', 'general', 'owner@example.c...', 'Owner', Array)
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(497): Mage_Checkout_Helper_Data->sendPaymentFailedEmail(Object(Mage_Sales_Model_Quote), 'Warning: includ...')
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#12 {main}
+2012-01-22T15:29:35+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: include(Elblogdeselo\CheckoutTrack\Model\Observer.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory  in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php on line 93' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): mageCoreErrorHandler(2, 'include(Elblogd...', 'C:\Program File...', 93, Array)
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Varien\Autoload.php(93): Varien_Autoload::autoload()
+#2 [internal function]: Varien_Autoload->autoload('Elblogdeselo_Ch...')
+#3 [internal function]: spl_autoload_call('Elblogdeselo_Ch...')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Config.php(1252): class_exists('Elblogdeselo_Ch...')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(432): Mage_Core_Model_Config->getModelInstance('checkouttrack/o...', Array)
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(446): Mage::getModel('checkouttrack/o...', Array)
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(1245): Mage::getSingleton('checkouttrack/o...')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(416): Mage_Core_Model_App->dispatchEvent('checkout_type_o...', Array)
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(180): Mage::dispatchEvent('checkout_type_o...', Array)
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Service\Quote.php(229): Mage_Sales_Model_Service_Quote->submitOrder()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(742): Mage_Sales_Model_Service_Quote->submitAll()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#16 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#17 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#18 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#19 {main}
+2012-01-22T15:29:37+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send('owner@example.c...', 'Owner', Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Helper\Data.php(217): Mage_Core_Model_Email_Template->sendTransactional('checkout_paymen...', 'general', 'owner@example.c...', 'Owner', Array)
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(497): Mage_Checkout_Helper_Data->sendPaymentFailedEmail(Object(Mage_Sales_Model_Quote), 'Warning: includ...')
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#12 {main}
+2012-01-22T15:31:29+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(79): Mage_Core_Model_Email_Template->sendTransactional('sales_email_ord...', 'sales', Array, Array, Array, '1')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Order.php(959): Mage_Core_Model_Email_Template_Mailer->send()
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(770): Mage_Sales_Model_Order->sendNewOrderEmail()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#14 {main}
+2012-01-22T15:32:35+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(79): Mage_Core_Model_Email_Template->sendTransactional('sales_email_ord...', 'sales', Array, Array, Array, '1')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Order.php(959): Mage_Core_Model_Email_Template_Mailer->send()
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(770): Mage_Sales_Model_Order->sendNewOrderEmail()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#14 {main}
+2012-01-22T15:33:35+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(79): Mage_Core_Model_Email_Template->sendTransactional('sales_email_ord...', 'sales', Array, Array, Array, '1')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Order.php(959): Mage_Core_Model_Email_Template_Mailer->send()
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(770): Mage_Sales_Model_Order->sendNewOrderEmail()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#14 {main}
+2012-01-22T15:34:55+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(79): Mage_Core_Model_Email_Template->sendTransactional('sales_email_ord...', 'sales', Array, Array, Array, '1')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Order.php(959): Mage_Core_Model_Email_Template_Mailer->send()
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(770): Mage_Sales_Model_Order->sendNewOrderEmail()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#14 {main}
+2012-01-22T15:36:15+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(79): Mage_Core_Model_Email_Template->sendTransactional('sales_email_ord...', 'sales', Array, Array, Array, '1')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Order.php(959): Mage_Core_Model_Email_Template_Mailer->send()
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(770): Mage_Sales_Model_Order->sendNewOrderEmail()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#14 {main}
+2012-01-22T15:37:12+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(79): Mage_Core_Model_Email_Template->sendTransactional('sales_email_ord...', 'sales', Array, Array, Array, '1')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Order.php(959): Mage_Core_Model_Email_Template_Mailer->send()
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(770): Mage_Sales_Model_Order->sendNewOrderEmail()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#14 {main}
+2012-01-22T15:38:34+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(384): Zend_Mail->send()
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template.php(437): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(79): Mage_Core_Model_Email_Template->sendTransactional('sales_email_ord...', 'sales', Array, Array, Array, '1')
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Sales\Model\Order.php(959): Mage_Core_Model_Email_Template_Mailer->send()
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\Model\Type\Onepage.php(770): Mage_Sales_Model_Order->sendNewOrderEmail()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Checkout\controllers\OnepageController.php(459): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#14 {main}
