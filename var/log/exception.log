@@ -2127,3 +2127,237 @@ Stack trace:
 #12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
 #13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
 #14 {main}
+2012-01-30T22:53:15+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'El tipo de bloque es inválido: Elbogdeselo_Headerblock_Block_Header' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php:550
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(469): Mage::throwException('El tipo de bloq...')
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(411): Mage_Core_Model_Layout->_getBlockInstance('headerblock/hea...', Array)
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(446): Mage_Core_Model_Layout->createBlock('headerblock/hea...', 'header.block')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(238): Mage_Core_Model_Layout->addBlock('headerblock/hea...', 'header.block')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(204): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(343): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\Helper\Page.php(110): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\Helper\Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'home')
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\controllers\IndexController.php(45): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'home')
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Cms_IndexController->indexAction()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('index')
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#16 {main}
+2012-01-30T22:53:27+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'El tipo de bloque es inválido: Elbogdeselo_Headerblock_Block_Header' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php:550
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(469): Mage::throwException('El tipo de bloq...')
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(411): Mage_Core_Model_Layout->_getBlockInstance('headerblock/hea...', Array)
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(446): Mage_Core_Model_Layout->createBlock('headerblock/hea...', 'header.block')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(238): Mage_Core_Model_Layout->addBlock('headerblock/hea...', 'header.block')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(204): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(343): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(270): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Customer\controllers\AccountController.php(115): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Customer_AccountController->loginAction()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('login')
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#15 {main}
+2012-01-30T22:53:50+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'El tipo de bloque es inválido: Elbogdeselo_Headerblock_Block_Header' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php:550
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(469): Mage::throwException('El tipo de bloq...')
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(411): Mage_Core_Model_Layout->_getBlockInstance('headerblock/hea...', Array)
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(446): Mage_Core_Model_Layout->createBlock('headerblock/hea...', 'header.block')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(238): Mage_Core_Model_Layout->addBlock('headerblock/hea...', 'header.block')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(204): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(343): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\Helper\Page.php(110): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\Helper\Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'home')
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\controllers\IndexController.php(45): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'home')
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Cms_IndexController->indexAction()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('index')
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#16 {main}
+2012-01-30T22:54:01+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'El tipo de bloque es inválido: Elbogdeselo_Headerblock_Block_Header' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php:550
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(469): Mage::throwException('El tipo de bloq...')
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(411): Mage_Core_Model_Layout->_getBlockInstance('headerblock/hea...', Array)
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(446): Mage_Core_Model_Layout->createBlock('headerblock/hea...', 'header.block')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(238): Mage_Core_Model_Layout->addBlock('headerblock/hea...', 'header.block')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(204): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(343): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(270): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Customer\controllers\AccountController.php(94): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Customer_AccountController->indexAction()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#15 {main}
+2012-01-30T22:55:06+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'El tipo de bloque es inválido: Elbogdeselo_Headerblock_Block_Header' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php:550
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(469): Mage::throwException('El tipo de bloq...')
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(411): Mage_Core_Model_Layout->_getBlockInstance('headerblock/hea...', Array)
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(446): Mage_Core_Model_Layout->createBlock('headerblock/hea...', 'header.block')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(238): Mage_Core_Model_Layout->addBlock('headerblock/hea...', 'header.block')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(204): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(343): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(270): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Customer\controllers\AccountController.php(94): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Customer_AccountController->indexAction()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#15 {main}
+2012-01-30T22:55:43+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'El tipo de bloque es inválido: Elbogdeselo_Headerblock_Block_Header' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php:550
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(469): Mage::throwException('El tipo de bloq...')
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(411): Mage_Core_Model_Layout->_getBlockInstance('headerblock/hea...', Array)
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(446): Mage_Core_Model_Layout->createBlock('headerblock/hea...', 'header.block')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(238): Mage_Core_Model_Layout->addBlock('headerblock/hea...', 'header.block')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(204): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(343): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(270): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Customer\controllers\AccountController.php(94): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Customer_AccountController->indexAction()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#15 {main}
+2012-01-30T22:57:03+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'El tipo de bloque es inválido: Elbogdeselo_Headerblock_Block_Header' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php:550
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(469): Mage::throwException('El tipo de bloq...')
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(411): Mage_Core_Model_Layout->_getBlockInstance('headerblock/hea...', Array)
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(446): Mage_Core_Model_Layout->createBlock('headerblock/hea...', 'header.block')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(238): Mage_Core_Model_Layout->addBlock('headerblock/hea...', 'header.block')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(204): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(343): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(270): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Customer\controllers\AccountController.php(94): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Customer_AccountController->indexAction()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#15 {main}
+2012-01-30T22:57:48+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'El tipo de bloque es inválido: Elbogdeselo_Headerblock_Block_Header' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php:550
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(469): Mage::throwException('El tipo de bloq...')
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(411): Mage_Core_Model_Layout->_getBlockInstance('headerblock/hea...', Array)
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(446): Mage_Core_Model_Layout->createBlock('headerblock/hea...', 'header.block')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(238): Mage_Core_Model_Layout->addBlock('headerblock/hea...', 'header.block')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(204): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(343): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(270): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Customer\controllers\AccountController.php(94): Mage_Core_Controller_Varien_Action->loadLayout()
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Customer_AccountController->indexAction()
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('index')
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#15 {main}
+2012-01-30T22:57:58+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'El tipo de bloque es inválido: Elbogdeselo_Headerblock_Block_Header' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php:550
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(469): Mage::throwException('El tipo de bloq...')
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(411): Mage_Core_Model_Layout->_getBlockInstance('headerblock/hea...', Array)
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(446): Mage_Core_Model_Layout->createBlock('headerblock/hea...', 'header.block')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(238): Mage_Core_Model_Layout->addBlock('headerblock/hea...', 'header.block')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(204): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(343): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\Helper\Page.php(110): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\Helper\Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'home')
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\controllers\IndexController.php(45): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'home')
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Cms_IndexController->indexAction()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('index')
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#16 {main}
+2012-01-30T22:58:36+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'El tipo de bloque es inválido: Elbogdeselo_Headerblock_Block_Header' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php:550
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(469): Mage::throwException('El tipo de bloq...')
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(411): Mage_Core_Model_Layout->_getBlockInstance('headerblock/hea...', Array)
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(446): Mage_Core_Model_Layout->createBlock('headerblock/hea...', 'header.block')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(238): Mage_Core_Model_Layout->addBlock('headerblock/hea...', 'header.block')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(204): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(343): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\Helper\Page.php(110): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\Helper\Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'home')
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\controllers\IndexController.php(45): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'home')
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Cms_IndexController->indexAction()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('index')
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#16 {main}
+2012-01-30T22:59:20+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'El tipo de bloque es inválido: Elbogdeselo_Headerblock_Block_Header' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php:550
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(469): Mage::throwException('El tipo de bloq...')
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(411): Mage_Core_Model_Layout->_getBlockInstance('headerblock/hea...', Array)
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(446): Mage_Core_Model_Layout->createBlock('headerblock/hea...', 'header.block')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(238): Mage_Core_Model_Layout->addBlock('headerblock/hea...', 'header.block')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(204): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(343): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\Helper\Page.php(110): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\Helper\Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'home')
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\controllers\IndexController.php(45): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'home')
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Cms_IndexController->indexAction()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('index')
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#16 {main}
+2012-01-30T22:59:59+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'El tipo de bloque es inválido: Elbogdeselo_Headerblock_Block_Header' in C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php:550
+Stack trace:
+#0 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(469): Mage::throwException('El tipo de bloq...')
+#1 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(411): Mage_Core_Model_Layout->_getBlockInstance('headerblock/hea...', Array)
+#2 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(446): Mage_Core_Model_Layout->createBlock('headerblock/hea...', 'header.block')
+#3 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(238): Mage_Core_Model_Layout->addBlock('headerblock/hea...', 'header.block')
+#4 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(204): Mage_Core_Model_Layout->_generateBlock(Object(Mage_Core_Model_Layout_Element), Object(Mage_Core_Model_Layout_Element))
+#5 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\Layout.php(209): Mage_Core_Model_Layout->generateBlocks(Object(Mage_Core_Model_Layout_Element))
+#6 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(343): Mage_Core_Model_Layout->generateBlocks()
+#7 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\Helper\Page.php(110): Mage_Core_Controller_Varien_Action->generateLayoutBlocks()
+#8 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\Helper\Page.php(52): Mage_Cms_Helper_Page->_renderPage(Object(Mage_Cms_IndexController), 'home')
+#9 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Cms\controllers\IndexController.php(45): Mage_Cms_Helper_Page->renderPage(Object(Mage_Cms_IndexController), 'home')
+#10 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Cms_IndexController->indexAction()
+#11 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(253): Mage_Core_Controller_Varien_Action->dispatch('index')
+#12 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Controller\Varien\Front.php(176): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\code\core\Mage\Core\Model\App.php(340): Mage_Core_Controller_Varien_Front->dispatch()
+#14 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\app\Mage.php(627): Mage_Core_Model_App->run(Array)
+#15 C:\Program Files\Zend\Apache2\htdocs\local.pruebas.com\index.php(82): Mage::run('base', 'website')
+#16 {main}

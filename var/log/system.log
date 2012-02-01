@@ -20310,3 +20310,9 @@ T: {{var telephone}}
     [_xpathExtends:protected] => //*[@extends]
 )
 
+2012-02-01T22:06:13+00:00 CRIT (2): Not valid template file:frontend\base\default\template\elblogdeselo/header.phtml
+2012-02-01T23:16:59+00:00 CRIT (2): Not valid template file:frontend\base\default\template\elblogdeselo/header.phtml
+2012-02-01T23:17:46+00:00 CRIT (2): Not valid template file:frontend\base\default\template\elblogdeselo/header.phtml
+2012-02-01T23:18:13+00:00 CRIT (2): Not valid template file:frontend\base\default\template\elblogdeselo/header.phtml
+2012-02-01T23:19:04+00:00 CRIT (2): Not valid template file:frontend\base\default\template\elblogdeselo/header.phtml
+2012-02-01T23:19:30+00:00 CRIT (2): Not valid template file:frontend\base\default\template\elblogdeselo/header.phtml
