@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Wpr_identifycustomer>
+			<version>0.1.0</version>
+		</Wpr_identifycustomer>
+	</modules>
+	<global><!-- Todos los parámetros de configuración global -->
+    	<events>
+    		<controller_front_init_routers>
+    			<observers><!-- Cuando tengamos el evento controller_front_init_routers -->
+    				<wpr_identifycustomer>
+    					<type>singleton</type>
+    					<class>Wpr_Identifycustomer_Model_Observer</class>
+    					<method>checkCustomer</method><!-- Llamaremos a este método al recibir el evento. -->
+    				</wpr_identifycustomer>
+    			</observers>
+    		</controller_front_init_routers>
+    	</events>
+    </global>
+	
+</config>

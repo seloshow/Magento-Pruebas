@@ -34,4 +34,13 @@ class Wpr_Helloindex_IndexController extends Mage_Core_Controller_Front_Action {
 	        
 	    }
 	}
+	public function responseAction(){
+		//var_dump(get_class($this->getResponse()));/*Pantalla: Mage_Core_Controller_Response_Http */
+		//$this->loadLayout();
+		//$this->renderLayout();
+		$request = new Zend_Controller_Request_Apache404();
+		var_dump($this->_getRefererUrl());
+		
+		
+	}
 }

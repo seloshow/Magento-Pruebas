@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<package>
+    <name>ASchroder_SMTPPro</name>
+    <version>1.4.3</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Full SMTP, Gmail and Google apps email support for Magento. Free and open source.</summary>
+    <description>This extension is now the combination of my SMTP Pro extension and the Gmail + Google Apps extension.&#xD;
+&#xD;
+For SMTP it handles everything from SMTP server authentication with MD5-CRAM to TLS and SSL connections.&#xD;
+&#xD;
+For Google Apps and Gmail it offers the same stupidly simple setup as always.&#xD;
+&#xD;
+The extension itself now supports several new features, such as suppressing emails and sending development mode emails to a single inbox, sending from multiple different gmail/google accounts and now email logging.</description>
+    <notes>1.4.3 - Added Amazon SES support, experimental only&#xD;
+&#xD;
+1.4.2 - Updated Email_Template to work with Magento 1.5.&#xD;
+&#xD;
+1.4.1 - Missed one place where a non-standard basedir will trip up the self test and add extra exception logging.&#xD;
+&#xD;
+1.4.0 - several bug fixes and update to support Magento 1.4.2&#xD;
+&#xD;
+1.3.3 - For the love of god Magento Connect - please let me upload this!&#xD;
+&#xD;
+1.3.2 - For the love of god Magento Connect - please let me upload this!&#xD;
+&#xD;
+1.3.1 - bug fix for the Observer.php include.&#xD;
+&#xD;
+1.3 - add test of _actual email sending and add From: header on test email (fixes an issue for some SMTP servers)&#xD;
+&#xD;
+1.1.1 - Bug fix release&#xD;
+&#xD;
+1.1.0 - Added email logging and event firing&#xD;
+&#xD;
+1.0.4 - No changes, just adding a new point release in the hope that magento connect will work...&#xD;
+&#xD;
+1.0.3 - No changes, just adding a new point release in the hope that magento connect will work...&#xD;
+&#xD;
+1.0.2 - Add support for multiple gmail or Google Apps accounts to address the 500 email limit Google imposes.&#xD;
+&#xD;
+1.0.1 - Re release of the SMTP Pro extension as a combined SMTP + Google apps/Gmail extension.</notes>
+    <authors><author><name>Ashley Schroder</name><user>auto-converted</user><email>ashley.schroder@gmail.com</email></author></authors>
+    <date>2011-03-20</date>
+    <time>04:24:33</time>
+    <contents><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="smtppro"><file name="view.phtml" hash="fd22a77c5754913bac050923bff57d95"/></dir></dir></dir></dir></dir></target><target name="magecommunity"><dir name="Aschroder"><dir name="SMTPPro"><dir name="Block"><dir name="Adminhtml"><file name="Test.php" hash="0d0ff50fe926cd5704426d5a7b255176"/></dir><dir name="Log"><file name="Grid.php" hash="2f04731eeeb9d821857fccda014a6d84"/><file name="View.php" hash="396702d55673f05961cf646525212534"/></dir><file name="Log.php" hash="d2a7233ec0fd3f20d048f3dd412f61a3"/></dir><dir name="Helper"><file name="Data.php" hash="e4ebefdc54df5e440caafa6365534624"/></dir><dir name="Model"><dir name="Email"><file name="Log.php" hash="c05dcbe851684410e0cbcfed6cc914cd"/><file name="Template.php" hash="a234cf2f9fa7d4b9a0e83c52e46e3d0f"/></dir><dir name="Mysql4"><dir name="Email"><dir name="Log"><file name="Collection.php" hash="8ca40c787081eb19f665e8033bfd5025"/></dir><file name="Log.php" hash="c8331530a6744b42c52beaf0e714fddd"/></dir><file name="Setup.php" hash="a1f73ffd26ddd42a9789b071a40b2450"/></dir><dir name="Newsletter"><file name="Template.php" hash="b38356df77253bd116ee5b6f6c59b223"/></dir><dir name="System"><dir name="Config"><dir name="Source"><dir name="Smtp"><file name="Authentication.php" hash="2e871d8a7a4beaff99c818a51fb38344"/><file name="Development.php" hash="2f9b6177e6063c2d42483c9af65995d3"/><file name="Option.php" hash="a4335eb0c2bc92c6a3356dd62fc568ff"/><file name="Ssl.php" hash="ae9af390a40b8bcebbc8451a9152821f"/></dir></dir></dir></dir><file name="Email.php" hash="043689ad6ac3bfa6c96739596126fd20"/><file name="Observer.php" hash="a9df4366354e355bfdb1476720610331"/></dir><dir name="controllers"><file name="IndexController.php" hash="63dcb8c38abd84e4996abb49e6b5d543"/><file name="LogController.php" hash="b6819bb30738db7416ca241303e5b1fd"/></dir><dir name="etc"><file name="config.xml" hash="512a199b1e4092c9051582afa648cce2"/><file name="system.xml" hash="9f4b9a8f2e59de0b3fd6b28c9a49b1d7"/></dir><dir name="lib"><file name="AmazonSES.php" hash="64e65ec97f0f2e3e72d132ed612fb858"/></dir><dir name="locale"><dir name="de_DE"><file name="Aschroder_SMTPPro.csv" hash="5b2e576a73cc62cfaf3ffc61d5149bb8"/></dir></dir><dir name="modules"><file name="Aschroder_SMTPPro.xml" hash="8a4e6872dd721b6bd17bce8b1cb11769"/></dir><dir name="sql"><dir name="smtppro_setup"><file name="mysql4-install-1.1.0.php" hash="5c13c266d15ce411658ae616c3e41e63"/></dir></dir><dir name="templates"><dir name="adminhtml"><dir name="base"><dir name="default"><dir name="template"><dir name="smtppro"><file name="view.phtml" hash="fd22a77c5754913bac050923bff57d95"/></dir></dir></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Aschroder_SMTPPro.xml" hash="8a4e6872dd721b6bd17bce8b1cb11769"/></dir></target><target name="magelocale"><dir name="de_DE"><file name="Aschroder_SMTPPro.csv" hash="5b2e576a73cc62cfaf3ffc61d5149bb8"/></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>
