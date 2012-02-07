@@ -7,7 +7,9 @@
 	</modules>
 	<global><!-- Todos los parámetros de configuración global -->
     	<events>
-    		<controller_front_init_routers>
+    		<controller_front_init_routers><!-- Podemos poner este evento tambien -->
+    		<!--  <controller_front_init_before>-->	<!-- otra opción -->
+    		
     			<observers><!-- Cuando tengamos el evento controller_front_init_routers -->
     				<wpr_identifycustomer>
     					<type>singleton</type>
@@ -15,7 +17,9 @@
     					<method>checkCustomer</method><!-- Llamaremos a este método al recibir el evento. -->
     				</wpr_identifycustomer>
     			</observers>
-    		</controller_front_init_routers>
+    		</controller_front_init_routers><!-- Podemos poner este evento tambien -->
+    		<!--</controller_front_init_before>-->	<!-- otra opción -->
+    		
     	</events>
     </global>
 	

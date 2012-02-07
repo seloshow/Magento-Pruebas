@@ -8,7 +8,7 @@
     <global><!-- Todos los parámetros de configuración global -->
     	<events>
     		<controller_front_init_routers>
-    			<observers><!-- Cuando tengamos el evento controller_front_init_routers -->
+    			<observers>
     				<alanstormdotcom_configviewer_model_observer>
     					<type>singleton</type>
     					<class>Alanstormdotcom_Configviewer_Model_Observer</class>

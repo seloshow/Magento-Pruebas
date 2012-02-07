@@ -8,7 +8,7 @@
 	<global>
 		<events>
 			 <sales_order_place_before>
-			 <!--  <controller_front_init_routers>-->
+			 
 			 	<observers>
 			 		<interactiv4_compraadmin_model_observer>
 			 			<type>singleton</type>
@@ -16,7 +16,7 @@
 			 			<method>prueba</method>
 			 		</interactiv4_compraadmin_model_observer>
 			 	</observers>
-			 <!-- </controller_front_init_routers>-->
+			 
 			 </sales_order_place_before>
 		</events>
 	</global>

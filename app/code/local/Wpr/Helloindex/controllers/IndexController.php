@@ -39,7 +39,7 @@ class Wpr_Helloindex_IndexController extends Mage_Core_Controller_Front_Action {
 		//$this->loadLayout();
 		//$this->renderLayout();
 		$request = new Zend_Controller_Request_Apache404();
-		var_dump($this->_getRefererUrl());
+		//var_dump($this->_getRefererUrl());
 		
 		
 	}
