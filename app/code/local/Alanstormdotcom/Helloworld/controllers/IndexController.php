@@ -190,4 +190,100 @@ class Alanstormdotcom_Helloworld_IndexController extends Mage_Core_Controller_Fr
 	{
 		$customer=new Customer();
 	}
+	public function mergexmlAction(){
+		
+		/*@davidselo: Action para entender como funciona el merge de los archivos XML*/
+		/*$first = new Mage_Core_Model_Config_Base;
+		$first->loadString('<config>
+				<one></one>
+				<two></two>
+				<three></three>
+				</config>');
+		
+		$second = new Mage_Core_Model_Config_Base;
+		$second->loadString('<config>
+				<four></four>
+				<five></five>
+				</config>');
+		
+		$first->extend($second);
+	    echo  $first->getNode()->asNiceXml();*/
+	    /*SALIDA POR PANTALLA:
+	     * <config>
+	     * 		<one/>
+	     * 		<two/>
+	     * 		<three/>
+	     *  	<four/>
+	     *  	<five/>
+	     *  </config>
+	     * 
+	     * */
+		/*
+		$first = new Mage_Core_Model_Config_Base;
+		$first->loadString('<config>
+				<one></one>
+				<two></two>
+				<three></three>
+				</config>');
+		
+		$second = new Mage_Core_Model_Config_Base;
+		$second->loadString('<config>
+				<one>Hello</one>
+				<two>Goodby</two>
+				</config>');
+		
+		$first->extend($second);
+		echo $first->getNode()->asNiceXml();*/
+		/*SALIDA POR PANTALLA:
+		 * <config>
+		 *   <three/>
+		 *     <one>Hello</one>
+		 *     <two>Goodby</two>
+		 * </config>*/
+		/*$first = new Mage_Core_Model_Config_Base;
+		$first->loadString('<config>
+				<one>
+				<two>
+				<three></three>
+				</two>
+				</one>
+				</config>');
+		
+		$second = new Mage_Core_Model_Config_Base;
+		$second->loadString('<config>
+				<one>
+				<two>
+				<four></four>
+				</two>
+				</one>
+				</config>');
+		
+		$first->extend($second);
+		echo $first->getNode()->asNiceXml();
+		*/
+		
+		$first = new Mage_Core_Model_Config_Base;
+		$first->loadString('<config>
+				<one>
+				<two>
+				<three>Original Value</three>
+				</two>
+				</one>
+				</config>');
+		
+		$second = new Mage_Core_Model_Config_Base;
+		$second->loadString('<config>
+				<one>
+				<two>
+				<four></four>
+				<three>New Value</three>
+				</two>
+				</one>
+				</config>');
+		
+		$first->extend($second,false);
+		echo $first->getNode()->asNiceXml();
+		
+		
+	}
 }
