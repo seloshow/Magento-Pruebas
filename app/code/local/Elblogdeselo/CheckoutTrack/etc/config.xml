@@ -13,7 +13,7 @@
 		</models>
 		<events>
     		<checkout_type_onepage_save_order>
-    			<observers><!-- Cuando tengamos el evento controller_front_init_routers -->
+    			<observers>
     				<elblogdeselo_checkouttrack>
     					<class>checkouttrack/observer</class>
     					<method>addSessionVariable</method><!-- Llamaremos a este método al recibir el evento. -->

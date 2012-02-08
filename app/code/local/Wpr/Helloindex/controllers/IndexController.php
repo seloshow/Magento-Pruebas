@@ -40,6 +40,8 @@ class Wpr_Helloindex_IndexController extends Mage_Core_Controller_Front_Action {
 		//$this->renderLayout();
 		$request = new Zend_Controller_Request_Apache404();
 		//var_dump($this->_getRefererUrl());
+		$patata=Mage::getSingleton('core/session')->getPatata();
+		var_dump($patata);exit;
 		
 		
 	}

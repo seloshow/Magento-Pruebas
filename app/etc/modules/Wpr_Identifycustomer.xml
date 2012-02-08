@@ -4,9 +4,6 @@
 		<Wpr_Identifycustomer>
 			<active>true</active>
 			<codePool>local</codePool>
-			<depends>
-               <Mage_Core/>
-            </depends>
 		</Wpr_Identifycustomer>
 	</modules>
 </config>
