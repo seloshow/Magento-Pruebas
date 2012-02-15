@@ -23,5 +23,5 @@
  * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
-//die('script de instalación ejecutandose 0.1.0');
+//die('script de instalaciï¿½n ejecutandose 0.1.0');
 echo "0.1.0";?><br>
