@@ -7,7 +7,8 @@
 	</modules>
 	<global><!-- Todos los parámetros de configuración global -->
     	<events>
-    		<cms_page_render>
+    		<!--  <cms_page_render>-->
+    		<controller_front_send_response_before>
     			<observers>
     				<wpr_identifycustomer>
     					<type>singleton</type>
@@ -15,7 +16,8 @@
     					<method>checkCustomer</method><!-- Llamaremos a este método al recibir el evento. -->
     				</wpr_identifycustomer>
     			</observers>
-    		</cms_page_render>   		
+    		</controller_front_send_response_before>
+<!--     		</cms_page_render>   		 -->
     	</events>
     </global>
     <frontend>

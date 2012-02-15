@@ -10,7 +10,10 @@ class Wpr_Helloindex_IndexController extends Mage_Core_Controller_Front_Action {
 	}
 	public function goodbyeAction()
 	{
-		echo 'goodbye';
+		//echo 'goodbye';
+		if (isset($_SERVER['IS_TV'])) {
+			var_dump($_SERVER['IS_TV']);
+		}
 	}
 	public function newpostAction()
 	{
@@ -44,5 +47,9 @@ class Wpr_Helloindex_IndexController extends Mage_Core_Controller_Front_Action {
 		var_dump($patata);exit;
 		
 		
+	}
+	public function sessionAction(){
+		var_dump(Mage::getSingleton('core/session')->getProcedencia());
+		//var_dump($_SESSION);
 	}
 }

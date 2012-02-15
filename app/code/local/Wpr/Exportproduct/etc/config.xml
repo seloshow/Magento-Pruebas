@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Wpr_Exportproduct>
+			<version>0.1.0</version>
+		</Wpr_Exportproduct>
+	</modules>
+	<frontend>
+		<routers>
+			<exportproduct>
+				<use>standard</use>
+				<args>
+					<module>Wpr_Exportproduct</module>
+					<frontName>exportproduct</frontName>
+				</args>
+			</exportproduct>
+		</routers>
+	</frontend>
+</config>
