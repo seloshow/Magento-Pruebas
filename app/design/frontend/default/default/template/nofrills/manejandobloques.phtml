@@ -1,0 +1,15 @@
+<?php # File : app/design/frontend/default/default/template/helloworld.phtml
+?>
+<h1> Hello World </h1 >
+<p>
+<?php /*Renderiza los hijos del bloque y llamaría a los métodos toHtml*/?>
+<?php //echo $this -> getChildHtml ('the_first'); ?>
+<?php //echo $this -> getChildHtml ('the_second'); ?>
+<?php /*si no le pasamos ningun parámetro a getChildHtml('') renderiza todos los hijos, 
+con lo cual lo escrito anteriormente tiene el mismo efecto que lo escrito a continuación */?>
+<?php echo $this->getChildHtml('');?>
+
+</p>
+<p>
+The second paragraph is hard - coded .
+</p>

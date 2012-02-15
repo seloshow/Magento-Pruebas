@@ -1,0 +1,21 @@
+<layout>	
+<!-- @davidselo: Instanciar aquí los bloques es igual que llamar al método inser de manera manual -->
+	<block type="nofrills_booklayout/template" name="root" template="simple-page/2col.phtml" output="toHtml">
+		<block type="nofrills_booklayout/template" name="additional_head" template="simple-page/head.phtml" />
+
+		<block type="nofrills_booklayout/template" name="sidebar">
+			<action method="setTemplate"><template>simple-page/sidebar.phtml</template></action>
+		</block>
+
+		<block type="core/text_list" name="content" />
+	</block>
+	
+	
+	<reference name="content">
+		<block type="core/text" name="goodbye">
+			<action method="setText"><text> The lazy dog was only faking it. </text></action>
+		</block>
+		
+	</reference>
+	
+</layout>

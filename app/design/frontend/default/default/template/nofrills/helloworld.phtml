@@ -1,0 +1,19 @@
+<?php # File : app / design / frontend / default / default / template / helloworld . phtml 
+/*This is the preferred way to create templates with dynamic data in Magento.
+* Your phtml should contain:
+*   1. HTML/CSS/Javascript code
+*	2. Calls to echo
+*	3. Looping and control structures
+*	4. Calls to block methods
+* Any PHP more complicated than the above should be put in block methods.
+* This includes calls to Magento models to read back data which was saved in the
+controller layer.
+ * */
+?>
+<h1 ><?php echo $this->fetchTitle();?></h1 >
+<p>
+<?php echo $this->getChildHtml('the_first');//Carga el bloque hijo y ejecuta su método toHtml() ?>
+</p>
+<p>
+	The second paragraph is hard - coded .
+</p>
