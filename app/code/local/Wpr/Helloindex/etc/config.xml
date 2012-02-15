@@ -32,6 +32,17 @@
                 </setup>
             </helloindex_setup>
         </resources>
+        <events>
+    		<controller_front_init_routers>
+    			<observers><!-- Cuando tengamos el evento controller_front_init_routers -->
+    				<wpr_helloindex_model_observer>
+    					<type>singleton</type>
+    					<class>Wpr_Helloindex_Model_Observer</class>
+    					<method>checkForDomain</method><!-- Llamaremos a este método al recibir el evento. -->
+    				</wpr_helloindex_model_observer>
+    			</observers>
+    		</controller_front_init_routers>
+    	</events>
 	</global>
 	 <frontend>
 	 	<layout>
