@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Wpr_Bannerbienvenida><!--app/code/<codePool>/Wpr/Bannerbiebenida/etc/config.xml  -->
+			<active>false</active>
+			<codePool>local</codePool>
+		</Wpr_Bannerbienvenida>
+	</modules>
+</config>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
 	<modules>
-		<Wpr_identifycustomer>
+		<Wpr_Identifycustomer>
 			<version>0.1.0</version>
-		</Wpr_identifycustomer>
+		</Wpr_Identifycustomer>
 	</modules>
 	<global><!-- Todos los parámetros de configuración global -->
     	<events>

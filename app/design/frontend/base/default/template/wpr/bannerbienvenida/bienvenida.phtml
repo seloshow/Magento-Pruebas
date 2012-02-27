@@ -1,0 +1,25 @@
+<?php if ($this->primeraVez()):?>
+<div id="light" class="white_content">
+<h1>Dia del padre</h1>
+<p>Esta categoría está dirigida a mayores de 18 años. Por favor, úsala de forma responsable. Rechazamos cualquier tipo de responsabilidad derivada de los efectos negativos que el acceso a esta categoría pueda causar. Queda estrictamente prohibido el acceso a personas menores de 18 años.</p>
+<h2>¿Eres mayor de edad?</h2>
+<h2>
+<a id="mayor_de_edad" href="#">Si</a>
+</h2>
+</div><div id="fade" class="black_overlay"></div>
+<?php echo $this->primeraVez();?>
+
+<script>
+function delay(){
+    setTimeout('afterThreeSeconds()',3000);
+}
+
+function afterThreeSeconds(){
+    //alert("after 3 seconds");
+	document.getElementById('light').style.display='none';
+	document.getElementById('fade').style.display='none';
+}
+window.onload = delay;
+
+</script>
+<?php endif;?>

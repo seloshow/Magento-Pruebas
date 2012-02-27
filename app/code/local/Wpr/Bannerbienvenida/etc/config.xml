@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Wpr_Bannerbienvenida>
+			<version>0.1.0</version>
+		</Wpr_Bannerbienvenida>
+	</modules>
+	<frontend>
+       <layout>
+            <updates>
+                <poll>
+                    <file>wpr_bienvenida.xml</file>
+                </poll>
+            </updates>
+        </layout>
+    </frontend>
+	<global>
+		<blocks>
+			<bienvenida>
+				<class>Wpr_Bannerbienvenida_Block</class>
+			</bienvenida>
+		</blocks>
+	</global>
+</config>

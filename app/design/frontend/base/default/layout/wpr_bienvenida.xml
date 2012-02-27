@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+
+	<cms_index_index><!-- handle cargado unicamente en la cms que se ha seleccionado de inicio -->
+		<!-- @davidselo: Bloque que añade el bloque de tipo template con el código HTML para crear la página de bienvenida. -->
+		<reference name="after_body_start">
+			<block type="bienvenida/bienvenida" name="banner.bienvenida" as="banner.bienvenida" template="wpr/bannerbienvenida/bienvenida.phtml">
+			</block>
+		</reference>
+		<!--  -->
+		<reference name="head">
+			 <action method="addCss"><stylesheet>css/wpr/bienvenida.css</stylesheet></action>
+			 
+		</reference>
+	</cms_index_index>
+	
+</layout>
