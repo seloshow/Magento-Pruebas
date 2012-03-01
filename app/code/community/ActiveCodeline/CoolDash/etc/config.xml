@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <ActiveCodeline_CoolDash>
+            <version>0.1.0</version>
+        </ActiveCodeline_CoolDash>
+    </modules>  
+    <global>
+        <blocks>
+            <somecooldashblock1>
+            	<class>ActiveCodeline_CoolDash_Block</class>
+           	</somecooldashblock1>
+        </blocks>
+        <helpers>
+            <somecooldashhelper1>
+                <class>ActiveCodeline_CoolDash_Helper</class>
+            </somecooldashhelper1>
+        </helpers>        
+        <models>
+            <somecooldashmodel1>
+                <class>ActiveCodeline_CoolDash_Model</class>
+            </somecooldashmodel1>
+		</models>
+        <models>
+            <somecooldashmodel2>
+                <class>ActiveCodeline_CoolDash_Model_Config</class>
+            </somecooldashmodel2>
+		</models>	
+        <models>
+            <somecooldashmodel3>
+                <class>ActiveCodeline_CoolDash_Model_BackendActions</class>
+            </somecooldashmodel3>
+		</models>			
+	</global>
+	
+	
+	<adminhtml>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<samplesection1 translate="title" module="somecooldashhelper1">
+											<title>CoolDash Section by Branko</title>
+											<sort_order>50</sort_order>
+										</samplesection1>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+	
+</config>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <ActiveCodeline_CoolDash>
+            <active>true</active>
+            <codePool>community</codePool>
+        </ActiveCodeline_CoolDash>
+    </modules>
+</config>

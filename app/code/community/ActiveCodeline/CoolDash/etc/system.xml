@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+
+<config>
+    <tabs>
+        <mycooltab1 translate="label" module="somecooldashhelper1">
+            <label>CoolDash main menu label</label>
+            <sort_order>210</sort_order>
+        </mycooltab1>
+    </tabs>
+    
+    <sections>
+        <samplesection1 translate="label" module="somecooldashhelper1">
+            <class>separator-top</class>
+            <label>Sample section 1 label</label>
+            <tab>mycooltab1</tab>
+            <sort_order>130</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <samplegroup1 translate="label">
+                    <label>Sample group 1 label</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <samplefield1fromgroup1 translate="label">
+                            <label>Sample group 1 field 1 label</label>
+                            <frontend_type>select</frontend_type>
+                            <backend_model>somecooldashmodel2/CustomSelectionOptions</backend_model>
+                            <source_model>somecooldashmodel2/CustomSelectionOptions</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Field comment here, for field 1 from group 1.</comment>
+                        </samplefield1fromgroup1>
+                    </fields>
+                </samplegroup1>
+                <samplegroup2 translate="label">
+                    <label>Sample group 2 label</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <samplefield1fromgroup2 translate="label">
+                            <label>Sample label for field 1 of group 2 here</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Just some field comment here, for field 1 from group 2.</comment>
+                        </samplefield1fromgroup2>
+                    </fields>
+                </samplegroup2>
+                <samplegroup3 translate="label">
+                    <label>Sample group 3 label</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>15</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <samplefield1fromgroup3 translate="label">
+                            <label>Sample group 3 field 1 label</label>
+                            <frontend_type>select</frontend_type>
+                            <backend_model>somecooldashmodel2/CustomMultiSelectionOptions</backend_model>
+                            <source_model>somecooldashmodel2/CustomMultiSelectionOptions</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>multiselect</frontend_type>
+                            <comment>Field comment here, for field 1 from group 1.</comment>
+                        </samplefield1fromgroup3>
+                    </fields>
+                </samplegroup3>
+                
+                
+                <samplegroup4 translate="label">
+                    <label>Sample group 4 label</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <samplefield1fromgroup4 translate="label">
+                            <label>Sample group image type label</label>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>somecooldashmodel3/HandlePhoto</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">catalog/product/placeholder</upload_dir>
+                            <base_url type="media" scope_info="1">catalog/product/placeholder</base_url>                            
+                            <label>Sample photo upload</label>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Field comment here, for field 1 from group 4.</comment>
+                        </samplefield1fromgroup4>
+                        
+                    </fields>
+                </samplegroup4>     
+                
+                
+                
+                <samplegroup5 translate="label">
+                    <label>Sample group 5 label (file upload demo)</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>21</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <samplefield1fromgroup5 translate="label">
+                            <label>Sample group file type label</label>
+                            <frontend_type>file</frontend_type>
+                            <backend_model>somecooldashmodel3/HandleFile</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">catalog/product/placeholder</upload_dir>
+                            <base_url type="media" scope_info="1">catalog/product/placeholder</base_url>                            
+                            <label>Sample file upload (check the HandleFile for logic)</label>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Field comment here, for field 1 from group 5.</comment>
+                        </samplefield1fromgroup5>
+                        
+                    </fields>
+                </samplegroup5>                             
+                
+                
+
+                <samplegroup6 translate="label">
+                    <label>Sample group 6 label (time demo)</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>22</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <samplefield1fromgroup6 translate="label">
+                            <label>Sample group date type label</label>
+                            <frontend_type>time</frontend_type>                            
+                            <label>Sample time</label>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Field comment here, for field 1 from group 6.</comment>
+                        </samplefield1fromgroup6>
+                        
+                    
+                        
+                    </fields>
+                </samplegroup6>                             
+                
+                
+                
+            </groups>
+        </samplesection1>
+    </sections>
+    
+    
+</config>

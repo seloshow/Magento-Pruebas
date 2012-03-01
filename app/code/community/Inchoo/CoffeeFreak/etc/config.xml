@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Inchoo_CoffeeFreak>
+            <version>0.1.0</version>
+        </Inchoo_CoffeeFreak>
+    </modules> 
+
+    <global>
+        <blocks>
+            <coffefreakblock1>
+            	<class>Inchoo_CoffeeFreak_Block</class>
+           	</coffefreakblock1>  
+			<coffefreakblock2>
+            	<class>Inchoo_CoffeeFreak_Block_EditSpecial</class>
+           	</coffefreakblock2> 
+        </blocks>
+        <helpers>
+            <coffefreakhelper1>
+                <class>Inchoo_CoffeeFreak_Helper</class>
+            </coffefreakhelper1>
+        </helpers>  
+	</global>    
+	
+
+
+
+
+	
+	<admin>
+		<routers>
+    
+		   <samplerouter1>
+                <use>admin</use>
+                <args>
+                    <module>Inchoo_CoffeeFreak_AdminControllersHere</module>
+                    <frontName>admin</frontName>
+                    
+                    <modules>
+		         		<sintax after="Inchoo_CoffeeFreak_AdminControllersHere">Mage_Adminhtml</sintax>
+		       		</modules>
+                </args>
+		   </samplerouter1>		     
+		     
+		     
+		     
+	     </routers>    	
+	</admin>
+	
+	
+	
+	
+    
+    <adminhtml>
+ 
+    
+        <menu>
+             <mymenu1 translate="title" module="coffefreakhelper1">
+                <title>CoffeeFreak</title>
+                <sort_order>20</sort_order>
+                <children>
+                <!-- Note the misleading "module" attribute. 
+                	It actualy refers to one of the declared helpers -->
+                	
+                    <myitem1 translate="title" module="coffefreakhelper1">
+                        <title>Simple one column layout with custom template file assigned for view</title>
+                        <action>samplerouter1/FreakOut</action>
+                        <sort_order>1</sort_order>                        
+                    </myitem1>
+                    
+                    <myitem2 translate="title" module="coffefreakhelper1">
+                        <title>Simple two column layout with custom template file assigned for view</title>
+                        <action>samplerouter1/FreakOut2</action>
+                        <sort_order>2</sort_order>                        
+                    </myitem2>                    
+                    
+                    
+				</children>
+             </mymenu1>
+        </menu>
+	</adminhtml>    
+    
+</config>
