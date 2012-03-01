@@ -1,0 +1,22 @@
+    <?php
+         $currentPage = $this->getCurrentPage();
+         $pages = $this->getPagesCount();    
+         $links = null;
+         $route = Mage::helper('blog')->getRoute();
+    ?>
+
+<?php if ($this->getCategoryMode()): $cat = $this->getRequest()->getParam('identifier'); ?>
+    <?php if ($currentPage > 1): ?>
+            <div class="left"><a href="<?php echo $this->getUrl($route . '/cat/' . $cat . '/page/' . ($currentPage - 1)); ?>" >< Newer Posts</a></div>
+     <?php elseif($currentPage < $pages): ?>          
+            <div class="right"><a href="<?php echo $this->getUrl($route . '/cat/' . $cat . '/page/' . ($currentPage + 1)); ?>" >Older Posts ></a></div>
+      <?php else: ?>
+      <?php endif; ?>
+<?php else: ?>
+ <?php if ($currentPage > 1): ?>
+            <div class="left"><a href="<?php echo $this->getUrl($route . '/page/' . ($currentPage - 1)); ?>" >< Newer Posts</a></div>
+     <?php elseif($currentPage < $pages): ?>          
+            <div class="right"><a href="<?php echo $this->getUrl($route .'/page/' . ($currentPage + 1)); ?>" >Older Posts ></a></div>
+      <?php else: ?>
+      <?php endif; ?>
+<?php endif; ?>
