@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+<!-- @davidselo: Esto tambien se puede definirm en el config.xml bajo el tag adminhtml, en este caso prefiero separarlo en otro archivo para que
+				 quede todo mas separado. -->
+        <menu>
+             <mymenu1 translate="title" module="coffefreakhelper1">
+                <title>CoffeeFreak</title>
+                <sort_order>20</sort_order>
+                <children>
+                <!-- Note the misleading "module" attribute. 
+                	It actualy refers to one of the declared helpers -->
+                	
+                    <myitem1 translate="title" module="coffefreakhelper1">
+                        <title>Simple one column layout with custom template file assigned for view</title>
+                        <action>samplerouter1/FreakOut</action>
+                        <sort_order>1</sort_order>                        
+                    </myitem1>
+                    
+                    <myitem2 translate="title" module="coffefreakhelper1">
+                        <title>Simple two column layout with custom template file assigned for view</title>
+                        <action>samplerouter1/FreakOut2</action>
+                        <sort_order>2</sort_order>                        
+                    </myitem2>                    
+				</children>
+             </mymenu1>
+        </menu>
+	   
+</config>

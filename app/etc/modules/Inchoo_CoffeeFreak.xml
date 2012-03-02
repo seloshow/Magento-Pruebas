@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-
+<!-- @davidselo: cuidado si se toma esta extension de ejemplo
+dado que al activarla se fastidia el apartado de insertar widjet. -->
 <config>
     <modules>
         <Inchoo_CoffeeFreak>
