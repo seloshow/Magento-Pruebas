@@ -28,7 +28,7 @@
                 <use>admin</use>
                 <args>
                     <module>Inchoo_CoffeeFreak_AdminControllersHere</module>
-                    <frontName>admin</frontName>
+                    <frontName>cofeefreak</frontName>
                     
                     <modules>
 		         		<sintax after="Inchoo_CoffeeFreak_AdminControllersHere">Mage_Adminhtml</sintax>
