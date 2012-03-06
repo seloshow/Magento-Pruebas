@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<menu>
+         <smsmainmenu translate="title" module="smspremiumhelper">
+            <title>Sms Premium</title>
+            <sort_order>20</sort_order>
+            <children>	
+                <item1 translate="title" module="smspremiumhelper">
+                    <title>Recogida datos de un formulario</title>
+                    <action>smspremium/adminhtml_smspremium</action>
+                    <sort_order>1</sort_order>                        
+                </item1>
+			</children>
+         </smsmainmenu>
+	</menu>
+</config>

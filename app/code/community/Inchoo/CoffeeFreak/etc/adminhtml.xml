@@ -3,6 +3,7 @@
 <config>
 <!-- @davidselo: Esto tambien se puede definirm en el config.xml bajo el tag adminhtml, en este caso prefiero separarlo en otro archivo para que
 				 quede todo mas separado. -->
+<!-- adminhtml.xml: En este archivo vamos a meter la configuración correspondiente a menu y acl. Así es como lo hace la gente de Magento Core -->
         <menu>
              <mymenu1 translate="title" module="coffefreakhelper1">
                 <title>CoffeeFreak</title>

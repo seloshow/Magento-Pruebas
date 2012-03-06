@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<CA_SmsPremium>
+			<version>0.1.0</version>
+		</CA_SmsPremium>
+	</modules>
+	<global>
+		<blocks>
+			<smspremium>
+				<class>CA_SmsPremium_Block</class>
+			</smspremium>
+		</blocks>
+		<helpers>
+			<smspremiumhelper>
+				<class>CA_SmsPremium_Helper</class>
+			</smspremiumhelper>
+		</helpers>
+	</global>
+	<admin>
+        <routers>
+			<smspremium>
+				<use>admin</use>
+				<args>
+					<module>CA_SmsPremium</module>
+					<frontName>smspremium</frontName>
+				</args>
+			</smspremium>
+        </routers>
+    </admin>
+</config>

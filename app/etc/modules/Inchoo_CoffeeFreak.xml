@@ -4,7 +4,7 @@ dado que al activarla se fastidia el apartado de insertar widjet. -->
 <config>
     <modules>
         <Inchoo_CoffeeFreak>
-            <active>true</active>
+            <active>false</active>
             <codePool>community</codePool>
         </Inchoo_CoffeeFreak>
     </modules>
