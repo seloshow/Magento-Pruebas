@@ -10,8 +10,8 @@ class CA_Smspremium_Block_Adminhtml_Smspremium_Edit_Tabs extends Mage_Adminhtml_
 	{
 		parent::__construct();
 		$this->setId('smspremium_tabs');
-      	$this->setDestElementId('segmentation_form');
-     	$this->setTitle(Mage::helper('smspremiumhelper')->__('Deal Information'));
+      	$this->setDestElementId('edit_form');
+     	$this->setTitle(Mage::helper('smspremiumhelper')->__('Información SMS'));
 	}
 
 	protected function _beforeToHtml()

@@ -38,7 +38,7 @@ class CA_Smspremium_Block_Adminhtml_Smspremium_Edit extends Mage_Adminhtml_Block
 		//$this->_controller = 'adminhtml_smspremium';
 		$this->_blockGroup = 'smspremium';
 		$this->_controller = 'adminhtml_smspremium';
-		$this->updateButton('save', 'label', Mage::helper('smspremiumhelper')->__('Guardar'));
+		$this->updateButton('save', 'label', Mage::helper('smspremiumhelper')->__('Guardar SMS'));
 		$this->_removeButton('reset');
 		
 		
