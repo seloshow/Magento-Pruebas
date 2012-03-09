@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
 	<modules>
-		<CA_SmsPremium>
+		<CA_Smspremium>
 			<active>true</active> <!-- app/code/[codePool]/CA/SmsPremium -->
 			<codePool>local</codePool>
-		</CA_SmsPremium>
+		</CA_Smspremium>
 	</modules>
 </config>

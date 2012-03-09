@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
 	<modules>
-		<CA_SmsPremium>
+		<CA_Smspremium>
 			<version>0.1.0</version>
-		</CA_SmsPremium>
+		</CA_Smspremium>
 	</modules>
 	<global>
 		<blocks>
 			<smspremium>
-				<class>CA_SmsPremium_Block</class>
+				<class>CA_Smspremium_Block</class>
 			</smspremium>
 		</blocks>
 		<helpers>
 			<smspremiumhelper>
-				<class>CA_SmsPremium_Helper</class>
+				<class>CA_Smspremium_Helper</class>
 			</smspremiumhelper>
 		</helpers>
 	</global>
@@ -22,8 +22,8 @@
 			<smspremium>
 				<use>admin</use>
 				<args>
-					<module>CA_SmsPremium</module>
-					<frontName>smspremium</frontName>
+					<module>CA_Smspremium</module>
+					<frontName>smspremium</frontName><!-- No utilizar admin, ya que este esta reservado para toda la parte de administración que trae Magento. -->
 				</args>
 			</smspremium>
         </routers>
