@@ -16,6 +16,27 @@
 				<class>CA_Smspremium_Helper</class>
 			</smspremiumhelper>
 		</helpers>
+		<models>
+			<smspremium>
+				<class>CA_Smspremium_Model</class>
+				<resourceModel>smspremium_mysql4</resourceModel>
+			</smspremium>
+			<smspremium_mysql4>
+				<class>CA_Smspremium_Model_Mysql4</class>
+				<entities>
+					<smspremium>
+						<table>ca_smspremium</table>
+					</smspremium>
+				</entities>
+			</smspremium_mysql4>
+		</models>
+		 <resources>
+            <smspremium_setup>
+                <setup>
+                    <module>CA_Smspremium</module>
+                </setup>
+            </smspremium_setup>
+        </resources>
 	</global>
 	<admin>
         <routers>

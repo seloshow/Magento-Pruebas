@@ -20,16 +20,16 @@ class CA_Smspremium_Block_Adminhtml_Smspremium_Edit_Tab_Segmentacion extends Mag
 		/*PASO 4: Añadimos los campos necesarios*/
 		
 		/*Campo reservado para el nombre*/
-		$field = $fieldset->addField('nombre', 'text', array(
+		$field = $fieldset->addField('smspremium_name', 'text', array(
 				'label'     => Mage::helper('smspremiumhelper')->__('Nombre'),
-				'name'      => 'nombre',
+				'name'      => 'smspremium_name',
 				'class'     => 'required-entry',
 				'required'  => true,
 		));
 		
-		$field = $fieldset->addField('apellido', 'text', array(
+		$field = $fieldset->addField('smspremium_apellido', 'text', array(
 				'label'     => Mage::helper('smspremiumhelper')->__('Apellido'),
-				'name'      => 'apellido',
+				'name'      => 'smspremium_apellido',
 				'class'     => 'required-entry',
 				'required'  => true,
 		));
