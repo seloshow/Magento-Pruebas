@@ -24,6 +24,25 @@ class CA_Smspremium_Adminhtml_SmspremiumController extends Mage_Adminhtml_Contro
 		/*renderizo el layout*/
 		$this->renderLayout();
 	}
+	public function listmanagementAction()
+	{
+		
+		/*Action destinado a la gestión de las listas de clientes.*/
+		/*cargo el layout*/
+		$this->loadLayout();
+		$this->_setActiveMenu('smsmainmenu/item1');
+		$this->renderLayout();
+		Mage::getSingleton('adminhtml/session')->addNotice(Mage::helper('smspremiumhelper')->__('Grid rellenado con datos de prueba, posteriormente recogerlos de la BBDD'));
+		
+	}
+	
+	public function newAction(){
+		$this->loadLayout();
+		var_dump("Action new llamado por defecto por Magento");
+		$this->_setActiveMenu('smsmainmenu/item1');
+		
+		$this->renderLayout();
+	}
 	
 	/*Action utilizado para realizar el salvado de los datos del formulario.*/
 	public function saveAction()
@@ -51,7 +70,7 @@ class CA_Smspremium_Adminhtml_SmspremiumController extends Mage_Adminhtml_Contro
 			$this->_redirect('*/*/');
 		}
 		else{
-			Mage::getSingleton('adminhtml/session')->addError(Mage::helper('smspremiumhelper')->__('Alguno de los datos es incorrecto'));
+			Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('smspremiumhelper')->__('Alguno de los datos es incorrecto'));
 			$this->_redirect('*/*/');
 		}
 	}

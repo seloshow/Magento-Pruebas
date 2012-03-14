@@ -11,6 +11,21 @@
                     <sort_order>1</sort_order>                        
                 </item1>
 			</children>
+			 <children>	
+                <item2 translate="title" module="smspremiumhelper">
+                    <title>Gestion listas de envio</title>
+                    <action>smspremium/adminhtml_smspremium/listmanagement</action>
+                    <sort_order>2</sort_order>                        
+                </item2>
+			</children>
+			<children>	
+                <item3 translate="title" module="smspremiumhelper">
+                    <title>Gestión de campañas</title>
+                    <action>smspremium/adminhtml_smspremium/listmanagement</action>
+                    <sort_order>3</sort_order>                        
+                </item3>
+			</children>
          </smsmainmenu>
 	</menu>
+	
 </config>
