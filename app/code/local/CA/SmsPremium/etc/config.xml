@@ -49,4 +49,13 @@
 			</smspremium>
         </routers>
     </admin>
+    <adminhtml>
+    	<layout>
+			<updates>
+				<smspremium>
+						<file>ca_smspremium.xml</file>
+				</smspremium>
+			</updates>
+		</layout>
+    </adminhtml>
 </config>

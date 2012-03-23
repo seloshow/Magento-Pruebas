@@ -16,12 +16,14 @@ class CA_Smspremium_Block_Adminhtml_Smspremium_Edit_Tabs extends Mage_Adminhtml_
 
 	protected function _beforeToHtml()
 	{
+		/*Primer tab que es un ejemplo para la recogida de datos de un formulario*/
 		$this->addTab('segmentation_section', array(
 				'label'     => Mage::helper('smspremiumhelper')->__('Formulario de prueba'),
 				'title'     => Mage::helper('smspremiumhelper')->__('Configuración de prueba'),
 				'content'   => $this->getLayout()->createBlock('smspremium/adminhtml_smspremium_edit_tab_segmentacion')->toHtml(),
 		));
-		 	 
+		
+	
 		return parent::_beforeToHtml();
 	}
 }

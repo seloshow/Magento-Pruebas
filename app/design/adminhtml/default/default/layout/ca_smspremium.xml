@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <smspremium_adminhtml_smspremium_listmanagement>
+        <reference name="content">
+            <block type="smspremium/adminhtml_smspremium" name="smspremium" />
+        </reference>
+    </smspremium_adminhtml_smspremium_listmanagement>
+</layout>
