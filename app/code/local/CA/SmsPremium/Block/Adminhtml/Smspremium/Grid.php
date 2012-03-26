@@ -10,6 +10,7 @@ class CA_Smspremium_Block_Adminhtml_Smspremium_Grid extends Mage_Adminhtml_Block
 				->setNumReg(200)
 				->setNombreLista('Lista de chicas')
 				->setFechaCreacion('2012-03-14')
+				->setDescripcion('Descripción de la primera lista')
 				->setNameList('SMS_linstachicas_388232.csv');
 		
 		$thing_2 = new Varien_Object();
@@ -17,6 +18,7 @@ class CA_Smspremium_Block_Adminhtml_Smspremium_Grid extends Mage_Adminhtml_Block
 		$thing_2->setNumReg(200);
 		$thing_2->setNombreLista('Lista de chicos');
 		$thing_2->setFechaCreacion('2012-03-13');
+		$thing_2->setDescripcion('Descripción de la segunda lista');
 		$thing_2->setNameList('SMS_linstachicos_384562.csv');
 		
 		$thing_3 = new Varien_Object();
@@ -24,6 +26,7 @@ class CA_Smspremium_Block_Adminhtml_Smspremium_Grid extends Mage_Adminhtml_Block
 		$thing_3->setNumReg(200);
 		$thing_3->setNombreLista('Lista de compradores');
 		$thing_3->setFechaCreacion('2012-03-12');
+		$thing_3->setDescripcion('Descripción de la tercera lista');
 		$thing_3->setNameList('SMS_linstacompradores_198232.csv');
 		
 		$collectionDemo= new Varien_Data_Collection();
@@ -81,6 +84,14 @@ class CA_Smspremium_Block_Adminhtml_Smspremium_Grid extends Mage_Adminhtml_Block
 				'type'      => 'datetime',
 				'default'   => '--',
 				'index'     => 'fecha_creacion',
+		));
+		/*Campo con la descripción de la lista*/
+		$this->addColumn('descripcion', array(
+				'header'    => Mage::helper('smspremiumhelper')->__('Descripción'),
+				'align'     => 'left',
+				'index'     => 'descripcion',
+				'type'      => 'text',
+		
 		));
 		
 		

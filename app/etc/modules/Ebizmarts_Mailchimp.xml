@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Ebizmarts_Mailchimp>
-            <active>true</active>
+            <active>false</active>
             <codePool>local</codePool>
         </Ebizmarts_Mailchimp>
     </modules>

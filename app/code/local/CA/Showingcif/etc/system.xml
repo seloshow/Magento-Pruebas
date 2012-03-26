@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<sections>
+		<general>
+			<groups>
+				<store_information>
+					<fields>
+						 <cif translate="label">
+						 	<label>Cif de la empresa</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						 </cif>
+                         <mercantil translate="label">
+                            <label>Mercantil de la empresa</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                       		<comment>El texto introducido aquí permite código HTML</comment>
+                         </mercantil>
+					</fields>
+				</store_information>
+			</groups>
+		</general>
+	</sections>
+</config>

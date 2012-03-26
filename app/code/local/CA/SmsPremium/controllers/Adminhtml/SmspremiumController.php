@@ -38,8 +38,21 @@ class CA_Smspremium_Adminhtml_SmspremiumController extends Mage_Adminhtml_Contro
 	
 	public function newAction(){
 		$this->loadLayout();
-		var_dump("Action new llamado por defecto por Magento");
+		var_dump("Action new llamado por defecto por Magento por el botón new");
 		$this->_setActiveMenu('smsmainmenu/item1');
+		/*Bloque que utilizaremos para la parte izquierda*/
+		$left=$this->getLayout()->createBlock(
+				'smspremium/adminhtml_smspremium_listmanagement_edit_tabs',
+				'sms_premium_block_left'
+		);
+		
+		/*Bloque que utilizaremos para la parte del content*/
+		$content = $this->getLayout()->createBlock(
+				'smspremium/adminhtml_smspremium_listmanagement_edit',
+				'sms_premium_listmanagement_block_content'
+		);
+		$this->_addContent($content)
+				->_addLeft($left);
 		
 		$this->renderLayout();
 	}
