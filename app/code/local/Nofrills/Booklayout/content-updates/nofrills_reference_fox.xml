@@ -1,0 +1,21 @@
+<!-- <reference name="content"> -->
+<!-- 	<block type="core/text" name="our_message"> -->
+<!-- 		<action method="setText"><text> -->
+<!-- 			The quick brown fox jumps over the lazy dog. -->
+<!-- 		</text></action> -->
+<!-- 	</block> -->
+<!-- </reference> -->
+<!-- apartado 2.11: usando el tag remove -->
+<reference name="content">
+		<block type="core/text" name="our_message">
+			<action method="setText"><text>
+				Magento is a foxy system.
+			</text></action>
+		</block>
+	</reference>	
+<remove name="sidebar" />
+<!-- <block type ="nofrills_booklayout/template" name="sidebar" ignore="1"/> 
+@davidselo: si descomentamos esta instrucción sigue apareciendo el bloque, pero es
+por que esta inicializado en el page.xml, si en este le ponemos el ingnore=1 entonces no 
+lo muestra
+-->

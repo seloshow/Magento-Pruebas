@@ -1,0 +1,7 @@
+<reference name="content">
+	<block type="core/text" name="our_message">
+		<action method="setText"><text>
+			The lazy dog's only job was to be jumped over.  
+		</text></action>
+	</block>
+</reference>

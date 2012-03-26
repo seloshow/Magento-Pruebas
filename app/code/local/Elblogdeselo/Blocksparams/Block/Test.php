@@ -23,9 +23,11 @@ class Elblogdeselo_Blocksparams_Block_Test extends Mage_Core_Block_Abstract{
 	
 	protected function _toHtml(){
 		
-		$nombre=$this->getNombre();
+		//$nombre=$this->getNombre();
+		$nombre=$this->getData('nombre');
 		$apellidos=$this->getApellidos();
 		$html=$nombre." ".$apellidos;
+		$html=$html." ".$this->getData('nuevo_parametro');
 		return $html;
 	}
 }
