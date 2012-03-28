@@ -57,4 +57,9 @@ class Sp_Ajaxify_IndexController extends Mage_Core_Controller_Front_Action
     
     	$this->loadLayout()->renderLayout();
     }
+    public function otherTextAction()
+    {
+    	/*Hacemos cosas*/
+    	$this->loadLayout()->renderLayout();
+    }
 }

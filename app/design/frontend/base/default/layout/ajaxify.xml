@@ -42,5 +42,20 @@
         </block>
 	</reference>
 </ajaxify_index_test>
-
+<ajaxify_index_otherText>
+	<update handle="ajaxify_all"/> <!-- This is always required. -->
+	<reference name="content">
+		<block type="core/text" name="ajax.test">
+			<action method="setText">
+				<text>hola esto es un texto de prueba</text>
+			</action>
+		</block>
+	</reference>
+</ajaxify_index_otherText>
+<default>
+	<reference name="header">
+		<block type="core/template" name="buttom.ajax" template="ajaxify/buttom/buttom.phtml"/>
+	</reference>
+</default>
+	
 </layout>
