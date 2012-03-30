@@ -1,0 +1,44 @@
+##
+# Fishpig's WordPress Integration for Magento eCommerce
+#
+# Author:			FishPig Limited (Ben Tideswell)
+# Documentation:	http://fishpig.co.uk/wordpress-integration/
+# Email Support:	help@fishpig.co.uk
+# Bug Reports:		help@fishpig.co.uk
+# Installation:		http://fishpig.co.uk/wordpress-integration-setup/
+##
+
+##
+#
+# Supported Plugins
+#
+##
+
+This file contains a list of all supported plugins for WordPress Integration.
+All the plugins listed below are plugins that require some form of frontend interaction.
+Plugins that operate solely on the Admin of WordPress do not need to be supported and should work
+just fine.
+
+When we perform our setup service for this extension, we will install these plugins for you.
+
+All In One SEO
+- Custom your blog's META information on a per-post basis
+
+ShareThis
+- Add social icons to your blog posts
+
+WP No Category Base
+- Remove the 'category' part of your category URL's to make them more SEO friendly
+
+Recent Category Posts
+- Creates a widget that allows you to add a recent posts block that can be filtered by category
+- This block can also display information such as post date, excerpt and date
+
+Category Order and Taxonomy Terms
+- Allows you to order your WordPress categories via the WordPress Admin
+
+Comment Reply Notification
+- Allow users to recieve notifications when another user posts a comment on a post they have commented on
+
+Advanced Custom Fields
+- Please email help@fishpig.co.uk for more information about this plugin

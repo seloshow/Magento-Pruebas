@@ -1,0 +1,37 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<?php $products = $this->getProducts() ?>
+<?php if (count($products) > 0): ?>
+	<div class="block block-associated-products">
+		<?php if ($title = $this->getTitle()): ?>
+			<div class="block-title">
+				<strong><?php echo $title ?></strong>
+			</div>
+		<?php endif; ?>
+		<div class="block-content">
+			<ol class="mini-products-list" id="block-associated-products">
+				<?php foreach($products as $product): ?>
+					<li class="item">
+						<div class="product">
+							<a href="<?php echo $product->getProductUrl() ?>" title="<?php echo $product->getName() ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($product, 'thumbnail')->resize(50) ?>" width="50" height="50" alt="<?php echo $product->getName() ?>" /></a>
+							<div class="product-details">
+								<p class="product-name"><a href="<?php echo $product->getProductUrl() ?>"><?php echo $product->getName() ?></a></p>
+								<?php echo $this->getPriceHtml($product, true, '-associated') ?>
+								<?php if ($this->helper('wishlist')->isAllow()) : ?>
+									<a href="<?php echo $this->getAddToWishlistUrl($product) ?>" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a>
+								<?php endif; ?>								
+							</div>
+						</div>
+					</li>
+				<?php endforeach; ?>
+			</ol>
+		</div>
+		<script type="text/javascript">decorateList('block-associated-products', 'none-recursive')</script>
+	</div>
+<?php endif; ?>

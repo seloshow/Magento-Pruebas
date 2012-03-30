@@ -1,0 +1,10 @@
+<?php
+/**
+ *
+ *
+ */
+?>
+<script type="text/javascript">document.observe('dom:loaded', function() {	$('nav').select('li').each(function(rootLi) {if($(rootLi).select('a')[0].select('span')[0].innerHTML=='<?php echo $this->__('WP Admin') ?>') {var ulObj=$(rootLi).select('ul')[0];$(rootLi).select('a')[0].target='_blank';fishpig_wpadmin_links(ulObj);}});function fishpig_wpadmin_links(ulObj){$(ulObj).select('li').each(function(liObj){$($(liObj).select('a')[0]).addClassName('wpadmin-link')});}});</script>
+<?php if (Mage::getStoreConfigFlag('wordpress_blog/auto_login/links_external_target')): ?>
+	<script type="text/javascript">document.observe('dom:loaded', function() {$$('a.wpadmin-link').each(function(a){a.target = '_blank';});});</script>
+<?php endif; ?>
