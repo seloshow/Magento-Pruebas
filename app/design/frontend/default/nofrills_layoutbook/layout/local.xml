@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+	<layout version=" 0.1.0 ">
+		<nofrills_package_index>
+			<reference name="content">
+				<block type="core/text" name="our_message">
+					<action method="setText">
+						<text>Hello Mars</text>
+					</action>
+				</block>
+			</reference>
+		</nofrills_package_index>
+		<nofrills_package_second>
+			<reference name ="content">
+				<block type ="core/text" name ="our_message">
+					<action method ="setText"><text>Hello Jupiter</text></action>
+				</block>
+			</reference>
+		</nofrills_package_second>
+	</layout>

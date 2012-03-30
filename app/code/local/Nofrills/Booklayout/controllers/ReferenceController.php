@@ -3,7 +3,7 @@
 # URL: http://magento.example.com/nofrills_booklayout/reference
 class Nofrills_Booklayout_ReferenceController extends Mage_Core_Controller_Front_Action
 {
-	/*Usado para crear la estructura base de la página*/
+	/*Usado para crear la estructura base de la pï¿½gina*/
 	protected function _initLayout()
 	{
 		$path_page = Mage::getModuleDir('','Nofrills_Booklayout').DS.
@@ -25,9 +25,9 @@ class Nofrills_Booklayout_ReferenceController extends Mage_Core_Controller_Front
 	# URL: http://magento.example.com/nofrills_booklayout/reference
 	public function indexAction()
 	{
-		$this->_initLayout();//carga la estructura general de la página
-		/*Añadir las actualizaciones aquí*/
-		/*Esto ahora lo vamos a realizar con una función*/
+		$this->_initLayout();//carga la estructura general de la pï¿½gina
+		/*Aï¿½adir las actualizaciones aquï¿½*/
+		/*Esto ahora lo vamos a realizar con una funciï¿½n*/
 // 		Mage::getSingleton('core/layout')
 // 			->getUpdate()
 // 			->addUpdate('<reference name ="content">
@@ -38,7 +38,7 @@ class Nofrills_Booklayout_ReferenceController extends Mage_Core_Controller_Front
 		$this->_loadUpdateFile('ceaser.xml');
 		$this->_sendOutput();//Manda a la salida 
 	}
-	/*Método que añadira el file que le pasemos para que actualice le módulo*/
+	/*Mï¿½todo que aï¿½adira el file que le pasemos para que actualice le mï¿½dulo*/
 	protected function _loadUpdateFile($file)
 	{
 		$path_update = Mage::getModuleDir('','Nofrills_Booklayout').DS.
@@ -47,17 +47,17 @@ class Nofrills_Booklayout_ReferenceController extends Mage_Core_Controller_Front
 			->getUpdate()
 			->addUpdate(file_get_contents($path_update));
 	}
-	/*Cargamos el layout en base a la petición realizada*/
+	/*Cargamos el layout en base a la peticiï¿½n realizada*/
 	protected function _loadUpdateFileFromRequest()
 	{
 		$path_update = Mage::getModuleDir('', 'Nofrills_Booklayout') . DS .
 		'content-updates' . DS . $this->getFullActionName() . '.xml';
-		/*@davidselo: así es como funciona el handle asociado al controlados que está saltando
+		/*@davidselo: asï¿½ es como funciona el handle asociado al controlados que estï¿½ saltando
 		 * en Magento pondriamos en el layour <nofrill_reference_fox>
 		 * Module Name: nofrills booklayout
 		 * Controller Name: reference
 		 * Action Name: fox
-		 * Es esencial para itentificar unicamente cualquier petición basandose en estos tres criterios.
+		 * Es esencial para itentificar unicamente cualquier peticiï¿½n basandose en estos tres criterios.
 		 * */
 		$layout = Mage::getSingleton('core/layout')
 		->getUpdate()
@@ -88,6 +88,43 @@ class Nofrills_Booklayout_ReferenceController extends Mage_Core_Controller_Front
 		$this->_initLayout();
 		$this->_loadUpdateFileFromRequest();
 		$this->_sendOutput();
+	}
+	/*
+	 * @davidselo: Mostrando los archivos que estan en los nodos del tipo 
+	 * <frontend>
+	 * 		<layout>
+	 * 			<updates>
+	 * 				<file>archivo.xml</file>
+	 * 
+	 * */
+	public function layoutfilesAction ()
+	{
+		$updatesRoot = Mage::app ()-> getConfig ()->getNode ('frontend/layout/updates');
+		$updateFiles = array ();
+		foreach ( $updatesRoot->children () as $updateNode ) {
+			if ( $updateNode-> file ) {
+				$module = $updateNode -> getAttribute ('module');
+				/*@davidselo: El siguiente If comprueba si esta desabilitada la salida, esto se configura en 
+				 * sistema->configuracion->avanzado. Entonces si esta desabilitada no cargarÃ¡ la actualizaciÃ³n de layout para dicho mÃ³dulo.*/
+				if ( $module && Mage::getStoreConfigFlag ('advanced/modules_disable_output/'.$module )) 
+				{
+					continue ;
+				}
+				$updateFiles [] = ( string ) $updateNode -> file ;
+			}
+		}
+		// custom local layout updates file - load always last
+		/*Nota: El Ãºltimo fichero que se va a cargar va a ser local.xml, esto lo han hecho asÃ­ para que puedas tener tus propias customizaciones del tema.*/
+		$updateFiles [] = 'local.xml ';
+		var_dump ( $updateFiles );
+	}
+	# URL : http :// magento . example . com / nofrills_booklayout / reference / handle
+	public function handleAction ()
+	{
+		$this->loadLayout ();
+		$handles = Mage :: getSingleton ('core/layout')-> getUpdate ()-> getHandles ();
+		var_dump ( $handles );
+		exit ;
 	}
 	
 }
