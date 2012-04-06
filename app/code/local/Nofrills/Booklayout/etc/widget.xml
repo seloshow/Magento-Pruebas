@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+	<nofrills_layoutbook_youtube type ="nofrills_booklayout/youtube">
+		<!-- El parámetro importante aquí será el type, y indicará que es un bloque 
+		Nofrills_Booklayout_Block_Youtube -->
+		<name>YouTube Example Widget</name><!-- name=> usado para la descripción del panel de administración. -->
+		<description type ="desc">This wiget displays a YouTube video.</description>
+		<!-- descripción=> utilizado para el panel de administración. -->
+		
+		<!-- Parámetros que le vamos a pasar al widget -->
+		<parameters >
+			<!-- Identificador que vamos a utilizar -->
+			<video_id>
+				<required>1</required>
+				<visible>1</visible>
+				<value>Enter ID Here</value>
+				<label>YouTube Video ID</label>
+				<type>text</type>
+			</video_id>
+			<!-- Plantilla que vamos a utilizar -->
+			<template>
+<!-- 				<required>1</required> -->
+<!-- 				<visible>0</visible> -->
+<!-- 				<value>nofrills_youtube/youtube.phtml</value> -->
+<!-- 				<label>Frontend Template</label> -->
+<!-- 				<type>text</type> -->
+					<!-- Totalmente configurable -->
+					<required>1</required>
+					<visible>1</visible>
+					<value>youtube.phtml</value>
+					<label>FrontendTemplate</label>
+					<type>select</type>
+					<values>
+						<as_video>
+						<value>nofrills_youtube/youtube.phtml</value>
+						<label>Embed Video</label>
+						</as_video>
+						<as_link>
+						<value>nofrills_youtube/youtube-as-link.phtml</value>
+						<label>Link Video</label>
+						</as_link>
+					</values>
+			</template>
+		</parameters>
+	</nofrills_layoutbook_youtube>
+</widgets>

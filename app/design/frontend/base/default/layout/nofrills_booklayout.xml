@@ -1,4 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
-	<block type ="nofrills_booklayout/helloworld" name="root" output ="toHtml"/>
+<!-- 	<block type ="nofrills_booklayout/helloworld" name="root" output ="toHtml"/> -->
+	<nofrills_order_index>
+		<reference name ="content">
+			<block type ="core/text" name ="one">
+				<action method ="setText">
+					<text><![CDATA[<p>One</p>]]></text>
+				</action>
+			</block>
+			<block type ="core/text" name ="two">
+				<action method ="setText">
+					<text><![CDATA[<p>Two</p>]]></text>
+				</action>
+			</block>
+			<block type ="core/text" name ="three">
+				<action method ="setText">
+					<text><![CDATA[<p>Three</p>]]></text>
+				</action>
+			</block>
+			<block type ="core/text" name ="four">
+				<action method ="setText">
+					<text><![CDATA[<p>Four</p>]]></text>
+				</action>
+			</block>
+			<block type ="core/text" name ="five">
+				<action method ="setText">
+					<text><![CDATA[<p>Five</p>]]></text>
+				</action>
+			</block>
+			<block type ="core/text" name ="six">
+				<action method ="setText">
+					<text><![CDATA[<p>Six</p>]]></text>
+				</action>
+			</block>
+			<block type ="core/text" name ="seven">
+				<action method ="setText">
+					<text><![CDATA[<p>Seven</p>]]></text>
+				</action>
+			</block>
+			<block type ="core/text" name ="line">
+				<action method ="setText">
+					<text><![CDATA[<hr/>]]></text>
+				</action>
+			</block>
+			<block type ="core/text" name ="line" after ="six">
+				<action method ="setText"><text><![CDATA[<hr/>]]></text></action>
+			</block>
+			<block type ="core/text" name ="fakeline" after ="four">
+				<action method ="setText">
+					<text><![CDATA[<div style ="border-color:black;border-style:solid;border-top: 1 px;width:300 px;"></div>]]>
+					</text >
+				</action>
+			</block>
+			<action method ="unsetChild"><name>one</name></action>
+			<block type ="core/text" name ="one" after ="-">
+				<action method ="setText"><t>one</t></action>
+			</block>
+		</reference>
+	</nofrills_order_index>	
 </layout>
