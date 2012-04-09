@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>PSystem_CatalogAjax</name>
+    <version>1.0.1</version>
+    <stability>stable</stability>
+    <license>OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This module use ajax for catalog product list and layer navigation.</summary>
+    <description>This module load product list by ajax.You can use filter in left navigation, page limiter, page browser and switch list mode by ajax.You can define your own css selector for reloading content in Admin Panel.</description>
+    <notes>This module was tested in Magento Commerce version 1.4.0.1, 1.5.0.1and 1.6.2.0, and work in this version smoothly.</notes>
+    <authors><author><name>Pascal System</name><user>auto-converted</user><email>info@pascalsystem.pl</email></author></authors>
+    <date>2012-02-12</date>
+    <time>22:18:43</time>
+    <contents><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="ps_catalogajax.xml" hash="bda5effb4895e7e5f6cb5e2f24f5e224"/></dir></dir></dir></dir></target><target name="mage"><dir name="js"><dir name="pascalsystem"><file name="catalogajax.js" hash="a9da925bab5f68ad5c31026f709ba94c"/></dir></dir></target><target name="mageetc"><dir name="modules"><file name="PSystem_CatalogAjax.xml" hash="0433aaebcae372eac3390df27034ee16"/></dir></target><target name="magecommunity"><dir name="PSystem"><dir name="CatalogAjax"><dir name="Block"><file name="Config.php" hash="a726d0419fb33ff2eb330df8f7fb2c10"/></dir><dir name="etc"><file name="adminhtml.xml" hash="f2ccfd6813e8772a96609e71095e6576"/><file name="config.xml" hash="eebfd4e84b395a59a745f97d1fe475e1"/><file name="system.xml" hash="43d2677605122493976af3e64f5e771d"/></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><package><name>PSystem_Base</name><channel>community</channel><min></min><max></max></package></required></dependencies>
+</package>

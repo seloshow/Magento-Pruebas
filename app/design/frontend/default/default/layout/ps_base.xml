@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   PSystem
+ * @package    PSystem_Base
+ * @author     Pascal System <info@pascalsystem.pl>
+ * @version    1.1.2
+ */
+-->
+<layout version="1.0.0">
+	<default>
+		<reference name="head">
+			<action method="addCss"><stylesheet>css/pascalsystem/base.css</stylesheet></action>
+			<action method="addJs"><script>pascalsystem/base.js</script></action>
+		</reference>
+	</default>
+
+	<catalog_category_default>
+		<reference name="content">
+			<block type="psbase/headerjs" name="psbase.headerjs" as="psbaseheaderjs" />
+		</reference>
+	</catalog_category_default>
+
+	<catalog_category_layered>
+		<reference name="content">
+			<block type="psbase/headerjs" name="psbase.headerjs" as="psbaseheaderjs" />
+		</reference>
+	</catalog_category_layered>
+
+	<catalog_category_layered_nochildren>
+		<reference name="content">
+			<block type="psbase/headerjs" name="psbase.headerjs" as="psbaseheaderjs" />
+		</reference>
+	</catalog_category_layered_nochildren>
+</layout>

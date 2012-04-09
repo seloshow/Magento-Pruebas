@@ -1,0 +1,191 @@
+@CHARSET "UTF-8";
+
+/* Panels */
+#dhmedia_devel_block_panels{
+	display: block;
+
+	position: fixed !important;
+	top: 5ex;
+	right: 12em !important;
+	bottom: 0 !important;
+	left: 100%;
+	z-index: 9990;
+
+	background-color: #fff;
+	text-align: left;
+
+	border-left: 1ex solid #000;
+	
+	box-shadow: -1px 0px 5px #000;
+
+	opacity: 0.9;
+
+	-webkit-transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7s ease-in-out;
+	-o-transition: all 0.7s ease-in-out;
+	transition: all 0.7s ease-in-out;
+}
+#dhmedia_devel_block_panels.resizing{
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+#dhmedia_devel_block_panels.resized {
+	-webkit-transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7s ease-in-out;
+	-o-transition: all 0.7s ease-in-out;
+	transition: all 0.7s ease-in-out;
+}
+#dhmedia_devel_block_panels.active{
+
+}
+#dhmedia_devel_block_panels .devel-grippie {
+	position: absolute;
+	top: 0;
+	left: -1ex;
+	width: 1ex;
+	height: 100%;
+	background: url(../images/x-grippie.png) 0 50% no-repeat;
+	opacity: 0.8;
+	display: none;
+}
+#dhmedia_devel_block_panels.active .devel-grippie {
+	display: block;
+}
+
+/* Panel */
+.devel-panel{
+	position: relative;
+	float: left;
+	
+	width: 0;
+	height: 100%;
+	opacity: 0;
+	overflow: hidden;
+
+	-webkit-transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7s ease-in-out;
+	-o-transition: all 0.7s ease-in-out;
+	transition: all 0.7s ease-in-out;
+}
+.devel-panel iframe{
+	height: 100%;
+	width: 100%;
+	border: 0;
+}
+
+.devel-panel.active{
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	overflow: visible;
+}
+
+.devel-panel.active.direct-content {
+	padding: 1.5%;
+	width: 97%;
+	height: 97%;
+	overflow: auto;
+}
+
+.devel-panel .protector{
+	display: none;
+	opacity: 0;
+	
+	-webkit-transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7s ease-in-out;
+	-o-transition: all 0.7s ease-in-out;
+	transition: all 0.7s ease-in-out;
+}
+.devel-panel .protector.active{
+	display: block;
+	opacity: 1;
+}
+
+/* Panel Buttons */
+.devel-panel-buttons {
+	position: absolute;`
+	top: 5em;
+	z-index: 1001;
+	height: 100%;
+	right: -12em;
+	width: 6em;
+
+	white-space: nowrap;
+
+	background-color: #333;
+	opacity: 0.5;
+	box-shadow: 0px 0px 3px #000;
+
+	-webkit-transition: all 0.7s ease-in-out;
+	-moz-transition: all 0.7s ease-in-out;
+	-o-transition: all 0.7s ease-in-out;
+	transition: all 0.7s ease-in-out;
+}
+.devel-panel-buttons.empty {
+	width: 3em;
+}
+.devel-panel-buttons:hover,
+.devel-panel-buttons.active {
+	opacity: 0.9;
+	width: 12em;
+	right: -12em;
+}
+.devel-panel-buttons .button {
+	position: relative;
+	display: block;
+	
+	color: #fff;
+	background-color: #222;
+	
+	width: 80%;
+	height: 2ex;
+	line-height: 2ex;
+	padding: 1.3ex 10%;
+
+	text-align: left;
+	text-indent: 21px;
+
+	opacity: 0.7;
+	
+	text-shadow: 0 0 2px #333;
+	box-shadow: 0px 0px 5px #000;
+	-moz-box-shadow: 0px 0px 5px #000;
+	-o-box-shadow: 0px 0px 5px #000;
+
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+
+	cursor: pointer;
+}
+.devel-panel-buttons .button:hover,
+.devel-panel-buttons .button.active {
+	text-shadow: 2px 2px 12px #cff;
+	background-color: #000;
+	opacity: 1;
+}
+.devel-panel-buttons .button .devel-sprite-icon {
+	position: absolute;
+	left: 0.5ex;
+	top: 0.3ex;
+}
+.devel-panel-buttons .button .close {
+	position: absolute;
+	display: none;
+
+	right: 10%;
+	top: 0.3ex;
+	margin-right: 12px;
+	
+	opacity: 0.6;
+}
+.devel-panel-buttons .button:hover .close,
+.devel-panel-buttons .button.active .close {
+	display: block;
+}
+.devel-panel-buttons .button .close:hover {
+	opacity: 1;
+}

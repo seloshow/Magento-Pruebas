@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   PSystem
+ * @package    PSystem_CatalogAjax
+ * @author     Pascal System <info@pascalsystem.pl>
+ * @version    1.0.0
+ */
+-->
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addCss"><stylesheet>css/pascalsystem/base.css</stylesheet></action>
+			<action method="addJs"><script>pascalsystem/base.js</script></action>
+			<action method="addJs"><script>pascalsystem/catalogajax.js</script></action>
+			
+			<block type="pscatalogajax/config" name="catalogajaxconfig" />
+		</reference>
+	</default>
+</layout>
