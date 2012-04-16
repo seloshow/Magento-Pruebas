@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widgets>
 	<nofrills_layoutbook_youtube type ="nofrills_booklayout/youtube">
+		<!-- @davidselo: Otra característica de los widget es que se puede resctringir los lugares( Handles) 
+		donde puede aparecer dicho bloque -->
+		<supported_blocks >
+			<uniquely_named_node >
+				<block_name>content</block_name>
+				<template>
+					<unique_name_one>as_video</unique_name_one>
+					<unique_name_two>as_link</unique_name_two>
+				</template>
+			</uniquely_named_node>
+			<another_uniquely_named_node>
+				<block_name>left</block_name>
+				<template>
+					<unique_name_one>as_video</unique_name_one>
+				</template>
+			</another_uniquely_named_node>
+		</supported_blocks>
+		
+		
+		
 		<!-- El parámetro importante aquí será el type, y indicará que es un bloque 
 		Nofrills_Booklayout_Block_Youtube -->
 		<name>YouTube Example Widget</name><!-- name=> usado para la descripción del panel de administración. -->
