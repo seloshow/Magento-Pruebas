@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0).
+ * It is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future.
+ *
+ * @category   RicoNeitzel
+ * @package    RicoNeitzel_VertNav
+ * @copyright  Copyright (c) 2011 Vinai Kopp http://netzarbeiter.com/
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <RicoNeitzel_VertNav>
+            <version>0.3.1</version>
+        </RicoNeitzel_VertNav>
+    </modules>
+
+    <global>
+    	<blocks>
+    		<vertnav>
+				<class>RicoNeitzel_VertNav_Block</class>
+    		</vertnav>
+    	</blocks>
+    	<models>
+    		<vertnav>
+				<class>RicoNeitzel_VertNav_Model</class>
+    		</vertnav>
+    	</models>
+		<helpers>
+    		<vertnav>
+				<class>RicoNeitzel_VertNav_Helper</class>
+    		</vertnav>
+		</helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <vertnav>
+                    <file>vertnav.xml</file>
+                </vertnav>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+    	<translate>
+    		<modules>
+    			<RicoNeitzel_VertNav>
+    				<files>
+    					<default>RicoNeitzel_VertNav.csv</default>
+    				</files>
+    			</RicoNeitzel_VertNav>
+    		</modules>
+    	</translate>
+    </adminhtml>
+    <default>
+    	<catalog>
+    		<vertnav>
+    			<display_product_count>0</display_product_count>
+				<expand_all>0</expand_all>
+				<expand_all_max_depth>0</expand_all_max_depth>
+				<hide_top>1</hide_top>
+				<vertnav_root>root</vertnav_root>
+				<fallback_to_root>1</fallback_to_root>
+    		</vertnav>
+    	</catalog>
+    </default>
+</config>
+
