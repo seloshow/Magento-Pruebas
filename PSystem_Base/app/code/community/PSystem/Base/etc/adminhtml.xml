@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   PSystem
+ * @package    PSystem_Base
+ * @author     Pascal System <info@pascalsystem.pl>
+ * @version    1.1.2
+ */
+-->
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<psbase />
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>

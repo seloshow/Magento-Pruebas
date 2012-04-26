@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   PSystem
+ * @package    PSystem_AjaxQuickCart
+ * @author     Pascal System <info@pascalsystem.pl>
+ * @version    1.0.2
+ */
+-->
+<layout version="1.0.2">
+	<default>
+		<reference name="head">
+			<action method="addCss"><stylesheet>css/pascalsystem/ajaxquickcart.css</stylesheet></action>
+			<action method="addJs"><script>pascalsystem/ajaxquickcart.js</script></action>
+
+			<action method="addJs"><script>varien/product.js</script></action>
+			<action method="addItem"><type>js_css</type><name>calendar/calendar-win2k-1.css</name><params/><!--<if/><condition>can_load_calendar_js</condition>--></action>
+			<action method="addItem"><type>js</type><name>calendar/calendar.js</name><!--<params/><if/><condition>can_load_calendar_js</condition>--></action>
+			<action method="addItem"><type>js</type><name>calendar/calendar-setup.js</name><!--<params/><if/><condition>can_load_calendar_js</condition>--></action>
+
+			<block type="ajaxquickcart/headerjs" name="psajaxquickcart.headerjs" />
+		</reference>
+	</default>
+	
+	<ajaxquickcart_viewcart_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/empty.phtml</template></action>
+		</reference>
+		<reference name="content">
+			<block type="checkout/cart" name="checkout.cart">
+				<action method="setCartTemplate"><value>ajaxquickcart/viewcart/cart.phtml</value></action>
+				<action method="setEmptyTemplate"><value>ajaxquickcart/viewcart/noItems.phtml</value></action>
+				<action method="chooseTemplate"/>
+				<action method="addItemRender"><type>simple</type><block>ajaxquickcart/item_renderer</block><template>ajaxquickcart/viewcart/item/default.phtml</template></action>
+				<action method="addItemRender"><type>grouped</type><block>ajaxquickcart/item_renderer_grouped</block><template>ajaxquickcart/viewcart/item/default.phtml</template></action>
+				<action method="addItemRender"><type>configurable</type><block>ajaxquickcart/item_renderer_configurable</block><template>ajaxquickcart/viewcart/item/default.phtml</template></action>
+				<block type="checkout/cart_totals" name="checkout.cart.totals" as="totals" template="checkout/cart/totals.phtml"/>
+				
+			</block>
+			<block type="ajaxquickcart/refresh" name="psajaxquickcart.refresh" as="ajaxquickrefresh" />
+		</reference>
+	</ajaxquickcart_viewcart_index>
+	
+	<checkout_cart_add>
+		<update handle="ajaxquickcart_viewcart_index" />
+	</checkout_cart_add>
+	
+	<ajaxquickcart_product_view>
+		<reference name="product.info">
+			<action method="setTemplate"><template>ajaxquickcart/quickcart/product.phtml</template></action>
+			<block type="ajaxquickcart/layerjs" name="psajaxquickcart.layerjs" as="ajaxquickjs" />
+		</reference>
+	</ajaxquickcart_product_view>
+	
+	<PRODUCT_TYPE_ajaxquickcart_simple>
+	</PRODUCT_TYPE_ajaxquickcart_simple>
+	
+	<PRODUCT_TYPE_ajaxquickcart_configurable>
+	</PRODUCT_TYPE_ajaxquickcart_configurable>
+	
+	<PRODUCT_TYPE_ajaxquickcart_grouped>
+	</PRODUCT_TYPE_ajaxquickcart_grouped>
+	
+	<PRODUCT_TYPE_ajaxquickcart_virtual>
+	</PRODUCT_TYPE_ajaxquickcart_virtual>
+	
+	<ajaxquickcart_viewcart_refresh>
+		<block type="ajaxquickcart/refresh_response" name="ajax.response">
+			<action method="addResponseBlock">
+				<selector>.quick-access|.links</selector>
+				<blockname>top.links</blockname>
+			</action>
+			<action method="addResponseBlock">
+				<selector>.col-right|.block-cart</selector>
+				<blockname>cart_sidebar</blockname>
+			</action>
+		</block>
+	</ajaxquickcart_viewcart_refresh>
+</layout>

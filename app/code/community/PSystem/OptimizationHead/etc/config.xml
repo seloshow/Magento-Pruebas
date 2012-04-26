@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   PSystem
+ * @package    PSystem_OptimizationHead
+ * @author     Pascal System <info@pascalsystem.pl>
+ * @version    1.0.2
+ */
+-->
+<config>
+	<modules>
+		<PSystem_OptimizationHead>
+			<version>1.0.0</version>
+		</PSystem_OptimizationHead>
+	</modules>
+	<global>
+		<blocks>
+			<page>
+				<rewrite>
+					<html_head>PSystem_OptimizationHead_Block_Head</html_head>
+				</rewrite>
+			</page>
+		</blocks>
+		<models>
+			<psoptimizationhead>
+				<class>PSystem_OptimizationHead_Model</class>
+			</psoptimizationhead>
+		</models>
+		<events>
+			<controller_action_postdispatch>
+				<observers>
+					<psoptimizationhead_postdispatch>
+						<type>singleton</type>
+						<class>psoptimizationhead/observer</class>
+						<method>postDispatch</method>
+					</psoptimizationhead_postdispatch>
+				</observers>
+			</controller_action_postdispatch>
+		</events>
+	</global>
+</config>

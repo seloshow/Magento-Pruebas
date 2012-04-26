@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   PSystem
+ * @package    PSystem_CatalogAjax
+ * @author     Pascal System <info@pascalsystem.pl>
+ * @version    1.0.1
+ */
+-->
+<config>
+	<modules>
+		<PSystem_CatalogAjax>
+			<active>true</active>
+			<codePool>community</codePool>
+			<depends>
+				<PSystem_Base/>
+			</depends>
+		</PSystem_CatalogAjax>
+	</modules>
+</config>

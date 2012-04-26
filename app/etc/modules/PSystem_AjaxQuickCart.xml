@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   PSystem
+ * @package    PSystem_AjaxQuickCart
+ * @author     Pascal System <info@pascalsystem.pl>
+ * @version    1.0.2
+ */
+-->
+<config>
+	<modules>
+		<PSystem_AjaxQuickCart>
+			<active>true</active>
+			<codePool>community</codePool>
+			<depends>
+				<PSystem_Base/>
+			</depends>
+		</PSystem_AjaxQuickCart>
+	</modules>
+</config>

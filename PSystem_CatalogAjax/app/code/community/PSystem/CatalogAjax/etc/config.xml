@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   PSystem
+ * @package    PSystem_CatalogAjax
+ * @author     Pascal System <info@pascalsystem.pl>
+ * @version    1.0.1
+ */
+-->
+<config>
+	<modules>
+		<PSystem_CatalogAjax>
+			<version>1.0.1</version>
+		</PSystem_CatalogAjax>
+	</modules>
+	<global>
+		<blocks>
+			<pscatalogajax>
+				<class>PSystem_CatalogAjax_Block</class>
+			</pscatalogajax>
+		</blocks>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<ps_catalogajax module="PSystem_CatalogAjax">
+					<file>ps_catalogajax.xml</file>
+				</ps_catalogajax>
+			</updates>
+		</layout>
+	</frontend>
+</config>

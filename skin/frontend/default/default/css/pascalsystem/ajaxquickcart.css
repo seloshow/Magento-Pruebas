@@ -1,0 +1,15 @@
+.pascalsystem-content .ajaxemptycart, .pascalsystem-content .cart {
+	width:550px;
+	padding:5px 10px;
+	background:#ffffff;
+	border:1px solid #000000;
+}
+.pascalsystem-content .cart .btn-continue {
+	margin-right:5px;
+}
+.pascalsystem-content .cart .btn-viewcart {
+	float:left;
+}
+.pascalsystem-content .product-view-layer {
+	width:380px;
+}

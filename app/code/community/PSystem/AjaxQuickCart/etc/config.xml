@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   PSystem
+ * @package    PSystem_AjaxQuickCart
+ * @author     Pascal System <info@pascalsystem.pl>
+ * @version    1.0.2
+ */
+-->
+<config>
+	<modules>
+		<PSystem_AjaxQuickCart>
+			<version>1.0.2</version>
+		</PSystem_AjaxQuickCart>
+	</modules>
+	<global>
+		<blocks>
+			<ajaxquickcart>
+				<class>PSystem_AjaxQuickCart_Block</class>
+			</ajaxquickcart>
+		</blocks>
+		<events>
+			<controller_action_postdispatch_checkout_cart_add>
+				<observers>
+					<psajaxquickcart_addtocart>
+						<type>singleton</type>
+						<class>PSystem_AjaxQuickCart_Model_Observer</class>
+						<method>postDispatchAddToCart</method>
+					</psajaxquickcart_addtocart>
+				</observers>
+			</controller_action_postdispatch_checkout_cart_add>
+			<controller_action_layout_load_before>
+				<observers>
+					<psajaxquickcart_catalogproductview>
+						<type>singleton</type>
+						<class>PSystem_AjaxQuickCart_Model_Observer</class>
+						<method>preDispatchCatalogProductView</method>
+					</psajaxquickcart_catalogproductview>
+				</observers>
+			</controller_action_layout_load_before>
+			<controller_action_postdispatch_checkout_cart_delete>
+				<observers>
+					<psajaxquickcart_cartdeleteitem>
+						<type>singleton</type>
+						<class>PSystem_AjaxQuickCart_Model_Observer</class>
+						<method>postDispatchDeleteCartItem</method>
+					</psajaxquickcart_cartdeleteitem>
+				</observers>
+			</controller_action_postdispatch_checkout_cart_delete>
+		</events>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<psajaxquickcart module="PSystem_AjaxQuickCart">
+					<file>ps_ajaxquickcart.xml</file>
+				</psajaxquickcart>
+			</updates>
+		</layout>
+		<routers>
+			<ajaxquickcart>
+				<use>standard</use>
+				<args>
+					<module>PSystem_AjaxQuickCart</module>
+					<frontName>ajaxquickcart</frontName>
+				</args>
+			</ajaxquickcart>
+		</routers>
+	</frontend>
+</config>
