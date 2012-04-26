@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Elblogdeselo_Pruebaajax>
+			<version>0.1.0</version>
+		</Elblogdeselo_Pruebaajax>
+	</modules>
+	<frontend>
+		<layout>
+            <updates>
+                <pruebaajax>
+                    <file>elblogdeselo_pruebaajax.xml</file>
+                </pruebaajax>
+            </updates>
+        </layout>
+		<routers>
+				<pruebaajax>
+					<use>standard</use>
+					<args>
+						<module>Elblogdeselo_Pruebaajax</module>
+						<frontName>pruebaajax</frontName>
+					</args>
+				</pruebaajax>
+			</routers>
+	</frontend>
+</config>

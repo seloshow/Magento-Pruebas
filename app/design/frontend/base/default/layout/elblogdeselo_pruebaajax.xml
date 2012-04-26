@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+	
+	<pruebaajax_ajax_index>
+		
+		<reference name="root">
+			<action method="setTemplate"><template>page/empty.phtml</template></action>
+		</reference>
+		<reference name="after_body_start">
+<!-- 			<block type="core/text" name="selo.prueba" > -->
+<!-- 				<action method="setText"><text>hola</text></action> -->
+<!-- 			</block> -->
+			<block type="core/template" name="prueba.ajax" template="elblogdeselo/ajaxbuttons.phtml"/>
+		</reference>
+	</pruebaajax_ajax_index>
+</layout>
