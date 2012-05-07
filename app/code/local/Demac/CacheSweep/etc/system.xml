@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<sections>
+        <cachesweepsection translate="label" module="demaccachesweep">
+            <class>separator-top</class>
+            <label><![CDATA[<span class="cachesweep">CacheSweep Configuration</span>]]></label>
+            <tab>demacall</tab>
+            <class>cache-sweep</class>
+            <sort_order>130</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+			<groups>
+				<cachesweep translate="label">
+					<label>Cache Sweep</label>
+                    <comment>
+                      <![CDATA[
+                        <div class="cachesweep">
+
+                        <h2>Demac Cache Sweeper</h2>
+                        <p>
+                           The most common configuration for the Magento Cache is to be stored on the filesystem, unfortunately Magento doesn't clean all the cache entries automatically this can
+                           eventually lead to a very large cache comprised by several thousands of file. The larger the cache is, the longer will take to Magento to read through all the files. 
+                        </p>
+                        <p>
+                           This problem is most commonly experienced at the cart and checkout on store with larger catalogs. Demac Cache Sweeper allows you to periodically clean your cache.  
+                           <a href="https://wiki.demacmedia.com/cache-sweeper">Check the Documentation</a>
+                        </p>
+                        </div>
+                      ]]>
+                    </comment>
+					<frontend_type>text</frontend_type>
+					<sort_order>2</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<scheduler_cron_expr>
+							<label>Sweep old cache</label>
+                            <comment>Cron Configuration. (Run every 30 min "30 * * * *")</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</scheduler_cron_expr>
+						<scheduler_cron_expr_sweepall>
+							<label>Sweep Cache Storage</label>
+                            <comment>Cron Configuration. (Run every 30 min "30 * * * *")</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</scheduler_cron_expr_sweepall>
+						<scheduler_cron_expr_sweepsystem>
+							<label>Sweep Magento Cache</label>
+                            <comment>Cron Configuration. (Run every 30 min "30 * * * *")</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</scheduler_cron_expr_sweepsystem>
+						<scheduler_cron_expr_sweepimages>
+							<label>Sweep Catalog Images Cache</label>
+                            <comment>Cron Configuration. (Run every 30 min "30 * * * *")</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</scheduler_cron_expr_sweepimages>
+						<scheduler_cron_expr_sweepstyle>
+							<label>Sweep JavaScript/CSS Cache</label>
+                            <comment>Cron Configuration. (Run every 30 min "30 * * * *")</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</scheduler_cron_expr_sweepstyle>
+						
+					</fields>
+				</cachesweep>
+			</groups>
+		</cachesweepsection>
+	</sections>
+</config>

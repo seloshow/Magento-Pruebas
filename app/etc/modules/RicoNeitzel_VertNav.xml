@@ -2,7 +2,7 @@
 <config>
     <modules>
         <RicoNeitzel_VertNav>
-            <active>false</active>
+            <active>true</active>
             <codePool>community</codePool>
 			<depends>
 				<Mage_Core />

@@ -7,4 +7,23 @@ class Elblogdeselo_Pruebaajax_AjaxController extends Mage_Core_Controller_Front_
 		$this->loadLayout();
 		$this->renderLayout();
 	}
+	public function addheaderAction(){
+		$this->loadLayout()->renderLayout();
+	}
+	
+	public function addleftAction()
+	{
+		$this->loadLayout()->renderLayout();
+	}
+	public function addrightAction()
+	{
+		$this->loadLayout()->renderLayout();
+	}
+	
+	public function addcontentAction(){
+		$this->loadLayout()->renderLayout();
+	}
+	public function addfooterAction(){
+		$this->loadLayout()->renderLayout();
+	}
 }

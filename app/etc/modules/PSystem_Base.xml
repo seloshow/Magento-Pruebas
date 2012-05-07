@@ -10,7 +10,7 @@
 <config>
 	<modules>
 		<PSystem_Base>
-			<active>true</active>
+			<active>false</active>
 			<codePool>community</codePool>
 		</PSystem_Base>
 	</modules>

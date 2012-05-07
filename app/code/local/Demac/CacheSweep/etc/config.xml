@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+		<Demac_CacheSweep>
+			<active>true</active>
+			<codePool>local</codePool>
+			<version>0.1.0</version>
+		</Demac_CacheSweep>
+	</modules>
+    
+	<default>
+		<cachesweepsection>
+			<cachesweep>
+				<scheduler_cron_expr>30 * * * *</scheduler_cron_expr>
+			</cachesweep>
+		</cachesweepsection>
+	</default>
+
+	<global>
+		<models>
+			<demaccachesweep><class>Demac_CacheSweep_Model</class></demaccachesweep>
+		</models>
+		<helpers>
+			<demaccachesweep><class>Demac_CacheSweep_Helper</class></demaccachesweep>
+		</helpers>
+	</global>
+
+	<adminhtml>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<cachesweepsection translate="title" module="demaccachesweep">
+											<title>Demac CacheSweep</title>
+											<sort_order>50</sort_order>
+										</cachesweepsection>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<demaccachesweep module="demaccachesweep">
+					<file>demac_cachesweep.xml</file>
+				</demaccachesweep>
+			</updates>
+		</layout>
+	</adminhtml>
+
+	<crontab>
+		<jobs>
+			<demaccachesweep>
+				<schedule><config_path>cachesweepsection/cachesweep/scheduler_cron_expr</config_path></schedule>
+				<run><model>demaccachesweep/sweeper::sweep</model></run>
+			</demaccachesweep>
+ 			<demaccachesweep_sweepall>
+				<schedule><config_path>cachesweepsection/cachesweep/scheduler_cron_expr_sweepall</config_path></schedule>
+				<run><model>demaccachesweep/sweeper::sweepAll</model></run>
+			</demaccachesweep_sweepall>
+			<demaccachesweep_sweepsystem>
+				<schedule><config_path>cachesweepsection/cachesweep/scheduler_cron_expr_sweepsystem</config_path></schedule>
+				<run><model>demaccachesweep/sweeper::sweepSystem</model></run>
+			</demaccachesweep_sweepsystem>
+			<demaccachesweep_sweepimages>
+				<schedule><config_path>cachesweepsection/cachesweep/scheduler_cron_expr_sweepimages</config_path></schedule>
+				<run><model>demaccachesweep/sweeper::sweepImages</model></run>
+			</demaccachesweep_sweepimages>
+			<demaccachesweep_sweepstyle>
+				<schedule><config_path>cachesweepsection/cachesweep/scheduler_cron_expr_sweepstyle</config_path></schedule>
+				<run><model>demaccachesweep/sweeper::sweepStyle</model></run>
+			</demaccachesweep_sweepstyle>
+		</jobs>
+	</crontab>
+</config>

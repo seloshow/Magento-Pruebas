@@ -10,7 +10,7 @@
 <config>
 	<modules>
 		<PSystem_CatalogAjax>
-			<active>true</active>
+			<active>false</active>
 			<codePool>community</codePool>
 			<depends>
 				<PSystem_Base/>

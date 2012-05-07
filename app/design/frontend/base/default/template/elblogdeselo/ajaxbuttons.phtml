@@ -5,9 +5,50 @@
  * */
 ?>
 <div id="botones-ajax">
-	<button onclick="setLocation('http://local.pruebas.com/coalesce-functioning-on-impatience-t-shirt.html?options=cart')" class="button btn-ajax-header" title="Carga el Header" type="button"><span><span>Cargar Header</span></span></button>
-	<button onclick="setLocation('http://local.pruebas.com/coalesce-functioning-on-impatience-t-shirt.html?options=cart')" class="button btn-ajax-left" title="Carga el Left" type="button"><span><span>Cargar Left</span></span></button>
-	<button onclick="setLocation('http://local.pruebas.com/coalesce-functioning-on-impatience-t-shirt.html?options=cart')" class="button btn-ajax-rigth" title="Carga el Rigth" type="button"><span><span>Cargar Rigth</span></span></button>
-	<button onclick="setLocation('http://local.pruebas.com/coalesce-functioning-on-impatience-t-shirt.html?options=cart')" class="button btn-ajax-content" title="Carga el Rigth" type="button"><span><span>Cargar Content</span></span></button>
-	<button onclick="setLocation('http://local.pruebas.com/coalesce-functioning-on-impatience-t-shirt.html?options=cart')" class="button btn-ajax-footer" title="Carga el Footer" type="button"><span><span>Cargar Footer</span></span></button>
+	<button  id ="bds-header"class="button btn-ajax-header" title="Carga el Header" type="button"><span><span>Cargar Header</span></span></button>
+	<button  id="bds-left" class="button btn-ajax-left" title="Carga el Left" type="button"><span><span>Cargar Left</span></span></button>
+	<button  id="bds-right" class="button btn-ajax-rigth" title="Carga el Right" type="button"><span><span>Cargar Right</span></span></button>
+	<button  id="bds-content" class="button btn-ajax-content" title="Carga el Rigth" type="button"><span><span>Cargar Content</span></span></button>
+	<button  id="bds-footer" class="button btn-ajax-footer" title="Carga el Footer" type="button"><span><span>Cargar Footer</span></span></button>
 </div>
+<!-- @davidselo: Capa para mostrar el spinner de Magento del backend  -->
+<div id="loadingmask" style="display: none;">
+<div class="loader" id="loading-mask-loader"><img src="<?php echo str_replace("index.php/","",$this->getUrl()) ?>skin/adminhtml/default/default/images/ajax-loader-tr.gif" alt="<?php echo $this->__('Loading...') ?>"/><?php echo $this->__('Loading...') ?></div>
+<div id="loading-mask"></div>
+</div>
+
+<!-- Todas las respuestas las va a escribir en un div en este ejemplo -->
+<div id="output-div">
+	<?php echo $this->getChildHtml('header');?>
+</div>
+
+
+<script type="text/javascript">
+Event.observe(window, 'load', function() {  
+	$("bds-header").observe("click", function(event) {
+		Element.show('loadingmask');
+		var ajax= new elblogdeseloAjax('<?php echo Mage::getBaseUrl().'pruebaajax/ajax/addheader'?>',1);
+		ajax._requestAjax();
+		});
+	$("bds-left").observe("click", function(event) {
+		Element.show('loadingmask');
+		var ajax= new elblogdeseloAjax('<?php echo Mage::getBaseUrl().'pruebaajax/ajax/addleft'?>',1);
+		ajax._requestAjax();
+		});
+	$("bds-right").observe("click", function(event) {
+		Element.show('loadingmask');
+		var ajax= new elblogdeseloAjax('<?php echo Mage::getBaseUrl().'pruebaajax/ajax/addright'?>',1);
+		ajax._requestAjax();
+		});
+	$("bds-content").observe("click", function(event) {
+		Element.show('loadingmask');
+		var ajax= new elblogdeseloAjax('<?php echo Mage::getBaseUrl().'pruebaajax/ajax/addcontent'?>',1);
+		ajax._requestAjax();
+		});
+	$("bds-footer").observe("click", function(event) {
+		Element.show('loadingmask');
+		var ajax= new elblogdeseloAjax('<?php echo Mage::getBaseUrl().'pruebaajax/ajax/addfooter'?>',1);
+		ajax._requestAjax();
+		});
+});
+</script>

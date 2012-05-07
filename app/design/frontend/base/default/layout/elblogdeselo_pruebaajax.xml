@@ -2,15 +2,119 @@
 <layout version="0.1.0">
 	
 	<pruebaajax_ajax_index>
+		<reference name="head">
+			<action method="addItem"><type>skin_js</type><item>js/elblogdeselo/ajax.js</item></action>
+<!-- 			<action method="addJs"><js>mage/adminhtml/loader.js</js></action> -->
+			<action method="addCss"><css>css/boxes.css</css></action>
+			<action method="addCss"><css>css/reset.css</css></action>
+		</reference>
 		
 		<reference name="root">
 			<action method="setTemplate"><template>page/empty.phtml</template></action>
 		</reference>
 		<reference name="after_body_start">
-<!-- 			<block type="core/text" name="selo.prueba" > -->
-<!-- 				<action method="setText"><text>hola</text></action> -->
-<!-- 			</block> -->
 			<block type="core/template" name="prueba.ajax" template="elblogdeselo/ajaxbuttons.phtml"/>
 		</reference>
 	</pruebaajax_ajax_index>
+	<pruebaajax_ajax_addheader>
+		<reference name="root">
+			<action method="setTemplate"><template>page/empty.phtml</template></action>
+		</reference>
+<!-- 		<remove name="content"/> -->
+<!-- 		<remove name="left"/> -->
+<!-- 		<remove name="right"/> -->
+<!-- 		<remove name="footer"/> -->
+			<reference name="after_body_start">
+				
+				<block type="page/html_header" name="header" as="header">
+	                <block type="page/template_links" name="top.links" as="topLinks"/>
+	                <block type="page/switch" name="store_language" as="store_language" template="page/switch/languages.phtml"/>
+	                <block type="core/text_list" name="top.menu" as="topMenu" translate="label">
+	                    <label>Navigation Bar</label>
+	                </block>
+	                <block type="page/html_wrapper" name="top.container" as="topContainer" translate="label">
+	                    <label>Page Header</label>
+	                    <action method="setElementClass"><value>top-container</value></action>
+	                </block>
+            	</block>
+			</reference>
+			<reference name="before_body_end">
+				<remove name="wee_developertoolbar"></remove>
+			</reference>
+<!-- 		<reference name="after_body_start"> -->
+<!-- 			<block type="core/text" output="toHtml" name="ajax.header"> -->
+<!-- 				<action method="setText"> -->
+<!-- 					<text>Header cargado mediante Ajax</text> -->
+<!-- 				</action> -->
+<!-- 			</block> -->
+<!-- 		</reference> -->
+<!-- 		<reference name="root"> -->
+<!-- 			<action method="setTemplate"><template>page/empty.phtml</template></action> -->
+<!-- 		</reference> -->
+	
+	</pruebaajax_ajax_addheader>
+	<!-- @davidselo: Ahora cargaremos el left. -->
+	<pruebaajax_ajax_addleft>
+		<remove name="content"/>
+		<remove name="header"/>
+		<remove name="breadcrumbs"/>
+<!-- 		<remove name="left"/> -->
+		<remove name="right"/>
+		<remove name="footer"/>
+		<remove name="global_notices"/>
+		<reference name="before_body_end">
+			<remove name="wee_developertoolbar"></remove>
+		</reference>
+	</pruebaajax_ajax_addleft>
+	<pruebaajax_ajax_addright>
+		<remove name="content"/>
+		<remove name="header"/>
+		<remove name="breadcrumbs"/>
+		<remove name="left"/>
+<!-- 		<remove name="right"/> -->
+		<remove name="footer"/>
+		<remove name="before_body_start"/>
+		<remove name="global_notices"/>
+		
+		<reference name="before_body_end">
+			<remove name="wee_developertoolbar"></remove>
+		</reference>
+	</pruebaajax_ajax_addright>
+	<pruebaajax_ajax_addcontent>
+<!-- 		<remove name="content"/> -->
+		<remove name="header"/>
+		<remove name="breadcrumbs"/>
+		<remove name="left"/>
+		<remove name="right"/>
+		<remove name="footer"/>
+		<remove name="before_body_start"/>
+		<remove name="global_notices"/>
+		
+		<reference name="before_body_end">
+			<remove name="wee_developertoolbar"></remove>
+		</reference>
+	</pruebaajax_ajax_addcontent>
+	<pruebaajax_ajax_addfooter>
+		<reference name="root">
+			<action method="setTemplate"><template>page/empty.phtml</template></action>
+		</reference>
+<!-- 		<remove name="content"/> -->
+<!-- 		<remove name="left"/> -->
+<!-- 		<remove name="right"/> -->
+<!-- 		<remove name="footer"/> -->
+			<reference name="after_body_start">	
+	            <block type="page/html_footer" name="footer" as="footer" template="page/html/footer.phtml">
+	                <block type="page/html_wrapper" name="bottom.container" as="bottomContainer" translate="label">
+	                    <label>Page Footer</label>
+	                    <action method="setElementClass"><value>bottom-container</value></action>
+	                </block>
+	                <block type="page/switch" name="store_switcher" as="store_switcher" template="page/switch/stores.phtml"/>
+	                <block type="page/template_links" name="footer_links" as="footer_links" template="page/template/links.phtml"/>
+	            </block>
+			</reference>
+			<reference name="before_body_end">
+				<remove name="wee_developertoolbar"></remove>
+			</reference>
+
+	</pruebaajax_ajax_addfooter>
 </layout>
