@@ -42,13 +42,13 @@ to app/etc/local.xml manually.
             <memcached><!-- memcached cache backend related config -->
                 <servers><!-- any number of server nodes can be included -->
                     <server>
-                        <host><![CDATA[]]></host>
-                        <port><![CDATA[]]></port>
-                        <persistent><![CDATA[]]></persistent>
-                        <weight><![CDATA[]]></weight>
-                        <timeout><![CDATA[]]></timeout>
-                        <retry_interval><![CDATA[]]></retry_interval>
-                        <status><![CDATA[]]></status>
+                        <host><![CDATA[localhost]]></host>
+                        <port><![CDATA[11211]]></port>
+                        <persistent><![CDATA[true]]></persistent>
+                        <weight><![CDATA[1]]></weight>
+                        <timeout><![CDATA[10]]></timeout>
+                        <retry_interval><![CDATA[15]]></retry_interval>
+                        <status><![CDATA[true]]></status>
                     </server>
                 </servers>
                 <compression><![CDATA[0]]></compression>
