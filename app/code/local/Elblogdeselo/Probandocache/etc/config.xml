@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Elblogdeselo_Probandocache>
+			<version>0.1.0</version>
+		</Elblogdeselo_Probandocache>
+	</modules>
+	<frontend>
+		<routers>
+            <pruebacache>
+                <use>standard</use>
+                <args>
+                    <module>Elblogdeselo_Probandocache</module>
+                    <frontName>pruebacache</frontName>
+                </args>
+            </pruebacache>
+        </routers>
+	</frontend>
+</config>
