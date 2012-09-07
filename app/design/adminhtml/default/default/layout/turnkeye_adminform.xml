@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+
+    <adminhtml_adminform_index>
+        <update handle="editor"/>
+        <reference name="content">
+            <block type="turnkeye_adminform/adminhtml_form_edit" name="adminform"/>
+        </reference>
+        <reference name="left">
+            <block type="turnkeye_adminform/adminhtml_form_edit_tabs" name="adminform_tabs"/>
+        </reference>
+    </adminhtml_adminform_index>
+
+</layout>

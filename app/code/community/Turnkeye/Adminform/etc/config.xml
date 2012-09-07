@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Turnkeye_Adminform>
+            <version>1.0.0</version>
+        </Turnkeye_Adminform>
+    </modules>
+
+    <global>
+        <blocks>
+            <turnkeye_adminform>
+                <class>Turnkeye_Adminform_Block</class>
+            </turnkeye_adminform>
+        </blocks>
+
+        <helpers>
+            <turnkeye_adminform>
+                <class>Turnkeye_Adminform_Helper</class>
+            </turnkeye_adminform>
+        </helpers>
+
+        <models>
+            <turnkeye_adminform>
+                <class>Turnkeye_Adminform_Model</class>
+                <resourceModel>turnkeye_adminform_mysql4</resourceModel>
+            </turnkeye_adminform>
+            <turnkeye_adminform_mysql4>
+                <class>Turnkeye_Adminform_Model_Mysql4</class>
+                <entities>
+                    <category>
+                        <table>turnkeye_fbstore_category</table>
+                    </category>
+                    <category_product>
+                        <table>turnkeye_fbstore_category_product</table>
+                    </category_product>
+                </entities>
+            </turnkeye_adminform_mysql4>
+        </models>
+
+        <resources>
+            <turnkeye_adminform_setup>
+                <setup>
+                    <module>Turnkeye_Adminform</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </turnkeye_adminform_setup>
+            <turnkeye_adminform_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </turnkeye_adminform_write>
+            <turnkeye_adminform_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </turnkeye_adminform_read>
+        </resources>
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <turnkeye_adminform after="Mage_Adminhtml">Turnkeye_Adminform_Adminhtml</turnkeye_adminform>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <turnkeye_adminform>
+                    <file>turnkeye_adminform.xml</file>
+                </turnkeye_adminform>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Turnkeye_Adminform>
+                    <files>
+                        <default>Turnkeye_Adminform.csv</default>
+                    </files>
+                </Turnkeye_Adminform>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <default>
+        <turnkeye_adminform>
+            <general>
+                <default_sort_by><![CDATA[position]]></default_sort_by>
+            </general>
+        </turnkeye_adminform>
+    </default>
+</config>
